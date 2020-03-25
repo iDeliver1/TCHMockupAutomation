@@ -1,0 +1,6 @@
+com\AP\qa\pages\Login.class
+com\AP\qa\pages\Logout.class
+com\AP\qa\pages\homepage.class
+com\AP\qa\util\TestUtil.class
+com\AP\qa\base\TestBase.class
+com\AP\qa\pages\Payment.class

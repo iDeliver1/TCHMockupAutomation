@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="59230" started-at="2020-03-04T11:54:00Z" finished-at="2020-03-04T11:54:59Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="59230" started-at="2020-03-04T11:54:00Z" finished-at="2020-03-04T11:54:59Z">
+      <class name="com.AP.qa.test.APTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.AP.qa.test.APTest@6ec8211c]" name="setUp" is-config="true" duration-ms="22959" started-at="2020-03-04T17:24:00Z" finished-at="2020-03-04T17:24:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:com.AP.qa.test.APTest@6ec8211c]" name="LoginTest" duration-ms="10197" started-at="2020-03-04T17:24:23Z" finished-at="2020-03-04T17:24:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="BookingTest()[pri:2, instance:com.AP.qa.test.APTest@6ec8211c]" name="BookingTest" duration-ms="9633" started-at="2020-03-04T17:24:33Z" depends-on-methods="com.AP.qa.test.APTest.LoginTest" finished-at="2020-03-04T17:24:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookingTest -->
+        <test-method status="PASS" signature="PaymentTest()[pri:3, instance:com.AP.qa.test.APTest@6ec8211c]" name="PaymentTest" duration-ms="11711" started-at="2020-03-04T17:24:43Z" depends-on-methods="com.AP.qa.test.APTest.BookingTest" finished-at="2020-03-04T17:24:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaymentTest -->
+        <test-method status="PASS" signature="Flush()[pri:0, instance:com.AP.qa.test.APTest@6ec8211c]" name="Flush" is-config="true" duration-ms="4707" started-at="2020-03-04T17:24:54Z" finished-at="2020-03-04T17:24:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Flush -->
+      </class> <!-- com.AP.qa.test.APTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
