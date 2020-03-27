@@ -36,7 +36,7 @@ static ExtentTest logger;
 public static XSSFWorkbook WB;
 public static XSSFSheet sh;
 public static XSSFCell cl;
-Extent_Report objRep = new Extent_Report();
+static Extent_Report objRep = new Extent_Report();
 public static long PAGE_LOAD_TIMEOUT = 20;
 public static long IMPLICIT_WAIT = 20;
 static String Report_Folder_path = "C:\\Reporting\\Report"+fTimestamp();
@@ -78,7 +78,7 @@ public static String fGetCurrentDate()
 		
 		
 		//Validation for Page Launch
-				public  void validation(String StepName,String Actual,String Expected) throws Throwable{
+				public static void validation(String StepName,String Actual,String Expected) throws Throwable{
 					
 					try{
 						Assert.assertEquals(true, Actual.contains(Expected));

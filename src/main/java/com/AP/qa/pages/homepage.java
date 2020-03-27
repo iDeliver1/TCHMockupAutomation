@@ -40,13 +40,15 @@ public class homepage extends TestBase{
 		Actions action = new Actions(driver);
 		action.moveToElement(Target).perform();
 		Tshirt.click();
-		wait.until(ExpectedConditions.elementToBeClickable(qty));
+		WaitForObject(qty, "Check");
+		//wait.until(ExpectedConditions.elementToBeClickable(qty));
 		qty.clear();
 		qty.sendKeys(prop.getProperty("Qty"));
 		Select psize = new Select(size);
 		psize.selectByIndex(1);
 		cart.click();
-		wait.until(ExpectedConditions.elementToBeClickable(checkout));
+		WaitForObject(checkout, "Check");
+		//wait.until(ExpectedConditions.elementToBeClickable(checkout));
 		checkout.click();
 	}
 }

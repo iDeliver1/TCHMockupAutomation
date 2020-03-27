@@ -11,7 +11,6 @@ import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,8 +36,7 @@ public class TestBase {
 	public static WebDriverWait wait;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
-	TestUtil objTe = new TestUtil();
-	Extent_Report objExtent = new Extent_Report();
+	static Extent_Report objExtent = new Extent_Report();
 	private static final Duration DEFAULT_WAIT_POLLING = Duration.ofSeconds(1);
 	private static final Duration DEFAULT_WAIT_DURATION = Duration.ofSeconds(20);
 	
@@ -59,17 +57,17 @@ public class TestBase {
 	
 	public static void initialization(String browserName) throws Throwable{
 		
-		
+		try {
 		
 		if(browserName.equals("chrome")){
 			
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/com/swn/qa/driver/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/com/AP/qa/driver/chromedriver.exe");
 			driver = new ChromeDriver(); 
 		
 		
 		}
 		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/src/main/java/com/swn/qa/driver/geckodriver.exe");	
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/src/main/java/com/AP/qa/driver/geckodriver.exe");	
 			driver = new FirefoxDriver(); 
 		
 		}
@@ -79,8 +77,13 @@ public class TestBase {
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
 		driver = e_driver;	
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
 	
 }
+	
 	
 	
 	public void initateURL() throws Throwable{
@@ -91,11 +94,11 @@ public class TestBase {
 		driver.get(prop.getProperty("url"));
 	}
 	
-	public void SetUP(String Reportname,String Title) throws Throwable{
+	public void SetUP(String Reportname,String Title) throws Throwable{		
 		Extent_Report.createins();
-		getReportname(Reportname);	
-		
-		objTe.validation("Verify User is able to launch " +GetProjectName()+"  page", driver.getTitle(), Title);
+		initateURL();	
+		Extent_Report.CreateRoportname(Reportname);
+		TestUtil.validation("Verify User is able to launch " +GetProjectName()+"  page", driver.getTitle(), Title);
 	}
 	
 public  String GetProjectName(){
@@ -116,11 +119,12 @@ public  String GetProjectName(){
 		
 		
 		//Getting TestName
-		public void getReportname(String Reportname){
-			Extent_Report.CreateRoportname(Reportname);
+		public void getReportname(String Reportname) throws Throwable{
+			
+			
 		}
 		
-		public  void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
+		public  static void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
 			objExtent.Report(Status, StepName, ActualStep, ExpectedStep);
 			
 		}

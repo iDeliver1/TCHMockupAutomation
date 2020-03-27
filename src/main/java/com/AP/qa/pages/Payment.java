@@ -20,7 +20,7 @@ public class Payment extends TestBase{
 	WebElement checkbox;
 	
 	@FindBy(xpath = "//button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]")
-	WebElement processCarrier;
+	WebElement processCarrier; 
 	
 	@FindBy(xpath = "//a[@class='bankwire']")
 	WebElement pay_method;
