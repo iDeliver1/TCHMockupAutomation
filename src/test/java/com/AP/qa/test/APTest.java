@@ -1,5 +1,6 @@
 package com.AP.qa.test;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -52,12 +53,13 @@ public class APTest extends TestBase {
 		pay.paymentpage();	
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void Flush() throws Throwable
 	{
 		logout.LogoutTest();	
 	}
 	
+	@AfterTest
 	public void CloseBrowser() {
 		closeBrowser();
 	}

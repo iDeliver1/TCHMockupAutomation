@@ -22,7 +22,7 @@ public class homepage extends TestBase{
 	
 	@FindBy(xpath = "//select[@id='group_1']")
 	WebElement size;
-	
+	 
 	@FindBy(xpath = "//span[contains(text(),'Add to cart')]")
 	WebElement cart;
 

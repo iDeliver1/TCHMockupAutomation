@@ -39,6 +39,7 @@ public class TestBase {
 	static Extent_Report objExtent = new Extent_Report();
 	private static final Duration DEFAULT_WAIT_POLLING = Duration.ofSeconds(1);
 	private static final Duration DEFAULT_WAIT_DURATION = Duration.ofSeconds(20);
+	public static String Report_Folder_path = "C:\\Reporting\\Report"+TestUtil.fTimestamp();
 	
 	public TestBase(){
 		
@@ -170,9 +171,10 @@ public  String GetProjectName(){
 		
 		//Closing Browser And Saving Report 
 		public static void closeBrowser() {
-			Extent_Report.extent.flush();
+			
 			driver.close();
-			driver.quit();
+			Extent_Report.extent.flush();
+			
 		}
 
 }
