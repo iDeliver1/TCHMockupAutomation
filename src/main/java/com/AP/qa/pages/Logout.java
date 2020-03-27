@@ -28,21 +28,16 @@ public class Logout extends TestBase{
 		try {
 			String sign = signIn.getText();
 			System.out.println(sign);
-			//Assert.assertEquals(sign, "\r\n" + 
-			//		"			Sign in\r\n" + 
-			//		"		");
 			Assert.assertEquals(true, sign.contains("Sign in"));
-			//TestUtil.Report("Pass","Logout successfull");
-			TestUtil.Report("Pass","Logout Validation","Logout successfull with the user -"+prop.getProperty("username"),"User should Logout from Store");
+			Reporting("Pass","Logout Validation","Logout successfull with the user -"+prop.getProperty("username"),"User should Logout from Store");
 			log("Logout successfull");
-			TestUtil.fExcelReporter("Logout Validation", "Logout successfull", "User should Logout from Store", "Pass", getTime());
+		
 		}catch(Exception e)
 		{
 			System.out.println(e);
-			//TestUtil.Report("Fail","Logout failed");
-			TestUtil.Report("Fail","Logout Validation","Logout Failed","User should Logout from Store");
+			Reporting("Fail","Logout Validation","Logout Failed","User should Logout from Store");
 			log("Logout failed");
-			TestUtil.fExcelReporter("Logout Validation", "Logout successfull", "User should Logout from Store", "Fail", getTime());
+			
 		}
 	}
 

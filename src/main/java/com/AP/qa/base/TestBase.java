@@ -1,45 +1,53 @@
 package com.AP.qa.base;
 
 
-import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.testng.Reporter;
+import com.AP.qa.util.Extent_Report;
 import com.AP.qa.util.TestUtil;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.AP.qa.util.WebEventListener;
+import com.google.common.base.Function;
+
+
 
 public class TestBase {
 	public static final Logger log = Logger.getLogger(TestBase.class.getName());
 	public static WebDriver driver;
 	public static Properties prop;
-	ExtentHtmlReporter htmlReporter;
-	static ExtentReports extent;
 	public static WebDriverWait wait;
-	public static int step =1;
-	public static String Excel_path = "C:\\Users\\ideliver\\Desktop\\Selenium1\\APTest\\test-Reports\\ExcelReport.xlsx";
+	public static EventFiringWebDriver e_driver;
+	public static WebEventListener eventListener;
+	TestUtil objTe = new TestUtil();
+	Extent_Report objExtent = new Extent_Report();
+	private static final Duration DEFAULT_WAIT_POLLING = Duration.ofSeconds(1);
+	private static final Duration DEFAULT_WAIT_DURATION = Duration.ofSeconds(20);
 	
 	public TestBase(){
+		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\ideliver\\Desktop\\Selenium1\\APTest\\src\\main\\java\\com\\AP\\qa\\config\\config.properties");
-			//FileInputStream ip = new FileInputStream(System.getProperty("User.dir")+"\\src\\main\\java\\com\\AP\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/AP/"
+					+ "qa/config/config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -48,79 +56,118 @@ public class TestBase {
 		}
 	}
 	
-	//the Extent report will be created only once, no matter wherever we do initialization
-	static {
-			 ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("C:\\Users\\ideliver\\Desktop\\Selenium1\\APTest\\test-Reports\\htmlReport.html");
-			 extent = new ExtentReports();
-			 extent.attachReporter(htmlReporter);
-			 extent.setSystemInfo("OS", "OS");
-			 extent.setSystemInfo("Browser", "browser");
-			 htmlReporter.config().setDocumentTitle("Automation Practice Report");
-			 htmlReporter.config().setReportName("Test Report");
-			 htmlReporter.config().setTheme(Theme.STANDARD);
-	}
 	
-	public static void initialization(String Browser) throws Throwable{
-		if(Browser.equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-			driver = new ChromeDriver();
+	public static void initialization(String browserName) throws Throwable{
+		
+		
+		
+		if(browserName.equals("chrome")){
+			
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/com/swn/qa/driver/chromedriver.exe");
+			driver = new ChromeDriver(); 
+		
+		
 		}
-		else {
-			driver = new FirefoxDriver();
+		else if(browserName.equals("FF")){
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/src/main/java/com/swn/qa/driver/geckodriver.exe");	
+			driver = new FirefoxDriver(); 
+		
 		}
-		wait = new WebDriverWait(driver, 20);
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.navigate().to(prop.getProperty("url"));	
-		create_file();
+		
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;	
+	
 }
 	
-	//create excel file
-	public static void create_file() throws IOException {
-		Workbook wb = null;
-		wb = new XSSFWorkbook();
-		wb.createSheet("Sheet1").createRow(0).createCell(0);
-		FileOutputStream fout = new FileOutputStream(new File(Excel_path));
-		wb.write(fout);
-		fout.close();
+	
+	public void initateURL() throws Throwable{
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
+		driver.get(prop.getProperty("url"));
 	}
 	
-	//Time function
-	public String getTime()
-	{
-	DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-	Date date = new Date();
-	String date1= dateFormat.format(date);  // Now format the date
-	return date1;
+	public void SetUP(String Reportname,String Title) throws Throwable{
+		Extent_Report.createins();
+		getReportname(Reportname);	
+		
+		objTe.validation("Verify User is able to launch " +GetProjectName()+"  page", driver.getTitle(), Title);
+	}
+	
+public  String GetProjectName(){
+		
+		String userDir = System.getProperty("user.dir");
+		Path path = Paths.get(userDir);
+		String project = path.getFileName().toString();
+		return project;
+		
 	}
 
 	//Logging method so that the same log is added in logger as well as syso
 			public void log(String data) {
 				
 				log.info(data);
-				//Reporter.log(data);
+				Reporter.log(data);
 			}
 		
 		
 		//Getting TestName
 		public void getReportname(String Reportname){
-			TestUtil.CreateRoportname(Reportname,extent);
+			Extent_Report.CreateRoportname(Reportname);
 		}
 		
-		//Creating Report 
-		public void Reporting(String Status,String StepName) throws Throwable{
-			//TestUtil.Report(Status, StepName);
+		public  void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
+			objExtent.Report(Status, StepName, ActualStep, ExpectedStep);
 			
+		}
+		
+		//Explicit Wait
+		public   void waitforElement(long timeoutseconds, WebElement element) {
+			WebDriverWait wait = new WebDriverWait(driver, timeoutseconds);
+			wait.until(ExpectedConditions.visibilityOf(element));
+		}
+		
+		//PageLoadTimeout Function
+		public  void waitfunction(){
+			driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);	
+		}
+		
+
+
+		//Fluent Wait for an Element for event for clicking or checking
+		public  void WaitForObject(  final WebElement element,String EventName) throws InterruptedException{
+			Wait<WebDriver> wait = new FluentWait<WebDriver> (driver)
+			   .withTimeout(DEFAULT_WAIT_DURATION)
+			   .pollingEvery(DEFAULT_WAIT_POLLING)
+			   .ignoring(NoSuchElementException.class);
+		
+			 WebElement foo = wait.until(new Function<WebDriver, WebElement>() { 
+			     public WebElement apply(WebDriver driver) {
+			      return element;
+			     }
+			   });
+			foo.isDisplayed();
+			if(EventName.contains("Click")){
+				
+				try{
+					foo.click();
+				}catch(Exception f){
+					System.out.println(f);
+				}
+				
+			}
 		}
 		
 		
 		//Closing Browser And Saving Report 
 		public static void closeBrowser() {
-			
+			Extent_Report.extent.flush();
 			driver.close();
-			extent.flush();
 			driver.quit();
 		}
 

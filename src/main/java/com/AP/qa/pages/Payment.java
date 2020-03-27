@@ -60,15 +60,15 @@ public class Payment extends TestBase{
 		try{
 			String amt = price.getText();
 			Assert.assertTrue(order_msg.isDisplayed());
-			TestUtil.Report("Pass","Payment Validation","Payment successfull","Payment should be done");
+			Reporting("Pass","Payment Validation","Payment successfull","Payment should be done");
 			log("Payment successfull of amount -"+amt);
-			TestUtil.fExcelReporter("Payment Validation", "Payment successfull", "Payment should be done", "Pass", getTime());
+			
 		}catch(Exception e)
 		{
 			System.out.println(e);
-			TestUtil.Report("Fail","Payment Validation","Payment Failed","Payment should be done");
+			Reporting("Fail","Payment Validation","Payment Failed","Payment should be done");
 			log("Payment failed");
-			TestUtil.fExcelReporter("Payment Validation", "Payment successfull", "Payment should be done", "Fail", getTime());
+			
 		}
 	}
 	
@@ -76,16 +76,16 @@ public class Payment extends TestBase{
 		try{
 			String amt = price.getText();
 			Assert.assertEquals(amt, amt2);
-			TestUtil.Report("Pass","Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
+			Reporting("Pass","Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
 			log("Successfully validated the order amount -"+amt2);
-			TestUtil.fExcelReporter("Price Validation", "Actual Price -"+amt2, "Expected Price -"+amt, "Pass", getTime());
+			
 		}catch(Exception e)
 		{
 			String amt = price.getText();
 			System.out.println(e);
-			TestUtil.Report("Fail","Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
+			Reporting("Fail","Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
 			log("Price validation failed");
-			TestUtil.fExcelReporter("Price Validation", "Actual Price -"+amt2, "Expected Price -"+amt, "Fail", getTime());
+			
 		}
 	}
 }

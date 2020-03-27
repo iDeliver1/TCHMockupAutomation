@@ -21,6 +21,9 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
 import com.AP.qa.base.TestBase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -29,33 +32,23 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 public class TestUtil extends TestBase{
 	
 static ExtentTest logger;
-static String [][] Data;
+
 public static XSSFWorkbook WB;
 public static XSSFSheet sh;
 public static XSSFCell cl;
+Extent_Report objRep = new Extent_Report();
+public static long PAGE_LOAD_TIMEOUT = 20;
+public static long IMPLICIT_WAIT = 20;
+static String Report_Folder_path = "C:\\Reporting\\Report"+fTimestamp();
 
-//---------------------------------------------Getting TestName---------------------------------------------------------
-	public static ExtentTest CreateRoportname(String Step_details,ExtentReports extent1){
+public static String fGetCurrentDate()
+{
+	Date date = new Date();  
+    SimpleDateFormat dateformat = new SimpleDateFormat("MM/dd/yyyy");  
+    String strDate = dateformat.format(date); 
+    return strDate;
+}
 
-		logger = extent1.createTest(Step_details);
-		return logger;
-		
-	}
-	
-	
-//--------------------------------------------Reporting for Pass & Fail Event---------------------------------------------
-	public static void Report(String Status1,String des,String actual, String expected/*,int sNO*/) throws Throwable{
-		
-		if(Status1.equalsIgnoreCase("PASS")){
-			logger.pass(String.format("<b>Step No : </b>"+step+"</br><b> Description : </b>"+des+"<br /> <b>Actual Result :</b> "+actual+"<br /> <b>Expected Result :</b> "+expected),MediaEntityBuilder.createScreenCaptureFromPath(fScreenReport()).build());
-			step++;
-		}
-		else{
-			logger.fail(String.format(/*"Step No : "+sNO+*/" <b> Description :</b> "+des+"<br /> <b>Actual Result :</b> "+actual+"<br /> <b>Expected Result :</b> "+expected),MediaEntityBuilder.createScreenCaptureFromPath(fScreenReport()).build());
-			closeBrowser();
-		}
-	}
-	
 	
 //-------------------------------------------TimeStamp Function----------------------------------	
 	public static String fTimestamp()
@@ -70,95 +63,65 @@ public static XSSFCell cl;
 	   public static String fScreenReport() throws Throwable
 		{
 	    	File source_image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	    	String Image_path = System.getProperty("user.dir")+"\\Screenshot\\"+fTimestamp()+".png";
+	    	String Image_path = Report_Folder_path+"/screenshots/" + System.currentTimeMillis() + ".png";
 	    	//System.out.println(Image_path);
 			File Desti_image = new File(Image_path);
 			FileUtils.copyFile(source_image,Desti_image);
 			return ""+Desti_image;
 		}
 	   
-//------------------------------------------------Reading Data from Excel-------------------------------	   
-	   public static Object[][] getExceldata() {
-		  try {
-		  FileInputStream fin = new FileInputStream("C:\\Users\\ideliver\\Desktop\\Selenium1\\APTest\\src\\main\\java\\com\\AP\\qa\\data\\testdata.xlsx");
-			  //FileInputStream fin = new FileInputStream(System.getProperty("User.dir")+"\\src\\main\\java\\com\\AP\\qa\\data\\testdata.xlsx");
-		  Workbook wb;	
-		  wb = WorkbookFactory.create(fin);
-		  Sheet sh = wb.getSheet("sheet1");
-		  Row rw = sh.getRow(0);
-		  Cell cl = rw.getCell(0);
-		  int row = sh.getPhysicalNumberOfRows();
-		  int col = rw.getPhysicalNumberOfCells();
-		  
-		   Data= new String[row][col];
-		  
-		  for(int i=0;i<row;i++)
-		  {
-			  for (int j=0; j<col; j++)
-			  {
-				  cl = sh.getRow(i).getCell(j);
-				  //System.out.println(cl.getStringCellValue());
-				  Data[i][j] = cl.getStringCellValue();
-			  }
-		  }
-		  
-		  
-		  }catch(Exception e) {
-			  System.out.println(e);
-		  }
-		  return (Data);
-	   }
+		public  void takeScreenshotAtEndOfTest() throws Throwable  {
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			String currentDir = System.getProperty("user.dir");
+			FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+		}
+		
+		
+		//Validation for Page Launch
+				public  void validation(String StepName,String Actual,String Expected) throws Throwable{
+					
+					try{
+						Assert.assertEquals(true, Actual.contains(Expected));
+						
+						objRep.Report("PASS",StepName,"Page launch Successfull "+ Actual ,"Should be able to launch "+Expected);
+						}catch(Exception e){ 
+							String cause = e.toString();
+							objRep.	Report("FAIL",StepName,"Page launch unsuccessfull "+ Actual+" Because of "+cause.substring(1, 88) ,"Should be able to launch "+Expected);
+						}
+				}
+				
+				//Function For Value Validation
+				
+			public  void Argvalidation(String StepName,String Actual,String Expected) throws Throwable{
+					
+					try{
+						Assert.assertEquals(Actual, Expected);
+						objRep.Report("PASS","Verifying "+StepName,StepName+" is equal to "+Actual,StepName+"should be equal to "+Expected);
+						
+						log(StepName+" Validation     "+Actual + " is equal to " +Expected);
+						
+						}catch(Exception e){ 
+						log(StepName+"  Validation    "+ Actual + " is not  equal to " +Expected+" because "+e);
+							
+						objRep.Report("FAIL","Verifying "+StepName,StepName+"is equal to "+Actual+""+e,StepName+"should be equal to "+Expected);
+						}
+				
+				}
 
-//----------------------------------------------Excel Reporting-------------------------------------------------------	   
-	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time) throws Throwable
-		{ 
-		   String[] Attribute = {"Step_details","Actual", "Expected","Status","Time"};
+			//Function for is Object is visble or not
+			public  void Menuvalidation(String StepName,WebElement element) throws Throwable{
+				
 				try{
-					FileInputStream fin = new FileInputStream(Excel_path); 
-					WB = new XSSFWorkbook(fin);
+					 Assert.assertEquals(true, element.isDisplayed());
+					 objRep.Report("PASS","Verifying "+ StepName,StepName+" is Visible ",StepName+" Must be visible");
+					log(StepName + " is Visible ");
+					}catch(Exception e){ 
+						String cause = e.toString();
+						log(StepName+" is not Visible ");
+						objRep	.Report("FAIL","Verifying "+StepName, StepName+" is not visible because "+cause.substring(1, 88) ,StepName+" Must be visible");
+						
 					}
-				catch(Exception e){
-					System.out.println(e);
-					}
-			sh = WB.getSheet("Sheet1");
-			//sh = WB.createSheet("Sheet1");	
-			int Row_cnt = sh.getLastRowNum();
-			XSSFRow newRow = sh.createRow(0);
-			
-
-			//Creating front color by cell style  	
-			XSSFFont customFont = WB.createFont();
-			customFont.setBold(true);
-			CellStyle style = WB.createCellStyle();
-			
-			  	for(int j=0;j<=4;j++)
-			  	{	
-					newRow.createCell(j).setCellValue(Attribute[j]);
-			  	}
-			
-			  
-			String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time};
-			XSSFRow newRow1 = sh.createRow(Row_cnt+1);
-				for(int i=0;i<=4;i++)
-					{
-					newRow1.createCell(i).setCellValue(Attribute_value[i]);
-					if(Attribute_value[i].equalsIgnoreCase("Pass"))
-						{
-							customFont.setColor(IndexedColors.GREEN.getIndex());
-							style.setFont(customFont);
-							newRow1.getCell(i).setCellStyle(style);
-						}
-					else if(Attribute_value[i].equalsIgnoreCase("Fail"))
-						{
-							customFont.setColor(IndexedColors.RED.getIndex());
-							style.setFont(customFont);
-							newRow1.getCell(i).setCellStyle(style);
-						}
-					}	
-			FileOutputStream fout = new FileOutputStream(Excel_path);
-			WB.write(fout);
-			fout.close();
-		} 
-	   
-//------------------------------------------------Create excel File--------------------------------	   
+			}
+		
+   
 }
