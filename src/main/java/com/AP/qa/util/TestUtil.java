@@ -2,21 +2,12 @@ package com.AP.qa.util;
 
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFFont;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
@@ -25,9 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.AP.qa.base.TestBase;
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 
 public class TestUtil extends TestBase{
 	
@@ -123,5 +112,25 @@ public static String fGetCurrentDate()
 					}
 			}
 		
-   
+		public static String getMultiProductValue(List<WebElement> element,WebElement prtx) {
+				   float value = 0,tax=0;
+				   try {
+					   
+					   for(int i =0;i<element.size();i++) {
+						   String a = element.get(i).getText();
+						  value = value +Float.parseFloat(a.replace("$", ""));
+					   }
+					   value = value+Float.parseFloat(prtx.getText().replace("$", ""));
+					   
+					   return String.format("%.02f", value);
+					   
+				   }catch(Exception e) {
+					   e.printStackTrace();
+				   }
+				   
+				   
+				   
+				   
+				return null;		
+		}
 }

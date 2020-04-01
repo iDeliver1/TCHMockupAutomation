@@ -13,7 +13,7 @@ import com.AP.qa.pages.Payment;
 import com.AP.qa.pages.homepage;
 
 
-public class APTest extends TestBase {
+public class TC001_Single_Product_Checkout extends TestBase {
 	
 	Login login;
 	homepage home;
@@ -38,7 +38,7 @@ public class APTest extends TestBase {
 	
 	@Test//(dataProvider = "Run")
 	void LoginTest() throws Throwable{
-		login.loginAP(prop.getProperty("username"), prop.getProperty("password"));
+		login.Login_Before_checkout(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	

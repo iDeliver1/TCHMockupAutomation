@@ -1,8 +1,5 @@
 package com.AP.qa.util;
 
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-
 import com.AP.qa.base.TestBase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

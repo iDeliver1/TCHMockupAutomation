@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
   <parameter name="Browser" value="chrome"/>
-  <test name="Test" parallel="tests">
+  <test name="Test">
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.AP.qa.test.APTest"/>
+      <class name="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
+      <class name="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Failed suite [Suite] -->

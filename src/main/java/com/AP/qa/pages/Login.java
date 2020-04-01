@@ -38,13 +38,20 @@ public class Login extends TestBase{
 		return validate_user.isDisplayed();
 	}
 	
-	public void loginAP(String usr, String pass) throws Throwable {
+	public void Login_Before_checkout(String usr, String pass) throws Throwable {
 		signInbtn.click();
+		loginAP(usr,pass);
+		home.click();
+	}
+	
+	
+	public void loginAP(String usr, String pass) throws Throwable {
+		//signInbtn.click();
 		user.sendKeys(usr);
 		password.sendKeys(pass);
 		signIn.click();
 		LoginValidation(usr,pass);
-		home.click();
+		//home.click();
 	}
 	
 	public void LoginValidation(String usr,String pwd) throws Throwable {

@@ -1,5 +1,7 @@
 package com.AP.qa.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -37,15 +39,41 @@ public class Payment extends TestBase{
 	@FindBy(xpath = "//span[@id='total_price']")
 	WebElement amount;
 	
+	@FindBy(xpath = "//span[contains(@id,'total_product_price')]")
+	List<WebElement> Price;
 	
+	@FindBy(xpath = "//td[@id='total_shipping']")
+	WebElement tax;
+	
+	@FindBy(xpath = "//span[@id='total_price']")
+	WebElement TotalPrice;
+	
+	@FindBy(xpath = "//input[@id='email']")
+	WebElement user;
+	
+	TestUtil objTest = new TestUtil();
+	Login login = new Login();
 	
 	public Payment() {
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void paymentpage() throws Throwable {
+		
 		String amt2 = amount.getText();
+		
+		String value =  TestUtil.getMultiProductValue(Price,tax);
+		objTest.Argvalidation("Price Varification", value, TotalPrice.getText().replace("$", ""));
+		
 		proceed.click();
+		
+		try {
+			login.loginAP(prop.getProperty("username"), prop.getProperty("password"));
+		}catch(Exception e)
+		{
+			System.out.println("Already sign in");
+		}
+		
 		processAddress.click();
 		checkbox.click();
 		processCarrier.click();
@@ -76,14 +104,14 @@ public class Payment extends TestBase{
 		try{
 			String amt = price.getText();
 			Assert.assertEquals(amt, amt2);
-			Reporting("Pass","Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
+			Reporting("Pass","CheckOut Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
 			log("Successfully validated the order amount -"+amt2);
 			
 		}catch(Exception e)
 		{
 			String amt = price.getText();
 			System.out.println(e);
-			Reporting("Fail","Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
+			Reporting("Fail","CheckOut Price Validation","Actual Price -"+amt2,"Expected Price -"+amt);
 			log("Price validation failed");
 			
 		}

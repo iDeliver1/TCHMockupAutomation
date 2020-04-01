@@ -122,5 +122,26 @@ public class Excel_Libraries extends TestBase {
 		  return (Data);
 	   }
 
-	
+	//------------------------------------------Get Data from Excel-----------------------------------------------------
+	   public static String getdata(int index) {
+		   try {
+		   FileInputStream fin = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/AP/"+ "qa/data/testdata.xlsx");
+		   //FileInputStream fin = new FileInputStream(System.getProperty("User.dir")+"\\src\\main\\java\\com\\AP\\qa\\data\\testdata.xlsx");
+		   Workbook wb;
+		   wb = WorkbookFactory.create(fin);
+		   Sheet sh = wb.getSheet("sheet1");
+		   Row rw = sh.getRow(0);
+		   Cell cl = rw.getCell(0);
+
+		    cl = sh.getRow(0).getCell(index);
+		   System.out.println(cl.getStringCellValue());
+
+		   return cl.getStringCellValue();
+		   
+		   
+		   }catch(Exception e) {
+		   System.out.println(e);
+		   }
+		   return null;
+		    }
 }
