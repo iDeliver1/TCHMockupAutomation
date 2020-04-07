@@ -25,7 +25,7 @@ import com.AP.qa.base.TestBase;
 
 public class Excel_Libraries extends TestBase {
 	static String [][] Data;
-	static String Excel_path = Report_Folder_path+"\\Excel.xls";
+	static String Excel_path = TestUtil.Report_Folder_path+"\\Excel.xls";
 	public static XSSFWorkbook WB;
 	public static XSSFSheet sh;
 	public static XSSFCell cl;

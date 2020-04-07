@@ -21,17 +21,13 @@ public class TC002_Multiple_Products_Checkout extends TestBase{
 	Payment pay;
 	Logout logout;
 	Multi_Product_Parameter multi;
-	
 
-	@Parameters("Browser")
-	@BeforeTest
-	public void init(String Browser) throws Throwable{
-		initialization(Browser);
-	}
 	
+	@Parameters("Browser")
 	@BeforeClass
-	public void Setup() throws Throwable {
-		SetUP("Automation_Practice", driver.getTitle());
+	public void init(String Browser) throws Throwable {
+		initialization(Browser);
+		SetUP(this.getClass().getSimpleName(), driver.getTitle());
 		login = new Login();
 		multi = new Multi_Product_Parameter();
 		home = new homepage();
@@ -44,13 +40,13 @@ public class TC002_Multiple_Products_Checkout extends TestBase{
 		login.Login_Before_checkout(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
-	@Test(priority = 2, enabled = true, dependsOnMethods = "LoginTest")
+	@Test(priority = 2, enabled = true)
 	public void MultiplePro()throws Throwable {
 		multi.SelectProducts();	
 	}
 	
-	@Test(priority = 3, enabled = true, dependsOnMethods = "MultiplePro")
-	void PaymentTest() throws Throwable{
+	@Test(priority = 3, enabled = true)
+	public void PaymentTest() throws Throwable{
 		pay.paymentpage();	
 	}
 	
@@ -58,10 +54,8 @@ public class TC002_Multiple_Products_Checkout extends TestBase{
 	public void Flush() throws Throwable
 	{
 		logout.LogoutTest();	
-	}
-	
-	@AfterTest
-	public void CloseBrowser() {
 		closeBrowser();
 	}
+	
+	
 }

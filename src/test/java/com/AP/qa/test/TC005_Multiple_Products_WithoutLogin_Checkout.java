@@ -20,15 +20,17 @@ public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
 	Payment pay;
 	Logout logout;
 	
-	@Parameters("Browser")
+	
 	@BeforeTest
-	public void init(String Browser) throws Throwable{
-		initialization(Browser);
+	public void init() throws Throwable{
+		
 	}
 	
+	@Parameters("Browser")
 	@BeforeClass
-	public void Setup() throws Throwable {
-		SetUP("Automation_Practice", driver.getTitle());
+	public void Setup(String Browser) throws Throwable {
+		initialization(Browser);
+		SetUP(this.getClass().getSimpleName(), driver.getTitle());
 		login = new Login();
 		Multibook = new Multiproduct();
 		pay = new Payment();
@@ -36,7 +38,7 @@ public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
 	}
 	
 	@Test(priority = 1, enabled = true)
-	void BookingTest() throws Throwable{
+	public void BookingTest() throws Throwable{
 		Multibook.addproduct();
 	}
 	
@@ -47,7 +49,7 @@ public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
 	
 	
 	@Test(priority = 3, enabled = true, dependsOnMethods = "BookingTest")
-	void PaymentTest() throws Throwable{
+	public	void PaymentTest() throws Throwable{
 		pay.paymentpage();	
 	}
 	
@@ -55,11 +57,12 @@ public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
 	public void Flush() throws Throwable
 	{
 		logout.LogoutTest();	
+		closeBrowser();
 	}
 	
 	@AfterTest
 	public void CloseBrowser() {
-		closeBrowser();
+	
 	}
 
 }

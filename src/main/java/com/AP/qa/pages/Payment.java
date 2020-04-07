@@ -8,7 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.AP.qa.base.TestBase;
-import com.AP.qa.util.TestUtil;
+import com.AP.qa.util.Extent_Report;
+
 
 public class Payment extends TestBase{
 	
@@ -51,24 +52,31 @@ public class Payment extends TestBase{
 	@FindBy(xpath = "//input[@id='email']")
 	WebElement user;
 	
-	TestUtil objTest = new TestUtil();
-	Login login = new Login();
 	
+	Login login = new Login();
+	Extent_Report objExp = new Extent_Report();
 	public Payment() {
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void paymentpage() throws Throwable {
-		
+		try {
 		String amt2 = amount.getText();
 		
-		String value =  TestUtil.getMultiProductValue(Price,tax);
-		objTest.Argvalidation("Price Varification", value, TotalPrice.getText().replace("$", ""));
+		String value =  objExp.getMultiProductValue(Price,tax);
+		
+		try {
+			objExp.Argvalidation("Price Varification", value, TotalPrice.getText().replace("$", ""));
+		}catch(Exception e) {
+			closeBrowser();
+		}
 		
 		proceed.click();
 		
 		try {
-			login.loginAP(prop.getProperty("username"), prop.getProperty("password"));
+			if(driver.getTitle().contains("Login - My Store")) {
+				login.loginAP(prop.getProperty("username"), prop.getProperty("password"));
+				}
 		}catch(Exception e)
 		{
 			System.out.println("Already sign in");
@@ -81,6 +89,10 @@ public class Payment extends TestBase{
 		confirm.click();
 		price_validation(amt2);
 		payment_validation();
+		}
+		catch(Exception e){
+			closeBrowser();
+		}
 	}
 	
 	public void payment_validation() throws Throwable {

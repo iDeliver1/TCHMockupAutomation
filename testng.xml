@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="classes" Thread-count = "2">
-  <test  name="Test">
+<suite name="Suite" >
+  <test  name="Test1"  >
   <parameter name = "Browser" value="chrome"/> 
     <classes>
-      <!-- class name="com.AP.qa.test.TC001_Single_Product_Checkout"/-->
-      <!--  class name="com.AP.qa.test.TC002_Multiple_Products_Checkout"/-->
-      <!--  class name ="com.AP.qa.test.TC003_Reorder_Products_Checkout"/-->
-      <!--  class name="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout"/-->
-      <class name ="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
-       <class name ="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
+      <class name="com.AP.qa.test.TC001_Single_Product_Checkout"/>
+      
     </classes>
-  </test> <!-- Test -->
+  </test>  
+  
+  
+  <test  name="Test2"  >
+  <parameter name = "Browser" value="chrome"/> 
+    <classes>
+    <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout"/>
+    </classes>
+  </test>  
+  
+  <test  name="Test3"  >
+  <parameter name = "Browser" value="chrome"/> 
+    <classes>
+      
+      <class name="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout"/>
+ 
+    </classes>
+  </test>  
+  
+  
+   <test  name="Test4"  >
+  <parameter name = "Browser" value="chrome"/> 
+    <classes>
+    
+      <class name ="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
+    </classes>
+  </test>  
+  
   
 </suite> <!-- Suite -->

@@ -44,6 +44,7 @@ List<WebElement> MultiProducts;
 	}
 
 	public void SelectProducts() throws Throwable {
+		try {
 		int multiproducts  = Integer.parseInt(prop.getProperty("MultiProduct"));
 		
 		for(int j = 0;j<multiproducts;j++ ) {
@@ -75,7 +76,10 @@ List<WebElement> MultiProducts;
 		}
 		
 		
-		
+		}
+		catch(Exception e) {
+			closeBrowser();
+		}
 		
 	}
 }

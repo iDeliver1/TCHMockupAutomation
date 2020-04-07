@@ -36,6 +36,7 @@ public class homepage extends TestBase{
 	}
 	
 	public void order_product() throws Throwable {
+		try {
 		Actions action = new Actions(driver);
 		action.moveToElement(Target).perform();
 		Tshirt.click();
@@ -49,5 +50,10 @@ public class homepage extends TestBase{
 		WaitForObject(checkout, "Check");
 		//wait.until(ExpectedConditions.elementToBeClickable(checkout));
 		checkout.click();
+		}
+		catch(Exception e) {
+			closeBrowser();
+		}
+		
 	}
 }

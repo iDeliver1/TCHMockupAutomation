@@ -1,9 +1,7 @@
 package com.AP.qa.test;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.AP.qa.base.TestBase;
@@ -20,16 +18,12 @@ public class TC001_Single_Product_Checkout extends TestBase {
 	Payment pay;
 	Logout logout;
 	
-
-	@Parameters("Browser")
-	@BeforeTest
-	public void init(String Browser) throws Throwable{
-		initialization(Browser);
-	}
 	
+	@Parameters("Browser")
 	@BeforeClass
-	public void Setup() throws Throwable {
-		SetUP("Automation_Practice", driver.getTitle());
+	public void init(String Browser) throws Throwable {
+		initialization(Browser);
+		SetUP(this.getClass().getSimpleName(), driver.getTitle());
 		login = new Login();
 		home = new homepage();
 		pay = new Payment();
@@ -37,30 +31,28 @@ public class TC001_Single_Product_Checkout extends TestBase {
 	}
 	
 	@Test//(dataProvider = "Run")
-	void LoginTest() throws Throwable{
+	public void LoginTest() throws Throwable{
 		login.Login_Before_checkout(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	
-	@Test(priority = 2, enabled = true, dependsOnMethods = "LoginTest")
-	void BookingTest() throws Throwable{
+	@Test(priority = 2,enabled = true)
+	public void BookingTest() throws Throwable{
 		home.order_product();
 	}
 	
 
-	@Test(priority = 3, enabled = true, dependsOnMethods = "BookingTest")
-	void PaymentTest() throws Throwable{
+	@Test(priority = 3,enabled = true)
+	public void PaymentTest() throws Throwable{
 		pay.paymentpage();	
 	}
 	
 	@AfterClass
 	public void Flush() throws Throwable
 	{
-		logout.LogoutTest();	
-	}
-	
-	@AfterTest
-	public void CloseBrowser() {
+		logout.LogoutTest();
 		closeBrowser();
 	}
+	
+	
 }

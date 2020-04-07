@@ -24,11 +24,13 @@ public class Reorder extends TestBase{
 	}
 	
 	public void ReorderMethod() throws InterruptedException {
-		
+		try {
 		WaitForObject(profile, "Click");		
 		orderDetails.click();
 		selectFirstOrder.click();
-		
+		}catch(Exception e) {
+			closeBrowser();
+		}
 		
 	}
 

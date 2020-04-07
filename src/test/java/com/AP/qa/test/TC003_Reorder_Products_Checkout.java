@@ -20,15 +20,17 @@ public class TC003_Reorder_Products_Checkout extends TestBase {
 	Reorder reorderObj;
 	
 
-	@Parameters("Browser")
+	
 	@BeforeTest
-	public void init(String Browser) throws Throwable{
-		initialization(Browser);
+	public void init() throws Throwable{
+		
 	}
 	
+	@Parameters("Browser")
 	@BeforeClass
-	public void Setup() throws Throwable {
-		SetUP("Automation_Practice", driver.getTitle());
+	public void Setup(String Browser) throws Throwable {
+		initialization(Browser);
+		SetUP(this.getClass().getSimpleName(), driver.getTitle());
 		login = new Login();
 		pay = new Payment();
 		logout = new Logout();
@@ -54,11 +56,12 @@ public class TC003_Reorder_Products_Checkout extends TestBase {
 	public void Flush() throws Throwable
 	{
 		logout.LogoutTest();	
+		closeBrowser();
 	}
 	
 	@AfterTest
 	public void CloseBrowser() {
-		closeBrowser();
+		
 	}
 
 }

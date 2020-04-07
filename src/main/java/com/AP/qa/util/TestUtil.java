@@ -26,9 +26,9 @@ public static XSSFWorkbook WB;
 public static XSSFSheet sh;
 public static XSSFCell cl;
 static Extent_Report objRep = new Extent_Report();
-public static long PAGE_LOAD_TIMEOUT = 20;
-public static long IMPLICIT_WAIT = 20;
-static String Report_Folder_path = "C:\\Reporting\\Report"+fTimestamp();
+public static long PAGE_LOAD_TIMEOUT = 40;
+public static long IMPLICIT_WAIT = 40;
+public static String Report_Folder_path = "C:\\Reporting\\Report"+fTimestamp();
 
 public static String fGetCurrentDate()
 {
@@ -67,70 +67,9 @@ public static String fGetCurrentDate()
 		
 		
 		//Validation for Page Launch
-				public static void validation(String StepName,String Actual,String Expected) throws Throwable{
-					
-					try{
-						Assert.assertEquals(true, Actual.contains(Expected));
-						
-						objRep.Report("PASS",StepName,"Page launch Successfull "+ Actual ,"Should be able to launch "+Expected);
-						}catch(Exception e){ 
-							String cause = e.toString();
-							objRep.	Report("FAIL",StepName,"Page launch unsuccessfull "+ Actual+" Because of "+cause.substring(1, 88) ,"Should be able to launch "+Expected);
-						}
-				}
+				
 				
 				//Function For Value Validation
 				
-			public  void Argvalidation(String StepName,String Actual,String Expected) throws Throwable{
-					
-					try{
-						Assert.assertEquals(Actual, Expected);
-						objRep.Report("PASS","Verifying "+StepName,StepName+" is equal to "+Actual,StepName+"should be equal to "+Expected);
-						
-						log(StepName+" Validation     "+Actual + " is equal to " +Expected);
-						
-						}catch(Exception e){ 
-						log(StepName+"  Validation    "+ Actual + " is not  equal to " +Expected+" because "+e);
-							
-						objRep.Report("FAIL","Verifying "+StepName,StepName+"is equal to "+Actual+""+e,StepName+"should be equal to "+Expected);
-						}
-				
-				}
-
-			//Function for is Object is visble or not
-			public  void Menuvalidation(String StepName,WebElement element) throws Throwable{
-				
-				try{
-					 Assert.assertEquals(true, element.isDisplayed());
-					 objRep.Report("PASS","Verifying "+ StepName,StepName+" is Visible ",StepName+" Must be visible");
-					log(StepName + " is Visible ");
-					}catch(Exception e){ 
-						String cause = e.toString();
-						log(StepName+" is not Visible ");
-						objRep	.Report("FAIL","Verifying "+StepName, StepName+" is not visible because "+cause.substring(1, 88) ,StepName+" Must be visible");
-						
-					}
-			}
 		
-		public static String getMultiProductValue(List<WebElement> element,WebElement prtx) {
-				   float value = 0,tax=0;
-				   try {
-					   
-					   for(int i =0;i<element.size();i++) {
-						   String a = element.get(i).getText();
-						  value = value +Float.parseFloat(a.replace("$", ""));
-					   }
-					   value = value+Float.parseFloat(prtx.getText().replace("$", ""));
-					   
-					   return String.format("%.02f", value);
-					   
-				   }catch(Exception e) {
-					   e.printStackTrace();
-				   }
-				   
-				   
-				   
-				   
-				return null;		
-		}
 }

@@ -69,6 +69,7 @@ public class Login extends TestBase{
 			{
 				Reporting("FAIL"," Enter Username & Password ", "Failed with enter Username"+usr+ " & password "+pwd, "User Should be able to login with Username"+usr+" & password"+pwd);
 				//return new LoginPage();
+				closeBrowser();
 				}
 			}
 		

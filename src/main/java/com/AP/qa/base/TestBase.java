@@ -36,10 +36,11 @@ public class TestBase {
 	public static WebDriverWait wait;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
-	static Extent_Report objExtent = new Extent_Report();
+	public static Extent_Report objExtent = new Extent_Report();
 	private static final Duration DEFAULT_WAIT_POLLING = Duration.ofSeconds(1);
 	private static final Duration DEFAULT_WAIT_DURATION = Duration.ofSeconds(20);
-	public static String Report_Folder_path = "C:\\Reporting\\Report"+TestUtil.fTimestamp();
+	//public static String Report_Folder_path = "C:\\Reporting\\Report"+TestUtil.fTimestamp();
+
 	
 	public TestBase(){
 		
@@ -56,7 +57,7 @@ public class TestBase {
 	}
 	
 	
-	public static void initialization(String browserName) throws Throwable{
+	public  void initialization(String browserName) throws Throwable{
 		
 		try {
 		
@@ -78,6 +79,7 @@ public class TestBase {
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
 		driver = e_driver;	
+
 		}
 		catch(Exception e) {
 			System.out.println(e);
@@ -96,10 +98,8 @@ public class TestBase {
 	}
 	
 	public void SetUP(String Reportname,String Title) throws Throwable{		
-		Extent_Report.createins();
-		initateURL();	
-		Extent_Report.CreateRoportname(Reportname);
-		TestUtil.validation("Verify User is able to launch " +GetProjectName()+"  page", driver.getTitle(), Title);
+		objExtent.CreateRoportname(Reportname);
+		initateURL();
 	}
 	
 public  String GetProjectName(){
@@ -118,14 +118,7 @@ public  String GetProjectName(){
 				Reporter.log(data);
 			}
 		
-		
-		//Getting TestName
-		public void getReportname(String Reportname) throws Throwable{
-			
-			
-		}
-		
-		public  static void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
+		public   void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
 			objExtent.Report(Status, StepName, ActualStep, ExpectedStep);
 			
 		}
@@ -170,10 +163,9 @@ public  String GetProjectName(){
 		
 		
 		//Closing Browser And Saving Report 
-		public static void closeBrowser() {
-			
+		public static   void closeBrowser() {
 			driver.close();
-			Extent_Report.extent.flush();
+			objExtent.flush();
 			
 		}
 

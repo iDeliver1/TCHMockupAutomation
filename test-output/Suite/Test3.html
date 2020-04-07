@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>TestNG:  Test3</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test3</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 07 22:09:29 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>159 seconds (159769 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout.BookingTest()'><b>BookingTest</b><br>Test class: com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout<br/>
+<a href="#Output-812031404" onClick='toggleBox("Output-812031404", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-812031404" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-812031404">
+Trying to find Element By : By.xpath: //ul[@id='homefeatured']//li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line']//div[@class='product-image-container']<br/>
+Found Element By : By.xpath: //ul[@id='homefeatured']//li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line']//div[@class='product-image-container']<br/>
+Trying to find Element By : By.xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]<br/>
+Found Element By : By.xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]<br/>
+Trying to find Element By : By.xpath: //input[@id='quantity_wanted']<br/>
+Found Element By : By.xpath: //input[@id='quantity_wanted']<br/>
+Trying to find Element By : By.xpath: //input[@id='quantity_wanted']<br/>
+Found Element By : By.xpath: //input[@id='quantity_wanted']<br/>
+Trying to find Element By : By.xpath: //input[@id='quantity_wanted']<br/>
+Found Element By : By.xpath: //input[@id='quantity_wanted']<br/>
+Trying to find Element By : By.xpath: //select[@id='group_1']<br/>
+Found Element By : By.xpath: //select[@id='group_1']<br/>
+Trying to find Element By : By.xpath: //select[@id='group_1']<br/>
+Found Element By : By.xpath: //select[@id='group_1']<br/>
+Trying to find Element By : By.xpath: //select[@id='group_1']<br/>
+Found Element By : By.xpath: //select[@id='group_1']<br/>
+Trying to find Element By : By.tagName: option<br/>
+Found Element By : By.tagName: option<br/>
+Trying to click on: [[[[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //select[@id='group_1']]] -> tag name: option]<br/>
+Clicked on: [[[[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //select[@id='group_1']]] -> tag name: option]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'Add to cart')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'Add to cart')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //span[contains(text(),'Add to cart')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //span[contains(text(),'Add to cart')]]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //span[contains(text(),'Proceed to checkout')]]<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout@545997b1</td></tr>
+<tr>
+<td title='com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout.PaymentTest()'><b>PaymentTest</b><br>Test class: com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout<br/>
+<a href="#Output-185488647" onClick='toggleBox("Output-185488647", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-185488647" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-185488647">
+Trying to find Element By : By.xpath: //span[@id='total_price']<br/>
+Found Element By : By.xpath: //span[@id='total_price']<br/>
+Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Found Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Found Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Found Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Trying to find Element By : By.xpath: //td[@id='total_shipping']<br/>
+Found Element By : By.xpath: //td[@id='total_shipping']<br/>
+Trying to find Element By : By.xpath: //span[@id='total_price']<br/>
+Found Element By : By.xpath: //span[@id='total_price']<br/>
+Trying to find Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]<br/>
+Trying to find Element By : By.xpath: //input[@id='email']<br/>
+Found Element By : By.xpath: //input[@id='email']<br/>
+Trying to find Element By : By.xpath: //input[@id='passwd']<br/>
+Found Element By : By.xpath: //input[@id='passwd']<br/>
+Trying to find Element By : By.xpath: //button[@id='SubmitLogin']<br/>
+Found Element By : By.xpath: //button[@id='SubmitLogin']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //button[@id='SubmitLogin']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //button[@id='SubmitLogin']]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'sunil jaiswal')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'sunil jaiswal')]<br/>
+Successful logging with username -  sunjai190688@gmail.com<br/>
+Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]<br/>
+Trying to find Element By : By.xpath: //input[@id='cgv']<br/>
+Found Element By : By.xpath: //input[@id='cgv']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //input[@id='cgv']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //input[@id='cgv']]<br/>
+Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]<br/>
+Trying to find Element By : By.xpath: //a[@class='bankwire']<br/>
+Found Element By : By.xpath: //a[@class='bankwire']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //a[@class='bankwire']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //a[@class='bankwire']]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //span[contains(text(),'I confirm my order')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (23a66396902f0f1fc95459305a7d8625)] -> xpath: //span[contains(text(),'I confirm my order')]]<br/>
+Trying to find Element By : By.xpath: //span[@class='price']<br/>
+Found Element By : By.xpath: //span[@class='price']<br/>
+Successfully validated the order amount -$35.02<br/>
+Trying to find Element By : By.xpath: //span[@class='price']<br/>
+Found Element By : By.xpath: //span[@class='price']<br/>
+Trying to find Element By : By.xpath: //strong[contains(text(),'Your order on My Store is complete.')]<br/>
+Found Element By : By.xpath: //strong[contains(text(),'Your order on My Store is complete.')]<br/>
+Payment successfull of amount -$35.02<br/>
+</div>
+</td>
+<td></td>
+<td>59</td>
+<td>com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout@545997b1</td></tr>
+</table><p>
+</body>
+</html>
