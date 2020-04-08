@@ -34,7 +34,8 @@ public class Extent_Report {
 	    htmlReporter.config().setReportName("Test Report");
 	    //htmlReporter.config().setTestViewChartLocation(CharacterSection.TOP);
 	    htmlReporter.config().setTheme(Theme.STANDARD);
-	    extent1.set(extent);
+	    
+	    
 	  
 	}
 
@@ -46,7 +47,7 @@ public class Extent_Report {
 
 	//Getting TestName
 	  public  ExtentTest CreateRoportname(String Step_details){
-		  logger =getInstance().createTest(Step_details);
+		  logger =extent.createTest(Step_details);
 		  functioncall=1;
 		  j=1;
 		  extentTest.set(logger);
@@ -67,6 +68,7 @@ public class Extent_Report {
 		  
 		  String ReportStatus = "<b>Step Number "+functioncall+"<br>Description :</b> "+Description+"<br><b>Expected :</b> "+ExpectedStep+"<br><b>Actual :</b> "+ActualStep;
 			System.out.println(getTest());
+			Excel_Libraries.fExcelReporter(Description, ActualStep, ExpectedStep, Status1, TestUtil.fGetCurrentDate());
 			try{
 			if(Status1.equalsIgnoreCase("PASS")){	
 				extentTest.get().log(Status.PASS, ReportStatus);
@@ -159,7 +161,7 @@ public class Extent_Report {
 	
 	
 	public void flush(){
-		getInstance().flush();
+		extent.flush();
 	}
 	
 	

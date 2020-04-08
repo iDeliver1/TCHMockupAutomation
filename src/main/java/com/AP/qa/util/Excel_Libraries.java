@@ -2,9 +2,11 @@ package com.AP.qa.util;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -19,6 +21,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.AP.qa.base.TestBase;
+import com.aventstack.extentreports.ExtentReports;
 
 
 
@@ -27,35 +30,80 @@ public class Excel_Libraries extends TestBase {
 	static String [][] Data;
 	static String Excel_path = TestUtil.Report_Folder_path+"\\Excel.xls";
 	public static XSSFWorkbook WB;
-	public static XSSFSheet sh;
-	public static XSSFCell cl;
+	static boolean abc ;
+	static String Reportn;
+	static int Sheetindex=0;
 	
-	public static void create_file() throws IOException {
-		Workbook wb = null;
-		wb = new XSSFWorkbook();
-		wb.createSheet("Sheet1").createRow(0).createCell(0);
-		FileOutputStream fout = new FileOutputStream(new File(Excel_path));
-		wb.write(fout);
-		fout.close();
+	 public static String createExcel(String Reportname) throws InvalidFormatException, IOException{
+			WB = new XSSFWorkbook();
+		if ((new File(Excel_path)).exists()==false) {	
+			
+			Reportn = Reportname;
+			String filename = System.getProperty("user.dir")+"/src/test/java/com/AP/qa/test" ;
+		
+			File file = new File(filename);
+		    String[] fileList = file.list();
+		    
+		    try {
+		    for(String name:fileList){
+		    	System.out.println(name.replace(".java", ""));
+		    	WB.createSheet(name.replace(".java", "")).createRow(0).createCell(0);
+		    }
+		    }catch(Exception f) {
+		    	System.out.println(f);
+		    
+		    }
+			
+			FileOutputStream fout;
+			try {
+				fout = new FileOutputStream(new File(Excel_path));
+				WB.write(fout);
+				fout.close();
+			} catch (FileNotFoundException e) {
+			
+				e.printStackTrace();
+			} catch (IOException e) {
+			
+				e.printStackTrace();
+			}
+		
+			
+		}
+		
+		else {
+			Reportn = Reportname;
+		}
+		
+		
+		
+		Sheetindex= Sheetindex+1;
+		return Reportn;
+		
 	}
 	
 	//----------------------------------------------Excel Reporting-------------------------------------------------------	   
 	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time) throws Throwable
 		{ 
+		   
 		   String[] Attribute = {"Step_details","Actual", "Expected","Status","Time"};
 				try{
-					FileInputStream fin = new FileInputStream(Excel_path); 
-					WB = new XSSFWorkbook(fin);
+					 FileInputStream fin = new FileInputStream(Excel_path);
+					 WB = new XSSFWorkbook();
+					 WB =  (XSSFWorkbook) WorkbookFactory.create(fin);
 					}
 				catch(Exception e){
 					System.out.println(e);
 					}
-			sh = WB.getSheet("Sheet1");
-			//sh = WB.createSheet("Sheet1");	
+				 
+		int	shindex = WB.getActiveSheetIndex();
+		Sheet sh = WB.getSheetAt(shindex+Sheetindex-1);
+		String hh = 	sh.getSheetName();
+		try {
 			int Row_cnt = sh.getLastRowNum();
-			XSSFRow newRow = sh.createRow(0);
 			
-
+			Row newRow = sh.createRow(0);
+		
+		
 			//Creating front color by cell style  	
 			XSSFFont customFont = WB.createFont();
 			customFont.setBold(true);
@@ -63,12 +111,13 @@ public class Excel_Libraries extends TestBase {
 			
 			  	for(int j=0;j<=4;j++)
 			  	{	
-					newRow.createCell(j).setCellValue(Attribute[j]);
+			  		newRow.createCell(j).setCellValue(Attribute[j]);
 			  	}
 			
 			  
 			String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time};
-			XSSFRow newRow1 = sh.createRow(Row_cnt+1);
+		Row	 newRow1 = sh.createRow(Row_cnt+1);
+			
 				for(int i=0;i<=4;i++)
 					{
 					newRow1.createCell(i).setCellValue(Attribute_value[i]);
@@ -88,6 +137,10 @@ public class Excel_Libraries extends TestBase {
 			FileOutputStream fout = new FileOutputStream(Excel_path);
 			WB.write(fout);
 			fout.close();
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
 		}
 	   
 	 //------------------------------------------------Reading Data from Excel-------------------------------	   
@@ -144,4 +197,28 @@ public class Excel_Libraries extends TestBase {
 		   }
 		   return null;
 		    }
+	   
+	   //Checking Sheet has value or not
+	   public static boolean  cellempty(XSSFWorkbook WB,String Rep) throws InvalidFormatException, IOException {
+		   FileInputStream fin = new FileInputStream(Excel_path);
+		   WB = (XSSFWorkbook) WorkbookFactory.create(fin);
+			  Sheet sh = WB.getSheet(Rep);
+			  Row rw = sh.getRow(0);
+			  Cell cell = rw.getCell(0);
+			  
+			  if (cell != null) { // use row.getCell(x, Row.CREATE_NULL_AS_BLANK) to avoid null cells
+			        return true;
+			    }
+
+			    if (cell.getCellType() != Cell.CELL_TYPE_BLANK) {
+			        return true;
+			    }
+
+			    if (cell.getCellType()!= Cell.CELL_TYPE_STRING && cell.getStringCellValue().trim().isEmpty()) {
+			        return true;
+			    }
+		   
+		return false;
+		   
+	   }
 }
