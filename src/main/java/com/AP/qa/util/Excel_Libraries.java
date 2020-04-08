@@ -97,7 +97,8 @@ public class Excel_Libraries extends TestBase {
 				 
 		int	shindex = WB.getActiveSheetIndex();
 		Sheet sh = WB.getSheetAt(shindex+Sheetindex-1);
-		String hh = 	sh.getSheetName();
+		sh.setDefaultColumnWidth(25);
+		
 		try {
 			int Row_cnt = sh.getLastRowNum();
 			
@@ -106,12 +107,12 @@ public class Excel_Libraries extends TestBase {
 		
 			//Creating front color by cell style  	
 			XSSFFont customFont = WB.createFont();
-			customFont.setBold(true);
 			CellStyle style = WB.createCellStyle();
-			
+		
 			  	for(int j=0;j<=4;j++)
 			  	{	
 			  		newRow.createCell(j).setCellValue(Attribute[j]);
+			  		
 			  	}
 			
 			  

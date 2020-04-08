@@ -2,28 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="Browser" value="chrome"/>
-  <test name="Test1">
+  <test name="Test">
     <parameter name="Browser" value="chrome"/>
     <classes>
       <class name="com.AP.qa.test.TC001_Single_Product_Checkout"/>
     </classes>
-  </test> <!-- Test1 -->
-  <test name="Test2">
-    <parameter name="Browser" value="chrome"/>
-    <classes>
-      <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout"/>
-    </classes>
-  </test> <!-- Test2 -->
-  <test name="Test3">
-    <parameter name="Browser" value="chrome"/>
-    <classes>
-      <class name="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout"/>
-    </classes>
-  </test> <!-- Test3 -->
-  <test name="Test4">
-    <parameter name="Browser" value="chrome"/>
-    <classes>
-      <class name="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
-    </classes>
-  </test> <!-- Test4 -->
+  </test> <!-- Test -->
 </suite> <!-- Failed suite [Suite] -->
