@@ -4,7 +4,7 @@
   <test name="Test">
   <parameter name = "Browser" value="chrome"/> 
     <classes>
-      <class name="com.AP.qa.test.TC001_Single_Product_Checkout"/>
+      <class name="com.AP.qa.test.TC006_CreateNewUser_Shopping"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

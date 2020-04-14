@@ -53,18 +53,21 @@ List<WebElement> MultiProducts;
 				for(int i=0;i<=MultiProducts.size();i++)
 				{
 					try {
-					if(MultiProducts.get(i).getText().contains(Excel_Libraries.getdata(j)))
-					{
-						Actions action = new Actions(driver);
-						action.moveToElement(MultiProducts.get(i)).build().perform();		
-						WaitForObject(Addtocart.get(i), "Click");
-						counter=counter+1;
-						break;
+					if(Excel_Libraries.getdata(j).isEmpty()==false) {
+						Reporting("Pass", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j));
+						if(MultiProducts.get(i).getText().contains(Excel_Libraries.getdata(j)))
+						{
+							Actions action = new Actions(driver);
+							action.moveToElement(MultiProducts.get(i)).build().perform();		
+							WaitForObject(Addtocart.get(i), "Click");
+							counter=counter+1;
+							break;
+						}
 					}
 				}
 				catch(Exception f){
 					f.printStackTrace();
-					System.out.println("Not founds");
+					Reporting("Fail", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j));
 				}
 				}
 				
@@ -78,6 +81,8 @@ List<WebElement> MultiProducts;
 		
 		}
 		catch(Exception e) {
+			String Casue = e.toString();
+			Reporting("Fail", "Product Selection Page  Validation", "Payment Page should displayed ", "Payment Page is unable to show due to"+Casue.substring(1, 88));
 			closeBrowser();
 		}
 		

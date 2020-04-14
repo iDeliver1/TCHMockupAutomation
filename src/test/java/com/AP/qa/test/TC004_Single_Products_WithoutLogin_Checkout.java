@@ -1,9 +1,7 @@
 package com.AP.qa.test;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.AP.qa.base.TestBase;
@@ -19,12 +17,6 @@ public class TC004_Single_Products_WithoutLogin_Checkout extends TestBase{
 	Payment pay;
 	Logout logout;
 	
-
-	
-	@BeforeTest
-	public void init() throws Throwable{
-		
-	}
 	
 	@Parameters("Browser")
 	@BeforeClass
@@ -57,8 +49,4 @@ public class TC004_Single_Products_WithoutLogin_Checkout extends TestBase{
 		closeBrowser();
 	}
 	
-	@AfterTest
-	public void CloseBrowser() {
-		
-	}
 }

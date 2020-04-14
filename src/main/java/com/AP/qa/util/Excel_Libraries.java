@@ -14,14 +14,10 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFFont;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.AP.qa.base.TestBase;
-import com.aventstack.extentreports.ExtentReports;
 
 
 
@@ -85,7 +81,7 @@ public class Excel_Libraries extends TestBase {
 	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time) throws Throwable
 		{ 
 		   
-		   String[] Attribute = {"Step_details","Actual", "Expected","Status","Time"};
+		   String[] Attribute = {"Step_details","Actual", "Expected","Status","Date"};
 				try{
 					 FileInputStream fin = new FileInputStream(Excel_path);
 					 WB = new XSSFWorkbook();
@@ -184,6 +180,7 @@ public class Excel_Libraries extends TestBase {
 		   Workbook wb;
 		   wb = WorkbookFactory.create(fin);
 		   Sheet sh = wb.getSheet("sheet1");
+		   //Sheet sh = wb.getSheet(sheet);
 		   Row rw = sh.getRow(0);
 		   Cell cl = rw.getCell(0);
 
@@ -222,4 +219,26 @@ public class Excel_Libraries extends TestBase {
 		return false;
 		   
 	   }
+	   
+	   public static String fRead(String Attri_name,String Sheet_name) throws Throwable
+	    {
+	FileInputStream fin=new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/AP/"+ "qa/data/testdata.xlsx");
+	WB=(XSSFWorkbook) WorkbookFactory.create(fin);
+	Sheet sh = WB.getSheet(Sheet_name);
+	int Row_cnt = sh.getLastRowNum();
+	  for(int i=0;i<=Row_cnt;i++)  
+	  {
+	  Row rw_obj = sh.getRow(i);
+	  Cell cell_obj = rw_obj.getCell(0);
+	  String Attri = cell_obj.toString();
+	     if(Attri.equals(Attri_name))
+	     {
+	  Cell Attri_valu= rw_obj.getCell(1);
+	  return Attri_valu.toString();
+	     }
+	  }
+	return null;  
+	}
+
+	   
 }

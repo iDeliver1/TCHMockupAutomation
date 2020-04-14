@@ -54,6 +54,8 @@ public class Payment extends TestBase{
 	
 	
 	Login login = new Login();
+	CreateUser usr = new CreateUser();
+	
 	Extent_Report objExp = new Extent_Report();
 	public Payment() {
 		PageFactory.initElements(driver, this);
@@ -91,8 +93,23 @@ public class Payment extends TestBase{
 		payment_validation();
 		}
 		catch(Exception e){
+			String Cause = e.toString();
+			Reporting("Fail", "Payment Page Validation", "Payment Page  should displayed ", "Payment Page is unable to show due to"+Cause.substring(1, 88));
 			closeBrowser();
 		}
+	}
+	
+	public void Create_new_User() throws Throwable {
+		String amt = amount.getText();
+		proceed.click();
+		usr.RealTimeUserMethod();
+		processAddress.click();
+		checkbox.click();
+		processCarrier.click();
+		pay_method.click();
+		confirm.click();
+		price_validation(amt);
+		payment_validation();
 	}
 	
 	public void payment_validation() throws Throwable {

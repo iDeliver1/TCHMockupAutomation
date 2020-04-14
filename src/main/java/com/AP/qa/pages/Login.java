@@ -39,9 +39,16 @@ public class Login extends TestBase{
 	}
 	
 	public void Login_Before_checkout(String usr, String pass) throws Throwable {
+		try {
 		signInbtn.click();
 		loginAP(usr,pass);
 		home.click();
+		}
+		catch(Exception e) {
+			String Cause = e.toString();
+			Reporting("Fail", "Login Page Validation", "Login Page should displayed ", "Login Page is unable to show due to"+Cause.substring(1, 88));
+			closeBrowser();	
+		}
 	}
 	
 	

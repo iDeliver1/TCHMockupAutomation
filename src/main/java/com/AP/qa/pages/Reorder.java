@@ -23,12 +23,14 @@ public class Reorder extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void ReorderMethod() throws InterruptedException {
+	public void ReorderMethod() throws Throwable {
 		try {
 		WaitForObject(profile, "Click");		
 		orderDetails.click();
 		selectFirstOrder.click();
 		}catch(Exception e) {
+			String Cause = e.toString();
+			Reporting("Fail", "Re-Order Page Validation", "Re-Order Page should displayed ", "Re-Order Page is unable to show due to"+Cause.substring(1, 88));
 			closeBrowser();
 		}
 		

@@ -21,7 +21,7 @@
   <parameter name = "Browser" value="chrome"/> 
     <classes>
       
-      <class name="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout"/>
+      <class name="com.AP.qa.test.TC003_Reorder_Products_Checkout"/>
  
     </classes>
   </test>  
@@ -31,9 +31,24 @@
   <parameter name = "Browser" value="chrome"/> 
     <classes>
     
+      <class name ="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout"/>
+    </classes>
+  </test>  
+  
+   <test  name="Test5"  >
+  <parameter name = "Browser" value="chrome"/> 
+    <classes>
+    
       <class name ="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
     </classes>
   </test>  
   
+   <test  name="Test6"  >
+  <parameter name = "Browser" value="chrome"/> 
+    <classes>
+    
+      <class name ="com.AP.qa.test.TC006_CreateNewUser_Shopping"/>
+    </classes>
+  </test>  
   
 </suite> <!-- Suite -->

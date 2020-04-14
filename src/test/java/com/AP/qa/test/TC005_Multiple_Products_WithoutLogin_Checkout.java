@@ -1,30 +1,23 @@
 package com.AP.qa.test;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.AP.qa.base.TestBase;
 import com.AP.qa.pages.Login;
 import com.AP.qa.pages.Logout;
-import com.AP.qa.pages.Multiproduct;
+import com.AP.qa.pages.Multi_Product_Parameter;
 import com.AP.qa.pages.Payment;
 
 
 public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
 	Login login;
-	Multiproduct Multibook;
+	Multi_Product_Parameter multi;
 	Payment pay;
 	Logout logout;
 	
-	
-	@BeforeTest
-	public void init() throws Throwable{
-		
-	}
 	
 	@Parameters("Browser")
 	@BeforeClass
@@ -32,23 +25,18 @@ public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
 		initialization(Browser);
 		SetUP(this.getClass().getSimpleName(), driver.getTitle());
 		login = new Login();
-		Multibook = new Multiproduct();
+		multi = new Multi_Product_Parameter();
 		pay = new Payment();
 		logout = new Logout();
 	}
 	
 	@Test(priority = 1, enabled = true)
 	public void BookingTest() throws Throwable{
-		Multibook.addproduct();
+		multi.SelectProducts();	
 	}
 	
-	/*@Test(priority = 2, enabled = true, dependsOnMethods = "BookingTest")
-	void LoginTest() throws Throwable{
-		login.loginAP(prop.getProperty("username"), prop.getProperty("password"));
-	}*/
 	
-	
-	@Test(priority = 3, enabled = true, dependsOnMethods = "BookingTest")
+	@Test(priority = 2, enabled = true, dependsOnMethods = "BookingTest")
 	public	void PaymentTest() throws Throwable{
 		pay.paymentpage();	
 	}
@@ -58,11 +46,6 @@ public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
 	{
 		logout.LogoutTest();	
 		closeBrowser();
-	}
-	
-	@AfterTest
-	public void CloseBrowser() {
-	
 	}
 
 }

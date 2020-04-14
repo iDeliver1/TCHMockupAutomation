@@ -52,6 +52,8 @@ public class homepage extends TestBase{
 		checkout.click();
 		}
 		catch(Exception e) {
+			String Cause = e.toString();
+			Reporting("Fail", "Home Page Validation", "homepage should displayed ", "Homepage is unable to show due to"+Cause.substring(1, 88));
 			closeBrowser();
 		}
 		
