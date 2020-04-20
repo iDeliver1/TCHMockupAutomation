@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Test">
+  <test  name="Test4"  >
   <parameter name = "Browser" value="chrome"/> 
+  <parameter name = "Product" value="Single"/> 
     <classes>
-      <class name="com.AP.qa.test.TC006_CreateNewUser_Shopping"/>
+    
+      <class name ="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  
+  
+     <!-- Test -->
 </suite> <!-- Suite -->

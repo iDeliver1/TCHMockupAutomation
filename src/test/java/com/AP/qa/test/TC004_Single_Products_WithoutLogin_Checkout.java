@@ -9,6 +9,7 @@ import com.AP.qa.pages.Login;
 import com.AP.qa.pages.Logout;
 import com.AP.qa.pages.Payment;
 import com.AP.qa.pages.homepage;
+import com.AP.qa.util.TestUtil;
 
 public class TC004_Single_Products_WithoutLogin_Checkout extends TestBase{
 
@@ -23,29 +24,58 @@ public class TC004_Single_Products_WithoutLogin_Checkout extends TestBase{
 	public void Setup(String Browser) throws Throwable {
 		initialization(Browser);
 		SetUP(this.getClass().getSimpleName(), driver.getTitle());
-		login = new Login();
 		home = new homepage();
-		pay = new Payment();
-		logout = new Logout();
+		
 	}
 	
-	
+	@Parameters("Product")
 	@Test(priority = 1, enabled = true)
-	public void BookingTest() throws Throwable{
-		home.order_product();
+	public void BookingTest(String Product) throws Throwable{
+		try {
+			TestUtil.MoveElement(home.Target);	//Moving object to desired postion 
+			
+			home.Tshirt.click();
+			
+			WaitForObject(home.qty, "Check");
+			
+			home.qty.clear();
+			
+			home.qty.sendKeys(prop.getProperty("Qty"));	//Can give number of quantity 
+			
+			TestUtil.SelectQuantity(home.size, "L");	//Select Size -S / M /L
+			
+			home.cart.click();
+			
+			WaitForObject(home.checkout, "Click");
+			
+			}
+			catch(Exception e) {
+				String Cause = e.toString();
+				Reporting("Fail", "Payment Page Validation", "Payment Page should displayed ", "Payment Page is unable to show due to"+Cause.substring(1, 88));
+				closeBrowser();
+			}
 	}
 	
 
-	@Test(priority = 2, enabled = true, dependsOnMethods = "BookingTest")
+	@Test(priority = 2, enabled = true)
 	public void PaymentTest() throws Throwable{
-		pay.paymentpage();	
-		
+		GlobalValue = TestUtil.CheckoutPriceValidation();
+		pay = TestUtil.Argvalidationforlogin("Check Out Price ", GlobalValue,Payment.TotalPrice.getText().replace("$", ""));
+		FinalPriceValue = pay.paymentpage();	
+		logout = TestUtil.price_validation(FinalPriceValue, Payment.price.getText().replace("$", ""));
+	}
+	
+	
+	@Test(priority = 4, enabled = true)
+	public void LogoutTest() throws Throwable {
+		GlobalValue = logout.LogoutTest();	
+		TestUtil.logoutvalidation(GlobalValue);
 	}
 	
 	@AfterClass
 	public void Flush() throws Throwable
 	{
-		logout.LogoutTest();	
+		
 		closeBrowser();
 	}
 	

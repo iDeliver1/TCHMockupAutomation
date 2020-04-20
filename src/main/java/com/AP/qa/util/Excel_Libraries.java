@@ -43,12 +43,14 @@ public class Excel_Libraries extends TestBase {
 		    try {
 		    for(String name:fileList){
 		    	System.out.println(name.replace(".java", ""));
-		    	WB.createSheet(name.replace(".java", "")).createRow(0).createCell(0);
+		    	//WB.createSheet(name.replace(".java", "")).createRow(0).createCell(0);
 		    }
 		    }catch(Exception f) {
 		    	System.out.println(f);
 		    
 		    }
+		    
+		    WB.createSheet(Reportname).createRow(0).createCell(0);
 			
 			FileOutputStream fout;
 			try {
@@ -67,6 +69,22 @@ public class Excel_Libraries extends TestBase {
 		}
 		
 		else {
+			
+			try{
+				 FileInputStream fin = new FileInputStream(Excel_path);
+				 WB = new XSSFWorkbook();
+				 WB =  (XSSFWorkbook) WorkbookFactory.create(fin);
+				}
+			catch(Exception e){
+				System.out.println(e);
+				}
+			
+			 WB.createSheet(Reportname).createRow(0).createCell(0);
+			 
+			 FileOutputStream fout = new FileOutputStream(Excel_path);
+				WB.write(fout);
+				fout.close();
+			
 			Reportn = Reportname;
 		}
 		

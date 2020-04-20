@@ -47,6 +47,8 @@ public class TestBase {
 	private static final Duration DEFAULT_WAIT_POLLING = Duration.ofSeconds(1);
 	private static final Duration DEFAULT_WAIT_DURATION = Duration.ofSeconds(20);
 	public static String Report_Folder_path = "C:\\Reporting\\Report"+TestUtil.fTimestamp();
+	public WebElement GlobalElement;
+	public static String GlobalValue,FinalPriceValue;
 
 	
 	public TestBase(){
@@ -120,13 +122,13 @@ public  String GetProjectName(){
 	}
 
 	//Logging method so that the same log is added in logger as well as syso
-			public void log(String data) {
+			public static void log(String data) {
 				
 				log.info(data);
 				Reporter.log(data);
 			}
 		
-		public   void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
+		public static   void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
 			objExtent.Report(Status, StepName, ActualStep, ExpectedStep);
 			
 		}

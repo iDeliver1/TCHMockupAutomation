@@ -43,7 +43,7 @@ List<WebElement> MultiProducts;
 		PageFactory.initElements(driver, this);
 	}
 
-	public void SelectProducts() throws Throwable {
+	public Payment SelectProducts() throws Throwable {
 		try {
 		int multiproducts  = Integer.parseInt(prop.getProperty("MultiProduct"));
 		
@@ -77,7 +77,7 @@ List<WebElement> MultiProducts;
 				else
 					WaitForObject(ContinueShop, "Click");		
 		}
-		
+		return new Payment();
 		
 		}
 		catch(Exception e) {
@@ -85,6 +85,7 @@ List<WebElement> MultiProducts;
 			Reporting("Fail", "Product Selection Page  Validation", "Payment Page should displayed ", "Payment Page is unable to show due to"+Casue.substring(1, 88));
 			closeBrowser();
 		}
+		return null;
 		
 	}
 }

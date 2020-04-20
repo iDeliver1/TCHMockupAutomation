@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="Product" value="Multi"/>
   <parameter name="Browser" value="chrome"/>
   <test name="Test1">
+    <parameter name="Product" value="Single"/>
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.AP.qa.test.TC001_Single_Product_Checkout"/>
+      <class name="com.AP.qa.test.TC001_Single_Product_Checkout1"/>
     </classes>
   </test> <!-- Test1 -->
   <test name="Test2">
+    <parameter name="Product" value="Multi"/>
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout"/>
+      <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout_2"/>
     </classes>
   </test> <!-- Test2 -->
   <test name="Test3">
+    <parameter name="Product" value="Reorder"/>
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.AP.qa.test.TC003_Reorder_Products_Checkout"/>
+      <class name="com.AP.qa.test.TC003_Reorder_Products_Checkout_3"/>
     </classes>
   </test> <!-- Test3 -->
   <test name="Test4">
+    <parameter name="Product" value="Single"/>
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout"/>
+      <class name="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout_4"/>
     </classes>
   </test> <!-- Test4 -->
   <test name="Test5">
+    <parameter name="Product" value="Multi"/>
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout"/>
+      <class name="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5"/>
     </classes>
   </test> <!-- Test5 -->
-  <test name="Test6">
-    <parameter name="Browser" value="chrome"/>
-    <classes>
-      <class name="com.AP.qa.test.TC006_CreateNewUser_Shopping"/>
-    </classes>
-  </test> <!-- Test6 -->
 </suite> <!-- Failed suite [Suite] -->

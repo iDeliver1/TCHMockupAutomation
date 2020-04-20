@@ -29,7 +29,7 @@ public class Login extends TestBase{
 	@FindBy(xpath = "//span[contains(text(),'sunil jaiswal')]")
 	WebElement validate_user;
 	
-	TestUtil objTe = new TestUtil();
+	
 	public Login() {
 		PageFactory.initElements(driver, this);
 	}
@@ -38,47 +38,34 @@ public class Login extends TestBase{
 		return validate_user.isDisplayed();
 	}
 	
-	public void Login_Before_checkout(String usr, String pass) throws Throwable {
-		try {
+	public WebElement Login_Before_checkout(String usr, String pass) throws Throwable {
 		signInbtn.click();
-		loginAP(usr,pass);
-		home.click();
-		}
-		catch(Exception e) {
-			String Cause = e.toString();
-			Reporting("Fail", "Login Page Validation", "Login Page should displayed ", "Login Page is unable to show due to"+Cause.substring(1, 88));
-			closeBrowser();	
-		}
-	}
-	
-	
-	public void loginAP(String usr, String pass) throws Throwable {
-		//signInbtn.click();
 		user.sendKeys(usr);
 		password.sendKeys(pass);
 		signIn.click();
-		LoginValidation(usr,pass);
-		//home.click();
+		home.click();
+		return validate_user;
+		
 	}
 	
-	public void LoginValidation(String usr,String pwd) throws Throwable {
-		try {
-			if(validateSWNLogo()){
 	
-				log("Successful logging with username -  "+usr);
-				Reporting("Pass"," Enter Username & Password ", "Entered Username "+usr+" & password "+pwd, "User Should be able to enter Username "+usr+" & password "+pwd);
-				
+	
+	public WebElement Login_After_checkout(String usr, String pass) throws Throwable {
+		//signInbtn.click();
+		try{
+		user.sendKeys(usr);
+		password.sendKeys(pass);
+		signIn.click();
+		return validate_user;
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		return null;
 
-				}
-			}
-			
-			catch(Exception e)
-			{
-				Reporting("FAIL"," Enter Username & Password ", "Failed with enter Username"+usr+ " & password "+pwd, "User Should be able to login with Username"+usr+" & password"+pwd);
-				//return new LoginPage();
-				closeBrowser();
-				}
-			}
+	}
+	
+	
 		
 	}
 

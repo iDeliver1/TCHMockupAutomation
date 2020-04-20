@@ -17,27 +17,10 @@ public class Logout extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void LogoutTest() throws Throwable {
+	public String LogoutTest() throws Throwable {
 		signOut.click();
-		Logout_validation();
+        return signIn.getText();
 	}
 	
-	public void Logout_validation() throws Throwable {
-		
-		try {
-			String sign = signIn.getText();
-			System.out.println(sign);
-			Assert.assertEquals(true, sign.contains("Sign in"));
-			Reporting("Pass","Logout Validation","Logout successfull with the user -"+prop.getProperty("username"),"User should Logout from Store");
-			log("Logout successfull");
-		
-		}catch(Exception e)
-		{
-			System.out.println(e);
-			Reporting("Fail","Logout Validation","Logout Failed","User should Logout from Store");
-			log("Logout failed");
-			
-		}
-	}
-
+	
 }

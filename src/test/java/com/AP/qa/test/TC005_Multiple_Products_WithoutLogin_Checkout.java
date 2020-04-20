@@ -4,48 +4,53 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.AP.qa.base.TestBase;
-import com.AP.qa.pages.Login;
 import com.AP.qa.pages.Logout;
-import com.AP.qa.pages.Multi_Product_Parameter;
 import com.AP.qa.pages.Payment;
+import com.AP.qa.pages.homepage;
+import com.AP.qa.util.TestUtil;
 
 
 public class TC005_Multiple_Products_WithoutLogin_Checkout extends TestBase{
-	Login login;
-	Multi_Product_Parameter multi;
+	homepage home;
 	Payment pay;
 	Logout logout;
-	
 	
 	@Parameters("Browser")
 	@BeforeClass
 	public void Setup(String Browser) throws Throwable {
 		initialization(Browser);
 		SetUP(this.getClass().getSimpleName(), driver.getTitle());
-		login = new Login();
-		multi = new Multi_Product_Parameter();
-		pay = new Payment();
-		logout = new Logout();
+		home = new homepage();
 	}
 	
+	@Parameters("Product")
 	@Test(priority = 1, enabled = true)
-	public void BookingTest() throws Throwable{
-		multi.SelectProducts();	
+	public void BookingTest(String Product) throws Throwable{
+		home.order_product(Product);
+	}
+	
+
+	@Test(priority = 2, enabled = true)
+	public void PaymentTest() throws Throwable{
+		GlobalValue = TestUtil.CheckoutPriceValidation();
+		pay = TestUtil.Argvalidationforlogin("Check Out Price ", GlobalValue,Payment.TotalPrice.getText().replace("$", ""));
+		FinalPriceValue = pay.paymentpage();	
+		logout = TestUtil.price_validation(FinalPriceValue, Payment.price.getText().replace("$", ""));
 	}
 	
 	
-	@Test(priority = 2, enabled = true, dependsOnMethods = "BookingTest")
-	public	void PaymentTest() throws Throwable{
-		pay.paymentpage();	
+	@Test(priority = 4, enabled = true)
+	public void LogoutTest() throws Throwable {
+		GlobalValue = logout.LogoutTest();	
+		TestUtil.logoutvalidation(GlobalValue);
 	}
 	
 	@AfterClass
 	public void Flush() throws Throwable
 	{
-		logout.LogoutTest();	
+		
 		closeBrowser();
 	}
-
+	
 }
