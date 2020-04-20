@@ -37,18 +37,7 @@ public class Excel_Libraries extends TestBase {
 			Reportn = Reportname;
 			String filename = System.getProperty("user.dir")+"/src/test/java/com/AP/qa/test" ;
 		
-			File file = new File(filename);
-		    String[] fileList = file.list();
-		    
-		    try {
-		    for(String name:fileList){
-		    	System.out.println(name.replace(".java", ""));
-		    	//WB.createSheet(name.replace(".java", "")).createRow(0).createCell(0);
-		    }
-		    }catch(Exception f) {
-		    	System.out.println(f);
-		    
-		    }
+			
 		    
 		    WB.createSheet(Reportname).createRow(0).createCell(0);
 			
