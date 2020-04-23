@@ -16,11 +16,13 @@ import java.util.logging.Logger;
 
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -33,6 +35,9 @@ import com.AP.qa.util.Extent_Report;
 import com.AP.qa.util.TestUtil;
 import com.AP.qa.util.WebEventListener;
 import com.google.common.base.Function;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 
 
@@ -49,8 +54,9 @@ public class TestBase {
 	public static String Report_Folder_path = "C:\\Reporting\\Report"+TestUtil.fTimestamp();
 	public WebElement GlobalElement;
 	public static String GlobalValue,FinalPriceValue;
-
-	
+	public static int counter = 0;
+	public static String brow;
+	public static String BrowserVersion;
 	public TestBase(){
 		
 		try {
@@ -69,10 +75,14 @@ public class TestBase {
 	public  void initialization(String browserName) throws Throwable{
 		
 		try {
-		
-		if(browserName.equals("chrome")){
+			if(counter == 0) {
+				 BrowserVersion = getBrowserVersion(browserName);	
+			}
 			
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/com/AP/qa/driver/chromedriver.exe");
+		System.out.println(BrowserVersion);
+		if(browserName.equals("chrome")){
+		
+			WebDriverManager.chromedriver().version(BrowserVersion).setup();
 			driver = new ChromeDriver(); 
 		
 		
@@ -93,10 +103,28 @@ public class TestBase {
 		catch(Exception e) {
 			System.out.println(e);
 		}
-	
+		counter = counter+1;
 }
 	
+	public static String getBrowserVersion(String brwo) throws IOException {
+		try {
+			
+			Runtime rt = Runtime.getRuntime();
+		    try {
+		       rt.exec("cmd  /K \"dir /B/AD \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > ‪C:\\version.txt\"");
+		       brow = TestUtil.getversion();
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		    }
+		return brow.substring(0, brow.length() - 4);
+	}
+	catch(Exception e)
+	{
+	brow = e.toString();
+		return brow;
+	}
 	
+	}
 	
 	public void initateURL() throws Throwable{
 		driver.manage().window().maximize();

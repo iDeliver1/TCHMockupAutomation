@@ -128,6 +128,7 @@ public class homepage extends TestBase{
 								if(MultiProducts.get(i).getText().contains(Excel_Libraries.getdata(j)))
 								{
 									TestUtil.MoveElement(MultiProducts.get(i));
+									WaitForObject(Addtocart.get(i), "Click");
 									counter=counter+1;
 									break;
 								}

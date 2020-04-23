@@ -2,18 +2,22 @@ package com.AP.qa.util;
 
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -36,6 +40,7 @@ static Extent_Report objRep = new Extent_Report();
 public static long PAGE_LOAD_TIMEOUT = 40;
 public static long IMPLICIT_WAIT = 40;
 public static String Report_Folder_path = "C:\\Reporting\\Report"+fTimestamp();
+
 static Login login = new Login();
 Payment Pay = new Payment();
 
@@ -233,6 +238,29 @@ public static String fGetCurrentDate()
 			}
 			return null;
 		}
+		
+		public static String getversion() {
+			 String data = "";
+			try {
+			File myObj = new File("C:\\version.txt");
+		      Scanner myReader = new Scanner(myObj);
+		      while (myReader.hasNextLine()) {
+		         data = myReader.nextLine();
+		        System.out.println(data);
+		        break;
+		        
+		      }
+		      myReader.close();
+		      return data;
+		    } catch (FileNotFoundException e) {
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		    }
+		  
+			return null;
+		}
+		
+		
 		
 		//Function for move able object 
 		

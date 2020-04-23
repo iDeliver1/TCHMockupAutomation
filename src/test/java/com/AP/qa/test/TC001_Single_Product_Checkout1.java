@@ -13,7 +13,7 @@ import com.AP.qa.pages.homepage;
 import com.AP.qa.util.TestUtil;
 
 
-@Test
+
 public class TC001_Single_Product_Checkout1 extends TestBase {
 	
 	Login login;
