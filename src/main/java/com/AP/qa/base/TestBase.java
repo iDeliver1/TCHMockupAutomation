@@ -104,25 +104,7 @@ public class TestBase {
 		counter = counter+1;
 }
 	
-	public static String getBrowserVersion(String brwo) throws IOException {
-		try {
-			
-			Runtime rt = Runtime.getRuntime();
-		    try {
-		       rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > F:/version.txt\"");
-		       brow = TestUtil.getversion();
-		    } catch (IOException e) {
-		        e.printStackTrace();
-		    }
-		return brow.substring(0, brow.length() - 4);
-	}
-	catch(Exception e)
-	{
-	brow = e.toString();
-		return brow;
-	}
 	
-	}
 	
 	public void initateURL() throws Throwable{
 		driver.manage().window().maximize();
