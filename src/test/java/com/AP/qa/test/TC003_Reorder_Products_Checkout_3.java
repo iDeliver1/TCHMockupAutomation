@@ -4,21 +4,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.AP.qa.base.TestBase;
 import com.AP.qa.pages.Login;
 import com.AP.qa.pages.Logout;
 import com.AP.qa.pages.Payment;
-import com.AP.qa.pages.Reorder;
 import com.AP.qa.pages.homepage;
-import com.AP.qa.util.TestUtil;
+import com.AP.qa.util.Genral_Function;
+
 
 public class TC003_Reorder_Products_Checkout_3 extends TestBase{
 
 	Login login;
-	homepage home;
-	Payment pay;
-	Logout logout;
+
 	
 	@Parameters("Browser")
 	@BeforeClass
@@ -28,36 +25,56 @@ public class TC003_Reorder_Products_Checkout_3 extends TestBase{
 		login = new Login();
 	}
 	
+	//Login Test
 	@Test
 	public void LoginTest() throws Throwable{
+		
 		GlobalElement=	login.Login_Before_checkout(prop.getProperty("username"), prop.getProperty("password"));
-		home=TestUtil.LoginValidation(GlobalElement);
+		if(Genral_Function.LoginValidation(GlobalElement)) {
+			 new homepage();	
+		}
 	}
 	
 	
+	//Select Product Test
 	@Parameters("Product")
 	@Test(priority = 2,enabled = true)
 	public void ReorderTest(String Product) throws Throwable {
-		WaitForObject(home.profile, "Click");		
-		home.orderDetails.click();
-		home.selectFirstOrder.click();
+		WaitForObject(homepage.profile, "Click");		
+		homepage.orderDetails.click();
+		homepage.selectFirstOrder.click();
 	}
 	
+	//Payment Test
 	@Test(priority = 3,enabled = true)
 	public void PaymentTest() throws Throwable{
-		GlobalValue = TestUtil.CheckoutPriceValidation();
-		pay = TestUtil.Argvalidation("CheckOut Price ", GlobalValue,Payment.TotalPrice.getText().replace("$", ""));
-		FinalPriceValue = pay.paymentpage();	
-		logout = TestUtil.price_validation(FinalPriceValue, Payment.price.getText().replace("$", ""));	
+		GlobalValue = Genral_Function.getMultiProductValue(homepage.Price, homepage.tax);
+		
+		if(Genral_Function.Argvalidation("CheckOut Price ", GlobalValue,homepage.TotalPrice.getText().replace("$", ""))==true) {
+			 new Payment();
+			 Payment.proceed.click();
+		}
+		
+		Payment.processAddress.click();
+		Payment.checkbox.click();
+		Payment.processCarrier.click();
+		GlobalValue = Payment.amount.getText().replace("$", "");
+		Payment.pay_method.click();
+		Payment.confirm.click();
+		
+		if(Genral_Function.Argvalidation("Final Price Validation", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
+				new Logout();
+		}
+		
 	}
 	
-	
+	//Logout Test
 	@Test(priority = 4, enabled = true)
 	public void LogoutTest() throws Throwable {
-		GlobalValue = logout.LogoutTest();	
-		TestUtil.logoutvalidation(GlobalValue);
+		Logout.signOut.click();
+		GlobalValue = Logout.signIn.getText();
+		Genral_Function.logoutvalidation(GlobalValue);
 	}
-	
 	
 	@AfterClass
 	public void Flush() throws Throwable

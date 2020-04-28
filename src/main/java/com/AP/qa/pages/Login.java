@@ -12,22 +12,22 @@ import com.AP.qa.util.TestUtil;
 public class Login extends TestBase{
 	
 	@FindBy(xpath = "//a[@class='login']")
-	WebElement signInbtn;
+	public static WebElement signInbtn;
 	
 	@FindBy(xpath = "//input[@id='email']")
-	WebElement user;
+	public static WebElement user;
 	
 	@FindBy(xpath = "//input[@id='passwd']")
-	WebElement password;
+	public static WebElement password;
 	
 	@FindBy(xpath = "//button[@id='SubmitLogin']")
-	WebElement signIn;
+	public static WebElement signIn;
 	
 	@FindBy(xpath = "//img[@class='logo img-responsive']")
-	WebElement home;
+	public static WebElement home;
 	
 	@FindBy(xpath = "//span[contains(text(),'sunil jaiswal')]")
-	WebElement validate_user;
+	public static WebElement validate_user;
 	
 	
 	public Login() {
@@ -50,7 +50,7 @@ public class Login extends TestBase{
 	
 	
 	
-	public WebElement Login_After_checkout(String usr, String pass) throws Throwable {
+	public static WebElement Login_After_checkout(String usr, String pass) throws Throwable {
 		//signInbtn.click();
 		try{
 		user.sendKeys(usr);

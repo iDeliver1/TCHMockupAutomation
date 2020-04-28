@@ -3,10 +3,10 @@ package com.AP.qa.pages;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 import com.AP.qa.base.TestBase;
 import com.AP.qa.util.Excel_Libraries;
 import com.AP.qa.util.TestUtil;
@@ -14,39 +14,42 @@ import com.AP.qa.util.TestUtil;
 
 public class homepage extends TestBase{
 	
-	@FindBy(xpath = "//span[contains(text(),'Order history and details')]")public
+	@FindBy(xpath = "//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]")
+	public static WebElement proceed;
+	
+	@FindBy(xpath = "//span[contains(text(),'Order history and details')]")public static
 	  WebElement orderDetails;	
 
 	@FindBy(xpath = "//tr[contains(@class,'first_item')]")public
 	  WebElement orderTable;
 		
-	@FindBy(xpath = "//tr[contains(@class,'first_item')]//a[2]")public
+	@FindBy(xpath = "//tr[contains(@class,'first_item')]//a[2]")public static
 	  WebElement selectFirstOrder;
 	
-	@FindBy(xpath = "//span[contains(text(),'sunil jaiswal')]")public
+	@FindBy(xpath = "//span[contains(text(),'sunil jaiswal')]")public static
 	  WebElement profile;
 	
 	@FindBy(xpath = "//li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]")
-	public
+	public static
 	  WebElement Tshirt;
 	
 	@FindBy(xpath = "//ul[@id='homefeatured']//li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line']//div[@class='product-image-container']")
-	public
+	public static
 	  WebElement Target;
 	
-	@FindBy(xpath = "//input[@id='quantity_wanted']") public
+	@FindBy(xpath = "//input[@id='quantity_wanted']") public static
 	  WebElement qty;
 	
 	@FindBy(xpath = "//div[@id='uniform-group_1']//following-sibling::option")
-	public
+	public static
 	 List < WebElement> size;
 	 
 	@FindBy(xpath = "//span[contains(text(),'Add to cart')]")
-	public
+	public static
 	  WebElement cart;
 
 	@FindBy(xpath = "//span[contains(text(),'Proceed to checkout')]")
-	public
+	public static
 	  WebElement checkout;
 	
 	@FindBy(xpath = "//div[@class='box-info-product']")public
@@ -55,27 +58,27 @@ public class homepage extends TestBase{
 	
 	   int counter=0;
 	
-	@FindBy(xpath = "//ul[@id='homefeatured']//following-sibling::li")public
+	@FindBy(xpath = "//ul[@id='homefeatured']//following-sibling::li")public static
 	  List<WebElement> MultiProducts;
 	
-	@FindBy(xpath = "//li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]")public
+	@FindBy(xpath = "//li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]")public static
 	  List<WebElement> Addtocart;
 	
-	@FindBy(xpath = "//span[@class='continue btn btn-default button exclusive-medium']")public
+	@FindBy(xpath = "//span[@class='continue btn btn-default button exclusive-medium']")public static
 	  WebElement ContinueShop;
 	
 	
-	@FindBy(xpath = "//span[contains(text(),'Proceed to checkout')]")public
+	@FindBy(xpath = "//span[contains(text(),'Proceed to checkout')]")public static
 	  WebElement ProccedCheckout;
 	
-	@FindBy(xpath = "//span[contains(@id,'product_price')]/span")public
-	  List<WebElement> Price;
+	@FindBy(xpath = "//span[contains(@id,'total_product_price')]")
+	public static  List<WebElement> Price;
 	
-	@FindBy(xpath = "//span[@id='total_price']")public
+	@FindBy(xpath = "//span[@id='total_price']")public static
 	  WebElement TotalPrice;
 	
-	@FindBy(xpath = "//td[@id='total_shipping']")public
-	  WebElement tax;
+	@FindBy(xpath = "//td[@id='total_shipping']")
+	public static  WebElement tax;
 	
 	@FindBy(xpath = "//td[@id='total_shipping']")public
 	  WebElement FinalProced;

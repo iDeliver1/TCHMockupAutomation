@@ -67,7 +67,7 @@ public class Extent_Report {
 		  
 		  
 		  String ReportStatus = "<b>Step Number "+functioncall+"<br>Description :</b> "+Description+"<br><b>Expected :</b> "+ExpectedStep+"<br><b>Actual :</b> "+ActualStep;
-			System.out.println(getTest());
+			//System.out.println(getTest());
 			Excel_Libraries.fExcelReporter(Description, ActualStep, ExpectedStep, Status1, TestUtil.fGetCurrentDate());
 			try{
 			if(Status1.equalsIgnoreCase("PASS")){	

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test5</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 20 23:14:32 IST 2020</td>
+<td>Started on:</td><td>Tue Apr 28 20:58:59 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64547 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34060 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,179 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5.LogoutTest()'><b>LogoutTest</b><br>Test class: com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5<br/>
+<a href="#Output-1291486201" onClick='toggleBox("Output-1291486201", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1291486201" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1291486201">
+Trying to find Element By : By.xpath: //a[@class='logout']<br/>
+Exception occured: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AVI26', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: EventFiringWebDriver<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AVI26&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5.LogoutTest(TC005_Multiple_Products_WithoutLogin_Checkout_5.java:120)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1291486201", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1291486201'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AVI26&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5.LogoutTest(TC005_Multiple_Products_WithoutLogin_Checkout_5.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+</pre></div></td>
+<td>0</td>
+<td>com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5@b3d7190</td></tr>
+<tr>
+<td title='com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5.PaymentTest()'><b>PaymentTest</b><br>Test class: com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5<br/>
+<a href="#Output-1165023158" onClick='toggleBox("Output-1165023158", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1165023158" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1165023158">
+Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Exception occured: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AVI26', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: EventFiringWebDriver<br/>
+Trying to find Element By : By.xpath: //span[@id='total_price']<br/>
+Exception occured: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AVI26', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: EventFiringWebDriver<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AVI26&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5.PaymentTest(TC005_Multiple_Products_WithoutLogin_Checkout_5.java:86)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1165023158", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1165023158'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AVI26&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5.PaymentTest(TC005_Multiple_Products_WithoutLogin_Checkout_5.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+</pre></div></td>
+<td>1</td>
+<td>com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5@b3d7190</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,11 +248,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout.BookingTest()'><b>BookingTest</b><br>Test class: com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout<br>Parameters: Multi<br/>
-<a href="#Output-1374664497" onClick='toggleBox("Output-1374664497", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5.BookingTest()'><b>BookingTest</b><br>Test class: com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5<br>Parameters: Multi<br/>
+<a href="#Output-1483050851" onClick='toggleBox("Output-1483050851", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1374664497" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1374664497">
+<a href="#Output-1483050851" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1483050851">
 Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
 Found Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
 Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
@@ -90,14 +263,14 @@ Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-siblin
 Found Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
 Trying to find Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]<br/>
 Found Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
 Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']<br/>
 Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']<br/>
 Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']<br/>
 Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]<br/>
 Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
 Found Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
 Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
@@ -112,82 +285,17 @@ Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-siblin
 Found Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li<br/>
 Trying to find Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]<br/>
 Found Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]<br/>
 Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]<br/>
 Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //span[contains(text(),'Proceed to checkout')]]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //span[contains(text(),'Proceed to checkout')]]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (0c098e3891c2183d456d3a4c7a102434)] -> xpath: //span[contains(text(),'Proceed to checkout')]]<br/>
 </div>
 </td>
 <td></td>
-<td>13</td>
-<td>com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout@b59d31</td></tr>
-<tr>
-<td title='com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout.LogoutTest()'><b>LogoutTest</b><br>Test class: com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout<br/>
-<a href="#Output-843803222" onClick='toggleBox("Output-843803222", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-843803222" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-843803222">
-Trying to find Element By : By.xpath: //a[@class='logout']<br/>
-Found Element By : By.xpath: //a[@class='logout']<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //a[@class='logout']]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //a[@class='logout']]<br/>
-Trying to find Element By : By.xpath: //div[@class='header_user_info']<br/>
-Found Element By : By.xpath: //div[@class='header_user_info']<br/>
-Logout successfull<br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout@b59d31</td></tr>
-<tr>
-<td title='com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout.PaymentTest()'><b>PaymentTest</b><br>Test class: com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout<br/>
-<a href="#Output-1070319462" onClick='toggleBox("Output-1070319462", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1070319462" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1070319462">
-Check Out Price  Validation     45.51 is equal to 45.51<br/>
-Trying to find Element By : By.xpath: //input[@id='email']<br/>
-Found Element By : By.xpath: //input[@id='email']<br/>
-Trying to find Element By : By.xpath: //input[@id='passwd']<br/>
-Found Element By : By.xpath: //input[@id='passwd']<br/>
-Trying to find Element By : By.xpath: //button[@id='SubmitLogin']<br/>
-Found Element By : By.xpath: //button[@id='SubmitLogin']<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //button[@id='SubmitLogin']]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //button[@id='SubmitLogin']]<br/>
-Trying to find Element By : By.xpath: //span[contains(text(),'sunil jaiswal')]<br/>
-Found Element By : By.xpath: //span[contains(text(),'sunil jaiswal')]<br/>
-Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]<br/>
-Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]<br/>
-Trying to find Element By : By.xpath: //input[@id='cgv']<br/>
-Found Element By : By.xpath: //input[@id='cgv']<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //input[@id='cgv']]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //input[@id='cgv']]<br/>
-Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]<br/>
-Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]<br/>
-Trying to find Element By : By.xpath: //span[@id='total_price']<br/>
-Found Element By : By.xpath: //span[@id='total_price']<br/>
-Trying to find Element By : By.xpath: //a[@class='bankwire']<br/>
-Found Element By : By.xpath: //a[@class='bankwire']<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //a[@class='bankwire']]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //a[@class='bankwire']]<br/>
-Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]<br/>
-Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]<br/>
-Trying to click on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //span[contains(text(),'I confirm my order')]]<br/>
-Clicked on: [[ChromeDriver: chrome on WINDOWS (762adfeb843c3dd6c9afcd3320a154df)] -> xpath: //span[contains(text(),'I confirm my order')]]<br/>
-Trying to find Element By : By.xpath: //span[@class='price']<br/>
-Found Element By : By.xpath: //span[@class='price']<br/>
-Successfully validated the order amount -45.51<br/>
-</div>
-</td>
-<td></td>
-<td>22</td>
-<td>com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout@b59d31</td></tr>
+<td>16</td>
+<td>com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5@b3d7190</td></tr>
 </table><p>
 </body>
 </html>

@@ -8,10 +8,10 @@ import com.AP.qa.base.TestBase;
 
 public class Logout extends TestBase{
 	@FindBy(xpath = "//a[@class='logout']")
-	WebElement signOut;
+	public static WebElement signOut;
 	
 	@FindBy(xpath = "//div[@class='header_user_info']" )
-	WebElement signIn;
+	public static WebElement signIn;
 	
 	public Logout() {
 		PageFactory.initElements(driver, this);

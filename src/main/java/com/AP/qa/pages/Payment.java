@@ -15,18 +15,23 @@ public class Payment extends TestBase{
 	public static WebElement proceed;
 	
 	@FindBy(xpath = "//button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]")
+	public static
 	WebElement processAddress;
 	
 	@FindBy(xpath = "//input[@id='cgv']")
+	public static
 	WebElement checkbox;
 	
 	@FindBy(xpath = "//button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]")
+	public static
 	WebElement processCarrier; 
 	
 	@FindBy(xpath = "//a[@class='bankwire']")
+	public static
 	WebElement pay_method;
 	
 	@FindBy(xpath = "//span[contains(text(),'I confirm my order')]")
+	public static
 	WebElement confirm;
 	
 	@FindBy(xpath = "//span[@class='price']")
@@ -36,6 +41,7 @@ public class Payment extends TestBase{
 	WebElement order_msg;
 	
 	@FindBy(xpath = "//span[@id='total_price']")
+	public static
 	WebElement amount;
 	
 	@FindBy(xpath = "//span[contains(@id,'total_product_price')]")
@@ -52,6 +58,7 @@ public class Payment extends TestBase{
 
 	
 	Extent_Report objExp = new Extent_Report();
+	
 	public Payment() {
 		PageFactory.initElements(driver, this);
 	}

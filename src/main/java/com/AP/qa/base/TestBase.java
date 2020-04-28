@@ -35,9 +35,8 @@ import com.AP.qa.util.Extent_Report;
 import com.AP.qa.util.TestUtil;
 import com.AP.qa.util.WebEventListener;
 import com.google.common.base.Function;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 
 
 
@@ -56,7 +55,7 @@ public class TestBase {
 	public static String GlobalValue,FinalPriceValue;
 	public static int counter = 0;
 	public static String brow;
-	public static String BrowserVersion;
+	public static String BrowserVersion ;
 	public TestBase(){
 		
 		try {
@@ -76,7 +75,7 @@ public class TestBase {
 		
 		try {
 			if(counter == 0) {
-				 BrowserVersion = getBrowserVersion(browserName);	
+				 BrowserVersion = TestUtil.getBrowserVersion();	
 			}
 			
 		System.out.println(BrowserVersion);
@@ -84,7 +83,6 @@ public class TestBase {
 		
 			WebDriverManager.chromedriver().version(BrowserVersion).setup();
 			driver = new ChromeDriver(); 
-		
 		
 		}
 		else if(browserName.equals("FF")){
@@ -111,7 +109,7 @@ public class TestBase {
 			
 			Runtime rt = Runtime.getRuntime();
 		    try {
-		       rt.exec("cmd  /K \"dir /B/AD \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > ‪C:\\version.txt\"");
+		       rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > F:/version.txt\"");
 		       brow = TestUtil.getversion();
 		    } catch (IOException e) {
 		        e.printStackTrace();
@@ -136,8 +134,9 @@ public class TestBase {
 	
 	public void SetUP(String Reportname,String Title) throws Throwable{		
 		objExtent.CreateRoportname(Reportname);
-		initateURL();
 		Excel_Libraries.createExcel(Reportname);
+		initateURL();
+		
 	}
 	
 public  String GetProjectName(){
@@ -202,7 +201,7 @@ public  String GetProjectName(){
 		
 		//Closing Browser And Saving Report 
 		public static   void closeBrowser() {
-			driver.close();
+			driver.quit();
 			objExtent.flush();
 			
 		}

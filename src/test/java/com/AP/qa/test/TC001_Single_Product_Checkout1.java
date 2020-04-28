@@ -10,6 +10,7 @@ import com.AP.qa.pages.Login;
 import com.AP.qa.pages.Logout;
 import com.AP.qa.pages.Payment;
 import com.AP.qa.pages.homepage;
+import com.AP.qa.util.Genral_Function;
 import com.AP.qa.util.TestUtil;
 
 
@@ -17,11 +18,6 @@ import com.AP.qa.util.TestUtil;
 public class TC001_Single_Product_Checkout1 extends TestBase {
 	
 	Login login;
-	homepage home;
-	Payment pay;
-	Logout logout;
-	
-	
 	
 	@Parameters("Browser")
 	@BeforeClass
@@ -31,35 +27,42 @@ public class TC001_Single_Product_Checkout1 extends TestBase {
 		login = new Login();
 	}
 	
-	//(dataProvider = "Run")
+	
+	
+	//Login test
 	@Test(priority = 1)
 	public void LoginTest() throws Throwable{
 		GlobalElement=	login.Login_Before_checkout(prop.getProperty("username"), prop.getProperty("password"));
-		home=TestUtil.LoginValidation(GlobalElement);
-	
+		
+		
+		if(Genral_Function.LoginValidation(GlobalElement)) {
+			 new homepage();	
+		}
+		
 	}
 	
 	
+	//Select Product Test
 	@Parameters("Product")
 	@Test(priority = 2, enabled = true)
 	public void BookingTest(String Product) throws Throwable{
 		
 		try {
-			TestUtil.MoveElement(home.Target);	//Moving object to desired postion 
+			TestUtil.MoveElement(homepage.Target);	//Moving object to desired postion 
 			
-			home.Tshirt.click();
+			homepage.Tshirt.click();
 			
-			WaitForObject(home.qty, "Check");
+			WaitForObject(homepage.qty, "Check");
 			
-			home.qty.clear();
+			homepage.qty.clear();
 			
-			home.qty.sendKeys(prop.getProperty("Qty"));	//Can give number of quantity 
+			homepage.qty.sendKeys(prop.getProperty("Qty"));	//Can give number of quantity 
 			
-			TestUtil.SelectQuantity(home.size, "L");	//Select Size -S / M /L
+			TestUtil.SelectQuantity(homepage.size, "L");	//Select Size -S / M /L
 			
-			home.cart.click();
+			homepage.cart.click();
 			
-			WaitForObject(home.checkout, "Click");
+			WaitForObject(homepage.checkout, "Click");
 			
 			}
 			catch(Exception e) {
@@ -69,18 +72,42 @@ public class TC001_Single_Product_Checkout1 extends TestBase {
 			}	
 	}
 	
+	
+	//Payment test
 	@Test(priority = 3, enabled = true)
 	public void PaymentTest() throws Throwable{
-		GlobalValue = TestUtil.CheckoutPriceValidation();
-		pay = TestUtil.Argvalidation("CheckOut Price ", GlobalValue,Payment.TotalPrice.getText().replace("$", ""));
-		FinalPriceValue = pay.paymentpage();	
-		logout = TestUtil.price_validation(FinalPriceValue, Payment.price.getText().replace("$", ""));
+		GlobalValue = Genral_Function.getMultiProductValue(homepage.Price, homepage.tax);
+		try{
+		if(Genral_Function.Argvalidation("CheckOut Price ", GlobalValue,homepage.TotalPrice.getText().replace("$", ""))==true) {
+			new Payment();
+			Payment.proceed.click();
+			 
+		}
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Payment.processAddress.click();
+		Payment.checkbox.click();
+		Payment.processCarrier.click();
+		GlobalValue = Payment.amount.getText().replace("$", "");
+		Payment.pay_method.click();
+		Payment.confirm.click();
+		
+		if(Genral_Function.Argvalidation("Final Price Validation", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
+		new Logout();
+		}
+		
 	}
 	
+	
+	//logout test
 	@Test(priority = 4, enabled = true)
 	public void LogoutTest() throws Throwable {
-		GlobalValue = logout.LogoutTest();	
-		TestUtil.logoutvalidation(GlobalValue);
+		Logout.signOut.click();
+		GlobalValue = Logout.signIn.getText();
+		Genral_Function.logoutvalidation(GlobalValue);
 	}
 	
 	@AfterClass

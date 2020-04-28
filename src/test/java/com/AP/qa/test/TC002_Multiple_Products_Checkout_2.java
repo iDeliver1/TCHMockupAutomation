@@ -11,14 +11,13 @@ import com.AP.qa.pages.Logout;
 import com.AP.qa.pages.Payment;
 import com.AP.qa.pages.homepage;
 import com.AP.qa.util.Excel_Libraries;
+import com.AP.qa.util.Genral_Function;
 import com.AP.qa.util.TestUtil;
 
 public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 
 	Login login;
-	homepage home;
-	Payment pay;
-	Logout logout;
+
 	
 
 	
@@ -34,7 +33,9 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	@Test//(dataProvider = "Run")
 	public void LoginTest() throws Throwable{
 		GlobalElement=	login.Login_Before_checkout(prop.getProperty("username"), prop.getProperty("password"));
-		home=TestUtil.LoginValidation(GlobalElement);
+		if(Genral_Function.LoginValidation(GlobalElement)) {
+			 new homepage();	
+		}
 	}
 	
 	@Parameters("Product")
@@ -49,18 +50,18 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 			
 			for(int j = 0;j<multiproducts;j++ ) {
 					
-				System.out.println(home.MultiProducts.size());
-					for(int i=0;i<=home.MultiProducts.size();i++)
+				System.out.println(homepage.MultiProducts.size());
+					for(int i=0;i<=homepage.MultiProducts.size();i++)
 					{
 						try {
 						if(Excel_Libraries.getdata(j).isEmpty()==false) {
 							
-							if(home.MultiProducts.get(i).getText().contains(Excel_Libraries.getdata(j)))
+							if(homepage.MultiProducts.get(i).getText().contains(Excel_Libraries.getdata(j)))
 							{
 								Reporting("Pass", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j));
-								TestUtil.MoveElement(home.MultiProducts.get(i));
+								TestUtil.MoveElement(homepage.MultiProducts.get(i));
 								
-								WaitForObject(home.Addtocart.get(i), "Click");
+								WaitForObject(homepage.Addtocart.get(i), "Click");
 								counter=counter+1;
 								break;
 							}
@@ -73,10 +74,10 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 					}
 					
 					if(counter==multiproducts) {
-						home.ProccedCheckout.click();
+						homepage.ProccedCheckout.click();
 					}
 					else
-						WaitForObject(home.ContinueShop, "Click");		
+						WaitForObject(homepage.ContinueShop, "Click");		
 			}
 		
 			
@@ -92,16 +93,32 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	
 	@Test(priority = 3, enabled = true)
 	public void PaymentTest() throws Throwable{
-		GlobalValue = TestUtil.CheckoutPriceValidation();
-		pay = TestUtil.Argvalidation("CheckOut Price ", GlobalValue,Payment.TotalPrice.getText().replace("$", ""));
-		FinalPriceValue = pay.paymentpage();	
-		logout = TestUtil.price_validation(FinalPriceValue, Payment.price.getText().replace("$", ""));
+		GlobalValue = Genral_Function.getMultiProductValue(homepage.Price, homepage.tax);
+		
+		if(Genral_Function.Argvalidation("CheckOut Price ", GlobalValue,homepage.TotalPrice.getText().replace("$", ""))==true) {
+			
+			 new Payment();
+			 Payment.proceed.click();
+		}
+		
+		Payment.processAddress.click();
+		Payment.checkbox.click();
+		Payment.processCarrier.click();
+		GlobalValue = Payment.amount.getText().replace("$", "");
+		Payment.pay_method.click();
+		Payment.confirm.click();
+		
+		if(Genral_Function.Argvalidation("Final Price Validation", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
+			 new Logout();
+		}
+		
 	}
 	
 	@Test(priority = 4, enabled = true)
 	public void LogoutTest() throws Throwable {
-		GlobalValue = logout.LogoutTest();	
-		TestUtil.logoutvalidation(GlobalValue);	
+		Logout.signOut.click();
+		GlobalValue = Logout.signIn.getText();
+		Genral_Function.logoutvalidation(GlobalValue);
 	}
 	
 	
