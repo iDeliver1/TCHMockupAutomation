@@ -5,8 +5,9 @@ package com.AP.qa.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import com.AP.qa.base.TestBase;
-import com.AP.qa.util.TestUtil;
+
 
 
 public class Login extends TestBase{
@@ -26,7 +27,7 @@ public class Login extends TestBase{
 	@FindBy(xpath = "//img[@class='logo img-responsive']")
 	public static WebElement home;
 	
-	@FindBy(xpath = "//span[contains(text(),'sunil jaiswal')]")
+	@FindBy(xpath = "//span[contains(text(),'tester demo')]")
 	public static WebElement validate_user;
 	
 	
@@ -34,7 +35,7 @@ public class Login extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public boolean validateSWNLogo(){
+	public static boolean validateLogo(){
 		return validate_user.isDisplayed();
 	}
 	
@@ -44,11 +45,19 @@ public class Login extends TestBase{
 		password.sendKeys(pass);
 		signIn.click();
 		home.click();
-		return validate_user;
-		
+		return validate_user;	
 	}
 	
-	
+	public static homepage Beforeloginvalidation() {
+		try {
+			Assert.assertEquals(true,validateLogo());
+			return new homepage();
+		}catch(Exception e) {
+			
+		}
+		
+		return null;
+	}
 	
 	public static WebElement Login_After_checkout(String usr, String pass) throws Throwable {
 		//signInbtn.click();
@@ -65,6 +74,16 @@ public class Login extends TestBase{
 
 	}
 	
+	public static Payment Afterloginvalidation() {
+		try {
+			Assert.assertEquals(true, validateLogo());
+			return new Payment();
+		}catch(Exception e) {
+			
+		}
+		
+		return null;
+	}
 	
 		
 	}

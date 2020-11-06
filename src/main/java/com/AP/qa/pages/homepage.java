@@ -1,15 +1,11 @@
 package com.AP.qa.pages;
 
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.AP.qa.base.TestBase;
-import com.AP.qa.util.Excel_Libraries;
-import com.AP.qa.util.TestUtil;
+
 
 
 public class homepage extends TestBase{
@@ -90,7 +86,7 @@ public class homepage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void order_product(String Product) throws Throwable {
+	/*public void order_product(String Product) throws Throwable {
 		
 		
 		switch (Product) {
@@ -170,7 +166,36 @@ public class homepage extends TestBase{
 					
 					break;
 		}
+		}*/
+	
+	
+	public static Payment BeforeLogin_PriceValidation(Boolean a) {
+		try {
+		
+		if(a==true) {
+			return new Payment();
 		}
+		}catch(Exception e) {
+			
+		}
+		return  null;
+	}
+	
+	
+	
+	public static Payment AfterLogin_PriceValidation(Boolean a) {
+		try {
+		
+		if(a==true) {
+			return new Payment();
+		}
+		}catch(Exception e) {
+			
+		}
+		return  null;
+	}
+	
+	
 }
 	
 		

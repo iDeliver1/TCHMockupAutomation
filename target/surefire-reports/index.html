@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\ideliver\Desktop\Selenium1\APTest\testng.xml</span>
+                    <span>C:\Users\iDeliver20\git\AutomationPractice\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,31 +91,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,  3 skipped,  </span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.AP.qa.test.APTest" hash-for-method="BookingTest">BookingTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.AP.qa.test.TC001_Single_Product_Checkout1" hash-for-method="BookingTest(Single)">BookingTest(Single)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.AP.qa.test.APTest" hash-for-method="LoginTest">LoginTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.AP.qa.test.TC001_Single_Product_Checkout1" hash-for-method="LoginTest">LoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.AP.qa.test.APTest" hash-for-method="PaymentTest">PaymentTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.AP.qa.test.TC001_Single_Product_Checkout1" hash-for-method="LogoutTest">LogoutTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.AP.qa.test.TC001_Single_Product_Checkout1" hash-for-method="PaymentTest">PaymentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,17 +132,18 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.AP.qa.test.APTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.AP.qa.test.TC001_Single_Product_Checkout1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="BookingTest">
-                  </a> <!-- BookingTest -->
+                  <a name="BookingTest(Single)">
+                  </a> <!-- BookingTest(Single) -->
                   <span class="method-name">BookingTest</span>
+                  <span class="parameters">(Single)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -145,13 +151,13 @@
                   <a name="LoginTest">
                   </a> <!-- LoginTest -->
                   <span class="method-name">LoginTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 13 stack frames
-</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LogoutTest">
+                  </a> <!-- LogoutTest -->
+                  <span class="method-name">LogoutTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -159,31 +165,25 @@
                   <a name="PaymentTest">
                   </a> <!-- PaymentTest -->
                   <span class="method-name">PaymentTest</span>
-                  <div class="stack-trace">java.lang.Throwable: Method APTest.PaymentTest()[pri:3, instance:com.AP.qa.test.APTest@1b68ddbd] depends on not successfully finished methods
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 9 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ideliver\Desktop\Selenium1\APTest\testng.xml</span>
+            <span class="header-content">C:\Users\iDeliver20\git\AutomationPractice\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test name=&quot;Test&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;Product&quot; value=&quot;Single&quot;/&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.AP.qa.test.APTest&quot;/&gt;
+      &lt;class name=&quot;com.AP.qa.test.TC001_Single_Product_Checkout1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -223,24 +223,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'BookingTest')
-data.setCell(0, 2, 'com.AP.qa.test.APTest')
-data.setCell(0, 3, 1);
+data.setCell(0, 1, 'PaymentTest')
+data.setCell(0, 2, 'com.AP.qa.test.TC001_Single_Product_Checkout1')
+data.setCell(0, 3, 19265);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'LoginTest')
-data.setCell(1, 2, 'com.AP.qa.test.APTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 2, 'com.AP.qa.test.TC001_Single_Product_Checkout1')
+data.setCell(1, 3, 12263);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'PaymentTest')
-data.setCell(2, 2, 'com.AP.qa.test.APTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 1, 'BookingTest')
+data.setCell(2, 2, 'com.AP.qa.test.TC001_Single_Product_Checkout1')
+data.setCell(2, 3, 7737);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'LogoutTest')
+data.setCell(3, 2, 'com.AP.qa.test.TC001_Single_Product_Checkout1')
+data.setCell(3, 3, 5475);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 ms</span>
+              <span class="suite-total-time">Total running time: 44 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -251,6 +255,131 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">BookingTest(Single)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //ul[@id='homefeatured']//li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line']//div[@class='product-image-container']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //ul[@id='homefeatured']//li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line']//div[@class='product-image-container']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //input[@id='quantity_wanted']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //input[@id='quantity_wanted']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //input[@id='quantity_wanted']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //input[@id='quantity_wanted']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //input[@id='quantity_wanted']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //input[@id='quantity_wanted']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(text(),'Add to cart')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(text(),'Add to cart')]</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //span[contains(text(),'Add to cart')]]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //span[contains(text(),'Add to cart')]]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //span[contains(text(),'Proceed to checkout')]]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //span[contains(text(),'Proceed to checkout')]]</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">PaymentTest</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(@id,'total_product_price')]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(@id,'total_product_price')]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(@id,'total_product_price')]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //td[@id='total_shipping']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //td[@id='total_shipping']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[@id='total_price']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[@id='total_price']</span>
+                <span class="reporter-method-output">CheckOut Price  Validation     35.02 is equal to 35.02</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //input[@id='cgv']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //input[@id='cgv']</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //input[@id='cgv']]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //input[@id='cgv']]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[@id='total_price']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[@id='total_price']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //a[@class='bankwire']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //a[@class='bankwire']</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='bankwire']]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='bankwire']]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //span[contains(text(),'I confirm my order')]]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //span[contains(text(),'I confirm my order')]]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[@class='price']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[@class='price']</span>
+                <span class="reporter-method-output">Final Price Validation Validation     35.02 is equal to 35.02</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">LogoutTest</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //a[@class='logout']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //a[@class='logout']</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='logout']]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='logout']]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //div[@class='header_user_info']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //div[@class='header_user_info']</span>
+                <span class="reporter-method-output">Logout successfull</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">LoginTest</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //a[@class='login']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //a[@class='login']</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='login']]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //a[@class='login']]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //input[@id='email']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //input[@id='email']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //input[@id='passwd']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //input[@id='passwd']</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //button[@id='SubmitLogin']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //button[@id='SubmitLogin']</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //button[@id='SubmitLogin']]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //button[@id='SubmitLogin']]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //img[@class='logo img-responsive']</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //img[@class='logo img-responsive']</span>
+                <span class="reporter-method-output">Trying to click on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //img[@class='logo img-responsive']]</span>
+                <span class="reporter-method-output">Clicked on: [[ChromeDriver: chrome on WINDOWS (dd67b5dbbaa37ee1a5ca4305a8e3fa75)] -> xpath: //img[@class='logo img-responsive']]</span>
+                <span class="reporter-method-output">Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]</span>
+                <span class="reporter-method-output">Found Element By : By.xpath: //span[contains(text(),'tester demo')]</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -266,17 +395,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.AP.qa.test.APTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">setUp(chrome)</span>
+              <div class="chronological-class-name">com.AP.qa.test.TC001_Single_Product_Checkout1</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">init(chrome)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">BookingTest</span>
-                <span class="method-start">13543 ms</span>
+                <span class="method-name">LoginTest</span>
+                <span class="method-start">21519 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BookingTest(Single)</span>
+                <span class="method-start">33783 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PaymentTest</span>
+                <span class="method-start">41520 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">LogoutTest</span>
+                <span class="method-start">60785 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Flush</span>
+                <span class="method-start">66260 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 4, Time elapsed: 15.236 sec <<< FAILURE! - in TestSuite
-setUp(com.AP.qa.test.APTest)  Time elapsed: 14.322 sec  <<< FAILURE!
-java.lang.NullPointerException: null value in entry: url=null
-	at com.AP.qa.test.APTest.setUp(APTest.java:25)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.505 sec

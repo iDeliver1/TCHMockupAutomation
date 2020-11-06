@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="15.236" tests="5" errors="0" skipped="4" failures="1">
+<testsuite name="TestSuite" time="44.733" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
-    <property name="java.vm.version" value="25.171-b11"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
+    <property name="java.vm.version" value="25.111-b14"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ideliver\Desktop\Selenium1\APTest"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\iDeliver20\git\AutomationPractice"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,46 +16,46 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\ideliver\Desktop\Selenium1\APTest"/>
-    <property name="java.runtime.version" value="1.8.0_171-b11"/>
+    <property name="user.dir" value="C:\Users\iDeliver20\git\AutomationPractice"/>
+    <property name="java.runtime.version" value="1.8.0_111-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\ideliver\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\IDELIV~1\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
+    <property name="classworlds.conf" value="C:\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\HP\NV\lib\shunra\vcat;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files\Java\jre1.8.0_171\bin;C:\Program Files\Java\jre1.8.0_171\lib;C:\Driver;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Micro Focus\Unified Functional Testing\bin;C:\Program Files (x86)\HP\LoadRunner\strawberry-perl\perl\bin;C:\Program Files (x86)\HP\NV\lib\thirdparty\safenet\LDK\7.0;C:\Program Files (x86)\HP\NV\lib\shunra\snv;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.6.3\;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\apache-maven-3.6.3\\bin;C:\Users\ideliver\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
-    <property name="maven.conf" value="C:\Program Files\apache-maven-3.6.3\bin\../conf"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jre1.8.0_221\bin\;C:\Program Files\Java\jre1.8.0_221\lib\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-13.0.1\bin;C:\Program Files\Java\jdk1.8.0_111\bin;C:\apache-maven-3.6.3\bin;C:\apache-maven-3.6.3\;C:\apache-maven-3.6.3\\bin;C:\Program Files\Java\jdk1.8.0_111;C:\Program Files\Java\jdk1.8.0_111\lib;C:\Program Files\Java\jdk1.8.0_111\lib;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;E:\JUnit\junit-4.13.jar;E:\JUnit\hamcrest-core-1.3.jar;C:\Program Files (x86)\Micro Focus\Unified Functional Testing\bin\PhantomJS\bin;C:\Program Files (x86)\Micro Focus\Unified Functional Testing\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\iDeliver20\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_111\bin;C:\Users\iDeliver20\AppData\Roaming\npm;C:\Users\iDeliver20\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="maven.conf" value="C:\apache-maven-3.6.3\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.6.3\bin\..\lib\jansi-native"/>
-    <property name="user.home" value="C:\Users\ideliver"/>
+    <property name="library.jansi.path" value="C:\apache-maven-3.6.3\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\iDeliver20"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="user.name" value="ideliver"/>
-    <property name="java.class.path" value="C:\Program Files\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="user.name" value="iDeliver20"/>
+    <property name="java.class.path" value="C:\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_111\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_171"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_171\jre\classes"/>
+    <property name="java.version" value="1.8.0_111"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_111\jre\classes;C:\Program Files (x86)\Micro Focus\Unified Functional Testing\bin\java_shared\classes\jasmine.jar"/>
     <property name="sun.stderr.encoding" value="cp437"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Program Files\apache-maven-3.6.3\bin\.."/>
+    <property name="maven.home" value="C:\apache-maven-3.6.3\bin\.."/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -64,66 +64,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="setUp" classname="com.AP.qa.test.APTest" time="14.322">
-    <failure message="null value in entry: url=null" type="java.lang.NullPointerException">java.lang.NullPointerException: null value in entry: url=null
-	at com.AP.qa.test.APTest.setUp(APTest.java:25)
-</failure>
-    <system-err><![CDATA[java.io.FileNotFoundException: null\src\main\java\com\AP\qa\config\config.properties (The system cannot find the path specified)
-	at java.io.FileInputStream.open0(Native Method)
-	at java.io.FileInputStream.open(FileInputStream.java:195)
-	at java.io.FileInputStream.<init>(FileInputStream.java:138)
-	at java.io.FileInputStream.<init>(FileInputStream.java:93)
-	at com.AP.qa.base.TestBase.<init>(TestBase.java:35)
-	at com.AP.qa.test.APTest.<init>(APTest.java:15)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.testng.internal.ObjectFactoryImpl.newInstance(ObjectFactoryImpl.java:29)
-	at org.testng.internal.ClassHelper.createInstance1(ClassHelper.java:377)
-	at org.testng.internal.ClassHelper.createInstance(ClassHelper.java:290)
-	at org.testng.internal.ClassImpl.getDefaultInstance(ClassImpl.java:125)
-	at org.testng.internal.ClassImpl.getInstances(ClassImpl.java:190)
-	at org.testng.internal.TestNGClassFinder.<init>(TestNGClassFinder.java:130)
-	at org.testng.TestRunner.initMethods(TestRunner.java:424)
-	at org.testng.TestRunner.init(TestRunner.java:247)
-	at org.testng.TestRunner.init(TestRunner.java:217)
-	at org.testng.TestRunner.<init>(TestRunner.java:161)
-	at org.testng.SuiteRunner$DefaultTestRunnerFactory.newTestRunner(SuiteRunner.java:556)
-	at org.testng.SuiteRunner.init(SuiteRunner.java:168)
-	at org.testng.SuiteRunner.<init>(SuiteRunner.java:117)
-	at org.testng.TestNG.createSuiteRunner(TestNG.java:1319)
-	at org.testng.TestNG.createSuiteRunners(TestNG.java:1306)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1160)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 31742
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1582888986.510][WARNING]: This version of ChromeDriver has not been tested with Chrome version 80.
-[1582888988.550][WARNING]: Timed out connecting to Chrome, retrying...
-Feb 28, 2020 4:53:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-[1582888994.039][WARNING]: Timed out connecting to Chrome, retrying...
-]]></system-err>
-  </testcase>
-  <testcase name="LoginTest" classname="com.AP.qa.test.APTest" time="0">
-    <skipped/>
-    <system-out><![CDATA[java.io.FileNotFoundException: null\src\main\java\com\AP\qa\data\testdata.xlsx (The system cannot find the path specified)
-]]></system-out>
-  </testcase>
-  <testcase name="BookingTest" classname="com.AP.qa.test.APTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="PaymentTest" classname="com.AP.qa.test.APTest" time="0">
-    <skipped message="Method APTest.PaymentTest()[pri:3, instance:com.AP.qa.test.APTest@1b68ddbd] depends on not successfully finished methods"/>
-  </testcase>
-  <testcase name="Flush" classname="com.AP.qa.test.APTest" time="0">
-    <skipped/>
-  </testcase>
+  <testcase name="LoginTest" classname="com.AP.qa.test.TC001_Single_Product_Checkout1" time="12.254"/>
+  <testcase name="BookingTest" classname="com.AP.qa.test.TC001_Single_Product_Checkout1" time="7.738"/>
+  <testcase name="PaymentTest" classname="com.AP.qa.test.TC001_Single_Product_Checkout1" time="19.272"/>
+  <testcase name="LogoutTest" classname="com.AP.qa.test.TC001_Single_Product_Checkout1" time="5.469"/>
 </testsuite>

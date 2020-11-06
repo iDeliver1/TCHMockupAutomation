@@ -1,1 +1,5 @@
-com\AP\qa\test\APTest.class
+com\AP\qa\test\TC004_Single_Products_WithoutLogin_Checkout_4.class
+com\AP\qa\test\TC001_Single_Product_Checkout1.class
+com\AP\qa\test\TC003_Reorder_Products_Checkout_3.class
+com\AP\qa\test\TC005_Multiple_Products_WithoutLogin_Checkout_5.class
+com\AP\qa\test\TC002_Multiple_Products_Checkout_2.class

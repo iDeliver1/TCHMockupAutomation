@@ -35,7 +35,7 @@ public class Excel_Libraries extends TestBase {
 		if ((new File(Excel_path)).exists()==false) {	
 			
 			Reportn = Reportname;
-			String filename = System.getProperty("user.dir")+"/src/test/java/com/AP/qa/test" ;
+			//String filename = System.getProperty("user.dir")+"/src/test/java/com/AP/qa/test" ;
 		
 			
 		    
@@ -214,13 +214,13 @@ public class Excel_Libraries extends TestBase {
 			        return true;
 			    }
 
-			    if (cell.getCellType() != Cell.CELL_TYPE_BLANK) {
+			   /* if (cell.getCellType() != Cell.CELL_TYPE_BLANK) {
 			        return true;
 			    }
 
 			    if (cell.getCellType()!= Cell.CELL_TYPE_STRING && cell.getStringCellValue().trim().isEmpty()) {
 			        return true;
-			    }
+			    }*/
 		   
 		return false;
 		   

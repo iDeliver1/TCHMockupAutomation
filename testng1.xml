@@ -5,8 +5,7 @@
   <parameter name = "Browser" value="chrome"/> 
   <parameter name = "Product" value="Single"/> 
     <classes>
-    
-      <class name ="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5"/>
+      <class name ="TC001_Single_Product_Checkout1"/>
     </classes>
   </test>  
   

@@ -72,4 +72,10 @@ public class Payment extends TestBase{
 		confirm.click();
 		return FPrice;
 		}
+	
+	
+	public static Logout logoutvalidation() {
+		
+		return new Logout();
+	}
 }

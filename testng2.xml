@@ -11,35 +11,5 @@
   </test>  
   
   
-  <test  name="Test2"  >
-  <parameter name = "Browser" value="chrome"/> 
-  <parameter name = "Product" value="Multi"/> 
-    <classes>
-    <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout_2"/>
-    </classes>
-  </test>  
-    
-   <test  name="Test3"  >
-  <parameter name = "Browser" value="chrome"/> 
-  <parameter name = "Product" value="Reorder"/> 
-    <classes>
-      <class name ="com.AP.qa.test.TC003_Reorder_Products_Checkout_3"/>
-    </classes>
-  </test>
-  
-   <test  name="Test4"  >
-  <parameter name = "Browser" value="chrome"/> 
-  <parameter name = "Product" value="Single"/> 
-    <classes>
-      <class name ="com.AP.qa.test.TC004_Single_Products_WithoutLogin_Checkout_4"/>
-    </classes>
-  </test>  
-  
-   <test  name="Test5"  >
-  <parameter name = "Browser" value="chrome"/> 
-  <parameter name = "Product" value="Multi"/> 
-    <classes>
-      <class name ="com.AP.qa.test.TC005_Multiple_Products_WithoutLogin_Checkout_5"/>
-    </classes>
-  </test>   <!-- Test -->
+    <!-- Test -->
 </suite> <!-- Suite -->

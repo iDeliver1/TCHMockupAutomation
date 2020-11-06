@@ -67,7 +67,7 @@ public static String fGetCurrentDate()
 				
 				Runtime rt = Runtime.getRuntime();
 			    try {
-			       rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > F:/version.txt\"");
+			       rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > E:/version.txt\"");
 			       brow = getversion();
 			    } catch (IOException e) {
 			        e.printStackTrace();
@@ -86,7 +86,7 @@ public static String fGetCurrentDate()
 		public static String getversion() {
 			 String data = "";
 			try {
-			File myObj = new File("F:/version.txt");
+			File myObj = new File("E:/version.txt");
 		      Scanner myReader = new Scanner(myObj);
 		      while (myReader.hasNextLine()) {
 		         data = myReader.nextLine();
