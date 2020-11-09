@@ -70,7 +70,7 @@ public class Genral_Function extends TestBase {
 	public static Boolean Argvalidation(String StepName,String Actual,String Expected) throws Throwable{
 		try{
 			Assert.assertEquals(Actual, Expected);
-			Reporting("PASS","Verifying "+StepName,StepName+" is equal to "+Actual,StepName+"should be equal to "+Expected);
+			Reporting("Pass","Verifying "+StepName,StepName+" is equal to "+Actual,StepName+"should be equal to "+Expected);
 			
 			log(StepName+" Validation     "+Actual + " is equal to " +Expected);
 			
@@ -80,7 +80,7 @@ public class Genral_Function extends TestBase {
 			}catch(Exception e){ 
 			log(StepName+"  Validation    "+ Actual + " is not  equal to " +Expected+" because "+e);
 				
-				Reporting("FAIL","Verifying "+StepName,StepName+"is equal to "+Actual+""+e,StepName+"should be equal to "+Expected);
+				Reporting("Fail","Verifying "+StepName,StepName+"is equal to "+Actual+""+e,StepName+"should be equal to "+Expected);
 				closeBrowser();
 			}
 		return false;
