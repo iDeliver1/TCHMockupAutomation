@@ -21,7 +21,7 @@ public class TestUtil extends TestBase{
 static Extent_Report objRep = new Extent_Report();
 public static long PAGE_LOAD_TIMEOUT = 40;
 public static long IMPLICIT_WAIT = 40;
-public static String Report_Folder_path = "C:\\Reporting\\Report"+fTimestamp();
+public static String Report_Folder_path = "C:\\Reporting";
 
 
 
@@ -67,7 +67,8 @@ public static String fGetCurrentDate()
 				
 				Runtime rt = Runtime.getRuntime();
 			    try {
-			       rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > E:/version.txt\"");
+			    	String rootdir = System.getProperty("user.dir");
+			       rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > "+rootdir+"\\version.txt\"");
 			       brow = getversion();
 			    } catch (IOException e) {
 			        e.printStackTrace();

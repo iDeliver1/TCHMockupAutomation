@@ -47,10 +47,11 @@ public class Extent_Report {
 
 	//Getting TestName
 	  public  ExtentTest CreateRoportname(String Step_details){
-		  logger =extent.createTest(Step_details);
+		  logger =extent.createTest("System Name - "+System.getenv("COMPUTERNAME"));
+		  child_logger=logger.createNode(Step_details);
 		  functioncall=1;
 		  j=1;
-		  extentTest.set(logger);
+		  extentTest.set(child_logger);
 			return extentTest.get();
 			
 	  }

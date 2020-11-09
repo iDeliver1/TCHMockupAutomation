@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -24,22 +23,23 @@ import com.AP.qa.base.TestBase;
 
 public class Excel_Libraries extends TestBase {
 	static String [][] Data;
-	static String Excel_path = TestUtil.Report_Folder_path+"\\Excel.xls";
+	static String Excel_path = TestUtil.Report_Folder_path+"\\Excel"+TestUtil.fTimestamp()+".xls";
 	public static XSSFWorkbook WB;
 	static boolean abc ;
 	static String Reportn;
-	static int Sheetindex=0;
+	static int Sheetindex=0,Row_cnt;
+	static Sheet sh;
+	static	Row newRow,newRow1;
+	static	XSSFFont customFont;
+	static CellStyle style;
 	
 	 public static String createExcel(String Reportname) throws InvalidFormatException, IOException{
-			WB = new XSSFWorkbook();
+	
+		 WB = new XSSFWorkbook();
 		if ((new File(Excel_path)).exists()==false) {	
 			
-			Reportn = Reportname;
-			//String filename = System.getProperty("user.dir")+"/src/test/java/com/AP/qa/test" ;
 		
-			
-		    
-		    WB.createSheet(Reportname).createRow(0).createCell(0);
+		    WB.createSheet().createRow(0).createCell(0);
 			
 			FileOutputStream fout;
 			try {
@@ -56,26 +56,8 @@ public class Excel_Libraries extends TestBase {
 	
 		}
 		
-		else {
-			
-			try{
-				 FileInputStream fin = new FileInputStream(Excel_path);
-				 WB = new XSSFWorkbook();
-				 WB =  (XSSFWorkbook) WorkbookFactory.create(fin);
-				}
-			catch(Exception e){
-				System.out.println(e);
-				}
-			
-			 WB.createSheet(Reportname).createRow(0).createCell(0);
-			 
-			 FileOutputStream fout = new FileOutputStream(Excel_path);
-				WB.write(fout);
-				fout.close();
-			
-			Reportn = Reportname;
-		}
 		
+		createcoloumnname(Reportname);
 		
 		
 		Sheetindex= Sheetindex+1;
@@ -83,43 +65,64 @@ public class Excel_Libraries extends TestBase {
 		
 	}
 	
+	private static void createcoloumnname(String Reportname) throws IOException, InvalidFormatException {
+		String[] Attribute = {"Step_details","Actual", "Expected","Status","Date"};
+		
+		 FileInputStream fin = new FileInputStream(Excel_path);
+		try {
+			 WB=(XSSFWorkbook) WorkbookFactory.create(fin);
+			 
+			 		sh = WB.getSheetAt(0);
+			 		sh.setDefaultColumnWidth(35);
+			 		customFont = WB.createFont();
+			 		style = WB.createCellStyle();
+					customFont.setBold(true);
+		 			style.setFont(customFont);
+					 Row_cnt = sh.getLastRowNum();
+					 newRow = sh.createRow(Row_cnt+2);
+					 newRow.createCell(0).setCellValue("System Name - "+System.getenv("COMPUTERNAME"));
+					 newRow.getCell(0).setCellStyle(style);
+					 
+					 newRow = sh.createRow(Row_cnt+3);
+					 newRow.createCell(0).setCellValue("TestCase Name - "+Reportname);
+					 newRow.getCell(0).setCellStyle(style);
+					 
+ 	
+			}
+	
+		
+			 catch(Exception e) {
+					System.out.println(e);
+				}
+		 Row_cnt = sh.getLastRowNum();
+		 newRow = sh.createRow(Row_cnt+1);
+		 
+ 	for(int j=0;j<=4;j++)
+ 	{	
+ 			newRow.createCell(j).setCellValue(Attribute[j]);
+ 			newRow.getCell(j).setCellStyle(style);
+ 		
+ 	}
+ 	FileOutputStream fout = new FileOutputStream(Excel_path);
+	WB.write(fout);
+	fout.close();	
+	}
+
 	//----------------------------------------------Excel Reporting-------------------------------------------------------	   
 	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time) throws Throwable
 		{ 
 		   
-		   String[] Attribute = {"Step_details","Actual", "Expected","Status","Date"};
-				try{
-					 FileInputStream fin = new FileInputStream(Excel_path);
-					 WB = new XSSFWorkbook();
-					 WB =  (XSSFWorkbook) WorkbookFactory.create(fin);
-					}
-				catch(Exception e){
-					System.out.println(e);
-					}
-				 
-		int	shindex = WB.getActiveSheetIndex();
-		Sheet sh = WB.getSheetAt(shindex+Sheetindex-1);
-		sh.setDefaultColumnWidth(25);
-		
-		try {
-			int Row_cnt = sh.getLastRowNum();
-			
-			Row newRow = sh.createRow(0);
-		
-		
-			//Creating front color by cell style  	
-			XSSFFont customFont = WB.createFont();
-			CellStyle style = WB.createCellStyle();
-		
-			  	for(int j=0;j<=4;j++)
-			  	{	
-			  		newRow.createCell(j).setCellValue(Attribute[j]);
-			  		
-			  	}
-			
-			  
-			String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time};
-		Row	 newRow1 = sh.createRow(Row_cnt+1);
+			try {
+				FileInputStream fin = new FileInputStream(Excel_path);
+				WB=(XSSFWorkbook) WorkbookFactory.create(fin);
+				String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time};
+				 sh = WB.getSheetAt(0);
+					sh.setDefaultColumnWidth(25);
+						 Row_cnt = sh.getLastRowNum();
+					
+					 newRow1 = sh.createRow(Row_cnt+1);
+					 customFont = WB.createFont();
+					 style = WB.createCellStyle();
 			
 				for(int i=0;i<=4;i++)
 					{
@@ -127,12 +130,14 @@ public class Excel_Libraries extends TestBase {
 					if(Attribute_value[i].equalsIgnoreCase("Pass"))
 						{
 							customFont.setColor(IndexedColors.GREEN.getIndex());
+							customFont.setBold(true);
 							style.setFont(customFont);
 							newRow1.getCell(i).setCellStyle(style);
 						}
 					else if(Attribute_value[i].equalsIgnoreCase("Fail"))
 						{
 							customFont.setColor(IndexedColors.RED.getIndex());
+							customFont.setBold(true);
 							style.setFont(customFont);
 							newRow1.getCell(i).setCellStyle(style);
 						}

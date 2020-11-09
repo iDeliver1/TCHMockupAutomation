@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="Product" value="Single"/>
+  <parameter name="Browser" value="chrome"/>
+  <test name="Test(failed)">
+    <parameter name="Product" value="Single"/>
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="com.AP.qa.test.TC001_Single_Product_Checkout">
+        <methods>
+          <include name="LogoutTest"/>
+          <include name="LoginTest"/>
+          <include name="PaymentTest"/>
+          <include name="init"/>
+          <include name="BookingTest"/>
+        </methods>
+      </class> <!-- com.AP.qa.test.TC001_Single_Product_Checkout -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

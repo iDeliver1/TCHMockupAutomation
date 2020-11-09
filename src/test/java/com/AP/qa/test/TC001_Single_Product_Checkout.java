@@ -32,7 +32,7 @@ public class TC001_Single_Product_Checkout extends TestBase {
 	//Login test
 	@Test(priority = 1)
 	public void LoginTest() throws Throwable{
-		//GlobalElement=	login.Login_Before_checkout(prop.getProperty("username"), prop.getProperty("password"));
+		
 		
 		Login.signInbtn.click();
 		Login.user.sendKeys(prop.getProperty("username"));
@@ -42,10 +42,10 @@ public class TC001_Single_Product_Checkout extends TestBase {
 		
 		
 		if(Login.Beforeloginvalidation()!=null) {
-			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username")+" & password - "+prop.getProperty("password"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username")+" & password - "+prop.getProperty("password"));	 
+			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"));	 
 		}
 		else {
-			 Reporting("Fail", "Login Page Validation", "User unsuccessfull naviagted to homepage with username - "+prop.getProperty("username")+" & password - "+prop.getProperty("password"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username")+" & password - "+prop.getProperty("password"));
+			 Reporting("Fail", "Login Page Validation", "User unsuccessfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"));
 			 closeBrowser();
 		}
 		
@@ -58,7 +58,7 @@ public class TC001_Single_Product_Checkout extends TestBase {
 	public void BookingTest(String Product) throws Throwable{
 		
 		try {
-			TestUtil.MoveElement(homepage.Target);	//Moving object to desired postion 
+			TestUtil.MoveElement(homepage.Target);	//Moving object to desired position 
 			
 			homepage.Tshirt.click();
 			

@@ -8,4 +8,14 @@
       <class name="com.AP.qa.test.TC001_Single_Product_Checkout"/>
     </classes>
   </test> <!-- Test -->
+  
+  <test name="Test1">
+  <parameter name = "Browser" value="chrome"/> 
+  <parameter name = "Product" value="Single"/> 
+    <classes>
+      <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout_2"/>
+    </classes>
+  </test>
+  
+  
 </suite> <!-- Suite -->
