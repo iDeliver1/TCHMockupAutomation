@@ -14,10 +14,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='login']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='login']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='login']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='login']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='login']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //input[@id='email']]]>
@@ -38,10 +38,10 @@
       <![CDATA[Found Element By : By.xpath: //button[@id='SubmitLogin']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@id='SubmitLogin']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@id='SubmitLogin']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@id='SubmitLogin']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@id='SubmitLogin']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //img[@class='logo img-responsive']]]>
@@ -50,10 +50,10 @@
       <![CDATA[Found Element By : By.xpath: //img[@class='logo img-responsive']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //img[@class='logo img-responsive']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //img[@class='logo img-responsive']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //img[@class='logo img-responsive']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //img[@class='logo img-responsive']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]]]>
@@ -74,16 +74,10 @@
       <![CDATA[Found Element By : By.xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
-    </line>
-    <line>
-      <![CDATA[Trying to find Element By : By.xpath: //input[@id='quantity_wanted']]]>
-    </line>
-    <line>
-      <![CDATA[Found Element By : By.xpath: //input[@id='quantity_wanted']]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //input[@id='quantity_wanted']]]>
@@ -98,16 +92,10 @@
       <![CDATA[Found Element By : By.xpath: //input[@id='quantity_wanted']]]>
     </line>
     <line>
-      <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+      <![CDATA[Trying to find Element By : By.xpath: //input[@id='quantity_wanted']]]>
     </line>
     <line>
-      <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
-    </line>
-    <line>
-      <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
-    </line>
-    <line>
-      <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+      <![CDATA[Found Element By : By.xpath: //input[@id='quantity_wanted']]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
@@ -146,10 +134,22 @@
       <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
+      <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
+      <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+    </line>
+    <line>
+      <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+    </line>
+    <line>
+      <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+    </line>
+    <line>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Add to cart')]]]>
@@ -158,16 +158,10 @@
       <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Add to cart')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
-    </line>
-    <line>
-      <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
-    </line>
-    <line>
-      <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
@@ -176,10 +170,16 @@
       <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
+    </line>
+    <line>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]]]>
@@ -221,10 +221,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
@@ -233,10 +233,10 @@
       <![CDATA[Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //input[@id='cgv']]]>
@@ -245,10 +245,10 @@
       <![CDATA[Found Element By : By.xpath: //input[@id='cgv']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //input[@id='cgv']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //input[@id='cgv']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //input[@id='cgv']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //input[@id='cgv']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
@@ -257,10 +257,10 @@
       <![CDATA[Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[@id='total_price']]]>
@@ -275,10 +275,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='bankwire']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='bankwire']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='bankwire']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='bankwire']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='bankwire']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
@@ -287,10 +287,10 @@
       <![CDATA[Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[@class='price']]]>
@@ -308,10 +308,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='logout']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='logout']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='logout']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='logout']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='logout']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //div[@class='header_user_info']]]>
@@ -335,10 +335,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='login']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='login']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='login']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='login']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='login']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //input[@id='email']]]>
@@ -359,10 +359,10 @@
       <![CDATA[Found Element By : By.xpath: //button[@id='SubmitLogin']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@id='SubmitLogin']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@id='SubmitLogin']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@id='SubmitLogin']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@id='SubmitLogin']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //img[@class='logo img-responsive']]]>
@@ -371,10 +371,10 @@
       <![CDATA[Found Element By : By.xpath: //img[@class='logo img-responsive']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //img[@class='logo img-responsive']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //img[@class='logo img-responsive']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //img[@class='logo img-responsive']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //img[@class='logo img-responsive']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]]]>
@@ -413,16 +413,10 @@
       <![CDATA[Found Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
-    </line>
-    <line>
-      <![CDATA[Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
-    </line>
-    <line>
-      <![CDATA[Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
@@ -431,10 +425,16 @@
       <![CDATA[Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
+      <![CDATA[Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
+      <![CDATA[Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
+    </line>
+    <line>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li]]>
@@ -479,10 +479,10 @@
       <![CDATA[Found Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
@@ -491,10 +491,10 @@
       <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]]]>
@@ -548,10 +548,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
@@ -560,10 +560,10 @@
       <![CDATA[Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //input[@id='cgv']]]>
@@ -572,10 +572,10 @@
       <![CDATA[Found Element By : By.xpath: //input[@id='cgv']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //input[@id='cgv']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //input[@id='cgv']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //input[@id='cgv']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //input[@id='cgv']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
@@ -584,10 +584,10 @@
       <![CDATA[Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[@id='total_price']]]>
@@ -602,10 +602,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='bankwire']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='bankwire']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='bankwire']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='bankwire']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='bankwire']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
@@ -614,10 +614,10 @@
       <![CDATA[Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //span[@class='price']]]>
@@ -635,10 +635,10 @@
       <![CDATA[Found Element By : By.xpath: //a[@class='logout']]]>
     </line>
     <line>
-      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='logout']]]]>
+      <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='logout']]]]>
     </line>
     <line>
-      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='logout']]]]>
+      <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='logout']]]]>
     </line>
     <line>
       <![CDATA[Trying to find Element By : By.xpath: //div[@class='header_user_info']]]>
@@ -650,12 +650,12 @@
       <![CDATA[Logout successfull]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="107646" started-at="2020-11-09T16:58:21Z" finished-at="2020-11-09T17:00:08Z">
+  <suite name="Suite" duration-ms="114616" started-at="2020-11-09T17:20:46Z" finished-at="2020-11-09T17:22:41Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="56519" started-at="2020-11-09T16:58:21Z" finished-at="2020-11-09T16:59:17Z">
+    <test name="Test" duration-ms="53164" started-at="2020-11-09T17:20:46Z" finished-at="2020-11-09T17:21:39Z">
       <class name="com.AP.qa.test.TC001_Single_Product_Checkout">
-        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="init" is-config="true" duration-ms="17613" started-at="2020-11-09T22:28:21Z" finished-at="2020-11-09T22:28:38Z">
+        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="init" is-config="true" duration-ms="16471" started-at="2020-11-09T22:50:46Z" finished-at="2020-11-09T22:51:03Z">
           <params>
             <param index="0">
               <value>
@@ -672,7 +672,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="LoginTest()[pri:1, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="LoginTest" duration-ms="10647" started-at="2020-11-09T22:28:38Z" finished-at="2020-11-09T22:28:49Z">
+        <test-method status="PASS" signature="LoginTest()[pri:1, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="LoginTest" duration-ms="7611" started-at="2020-11-09T22:51:03Z" finished-at="2020-11-09T22:51:10Z">
           <reporter-output>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //a[@class='login']]]>
@@ -681,10 +681,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='login']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='login']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='login']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='login']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='login']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //input[@id='email']]]>
@@ -705,10 +705,10 @@
               <![CDATA[Found Element By : By.xpath: //button[@id='SubmitLogin']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@id='SubmitLogin']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@id='SubmitLogin']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@id='SubmitLogin']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@id='SubmitLogin']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //img[@class='logo img-responsive']]]>
@@ -717,10 +717,10 @@
               <![CDATA[Found Element By : By.xpath: //img[@class='logo img-responsive']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //img[@class='logo img-responsive']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //img[@class='logo img-responsive']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //img[@class='logo img-responsive']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //img[@class='logo img-responsive']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]]]>
@@ -730,7 +730,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="BookingTest(java.lang.String)[pri:2, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="BookingTest" duration-ms="10401" started-at="2020-11-09T22:28:49Z" finished-at="2020-11-09T22:28:59Z">
+        <test-method status="PASS" signature="BookingTest(java.lang.String)[pri:2, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="BookingTest" duration-ms="11142" started-at="2020-11-09T22:51:10Z" finished-at="2020-11-09T22:51:21Z">
           <params>
             <param index="0">
               <value>
@@ -752,16 +752,10 @@
               <![CDATA[Found Element By : By.xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
-            </line>
-            <line>
-              <![CDATA[Trying to find Element By : By.xpath: //input[@id='quantity_wanted']]]>
-            </line>
-            <line>
-              <![CDATA[Found Element By : By.xpath: //input[@id='quantity_wanted']]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //input[@id='quantity_wanted']]]>
@@ -776,16 +770,10 @@
               <![CDATA[Found Element By : By.xpath: //input[@id='quantity_wanted']]]>
             </line>
             <line>
-              <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+              <![CDATA[Trying to find Element By : By.xpath: //input[@id='quantity_wanted']]]>
             </line>
             <line>
-              <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
-            </line>
-            <line>
-              <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
-            </line>
-            <line>
-              <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+              <![CDATA[Found Element By : By.xpath: //input[@id='quantity_wanted']]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
@@ -824,10 +812,22 @@
               <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
+              <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
+              <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+            </line>
+            <line>
+              <![CDATA[Trying to find Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+            </line>
+            <line>
+              <![CDATA[Found Element By : By.xpath: //div[@id='uniform-group_1']//following-sibling::option]]>
+            </line>
+            <line>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //div[@id='uniform-group_1']//following-sibling::option]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Add to cart')]]]>
@@ -836,16 +836,10 @@
               <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Add to cart')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
-            </line>
-            <line>
-              <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
-            </line>
-            <line>
-              <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Add to cart')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
@@ -854,14 +848,20 @@
               <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
+            </line>
+            <line>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
             </line>
           </reporter-output>
         </test-method> <!-- BookingTest -->
-        <test-method status="PASS" signature="PaymentTest()[pri:3, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="PaymentTest" duration-ms="13176" started-at="2020-11-09T22:28:59Z" finished-at="2020-11-09T22:29:12Z">
+        <test-method status="PASS" signature="PaymentTest()[pri:3, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="PaymentTest" duration-ms="12688" started-at="2020-11-09T22:51:21Z" finished-at="2020-11-09T22:51:34Z">
           <reporter-output>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]]]>
@@ -903,10 +903,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
@@ -915,10 +915,10 @@
               <![CDATA[Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //input[@id='cgv']]]>
@@ -927,10 +927,10 @@
               <![CDATA[Found Element By : By.xpath: //input[@id='cgv']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //input[@id='cgv']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //input[@id='cgv']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //input[@id='cgv']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //input[@id='cgv']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
@@ -939,10 +939,10 @@
               <![CDATA[Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[@id='total_price']]]>
@@ -957,10 +957,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='bankwire']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='bankwire']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='bankwire']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='bankwire']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='bankwire']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
@@ -969,10 +969,10 @@
               <![CDATA[Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[@class='price']]]>
@@ -985,7 +985,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- PaymentTest -->
-        <test-method status="PASS" signature="LogoutTest()[pri:4, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="LogoutTest" duration-ms="3524" started-at="2020-11-09T22:29:12Z" finished-at="2020-11-09T22:29:16Z">
+        <test-method status="PASS" signature="LogoutTest()[pri:4, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="LogoutTest" duration-ms="4360" started-at="2020-11-09T22:51:34Z" finished-at="2020-11-09T22:51:38Z">
           <reporter-output>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //a[@class='logout']]]>
@@ -994,10 +994,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='logout']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='logout']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='logout']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (ee6c73c4afd4f753b1ffd20e7589202d)] -> xpath: //a[@class='logout']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (63d82d070414373759ee4c6d8d21c9e3)] -> xpath: //a[@class='logout']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //div[@class='header_user_info']]]>
@@ -1010,15 +1010,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- LogoutTest -->
-        <test-method status="PASS" signature="Flush()[pri:0, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="Flush" is-config="true" duration-ms="1107" started-at="2020-11-09T22:29:16Z" finished-at="2020-11-09T22:29:17Z">
+        <test-method status="PASS" signature="Flush()[pri:0, instance:com.AP.qa.test.TC001_Single_Product_Checkout@77846d2c]" name="Flush" is-config="true" duration-ms="850" started-at="2020-11-09T22:51:38Z" finished-at="2020-11-09T22:51:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Flush -->
       </class> <!-- com.AP.qa.test.TC001_Single_Product_Checkout -->
     </test> <!-- Test -->
-    <test name="Test1" duration-ms="51102" started-at="2020-11-09T16:59:17Z" finished-at="2020-11-09T17:00:08Z">
+    <test name="Test1" duration-ms="61430" started-at="2020-11-09T17:21:39Z" finished-at="2020-11-09T17:22:41Z">
       <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout_2">
-        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="init" is-config="true" duration-ms="14289" started-at="2020-11-09T22:29:17Z" finished-at="2020-11-09T22:29:31Z">
+        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="init" is-config="true" duration-ms="12021" started-at="2020-11-09T22:51:39Z" finished-at="2020-11-09T22:51:51Z">
           <params>
             <param index="0">
               <value>
@@ -1035,7 +1035,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="LoginTest" duration-ms="9642" started-at="2020-11-09T22:29:31Z" finished-at="2020-11-09T22:29:41Z">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="LoginTest" duration-ms="19325" started-at="2020-11-09T22:51:51Z" finished-at="2020-11-09T22:52:11Z">
           <reporter-output>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //a[@class='login']]]>
@@ -1044,10 +1044,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='login']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='login']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='login']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='login']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='login']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //input[@id='email']]]>
@@ -1068,10 +1068,10 @@
               <![CDATA[Found Element By : By.xpath: //button[@id='SubmitLogin']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@id='SubmitLogin']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@id='SubmitLogin']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@id='SubmitLogin']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@id='SubmitLogin']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //img[@class='logo img-responsive']]]>
@@ -1080,10 +1080,10 @@
               <![CDATA[Found Element By : By.xpath: //img[@class='logo img-responsive']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //img[@class='logo img-responsive']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //img[@class='logo img-responsive']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //img[@class='logo img-responsive']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //img[@class='logo img-responsive']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]]]>
@@ -1093,7 +1093,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="MultiplePro(java.lang.String)[pri:2, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="MultiplePro" duration-ms="7617" started-at="2020-11-09T22:29:41Z" finished-at="2020-11-09T22:29:49Z">
+        <test-method status="PASS" signature="MultiplePro(java.lang.String)[pri:2, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="MultiplePro" duration-ms="13198" started-at="2020-11-09T22:52:11Z" finished-at="2020-11-09T22:52:24Z">
           <params>
             <param index="0">
               <value>
@@ -1133,16 +1133,10 @@
               <![CDATA[Found Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
-            </line>
-            <line>
-              <![CDATA[Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
-            </line>
-            <line>
-              <![CDATA[Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
@@ -1151,10 +1145,16 @@
               <![CDATA[Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
+              <![CDATA[Trying to find Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
+              <![CDATA[Found Element By : By.xpath: //span[@class='continue btn btn-default button exclusive-medium']]]>
+            </line>
+            <line>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[@class='continue btn btn-default button exclusive-medium']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //ul[@id='homefeatured']//following-sibling::li]]>
@@ -1199,10 +1199,10 @@
               <![CDATA[Found Element By : By.xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //li[contains(@class,'ajax_block_product col-xs-12 col-sm-4 col-md-3')]//span[contains(text(),'Add to cart')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
@@ -1211,14 +1211,14 @@
               <![CDATA[Found Element By : By.xpath: //span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'Proceed to checkout')]]]]>
             </line>
           </reporter-output>
         </test-method> <!-- MultiplePro -->
-        <test-method status="PASS" signature="PaymentTest()[pri:3, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="PaymentTest" duration-ms="11292" started-at="2020-11-09T22:29:49Z" finished-at="2020-11-09T22:30:00Z">
+        <test-method status="PASS" signature="PaymentTest()[pri:3, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="PaymentTest" duration-ms="12011" started-at="2020-11-09T22:52:24Z" finished-at="2020-11-09T22:52:36Z">
           <reporter-output>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]]]>
@@ -1272,10 +1272,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
@@ -1284,10 +1284,10 @@
               <![CDATA[Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //input[@id='cgv']]]>
@@ -1296,10 +1296,10 @@
               <![CDATA[Found Element By : By.xpath: //input[@id='cgv']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //input[@id='cgv']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //input[@id='cgv']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //input[@id='cgv']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //input[@id='cgv']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
@@ -1308,10 +1308,10 @@
               <![CDATA[Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[@id='total_price']]]>
@@ -1326,10 +1326,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='bankwire']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='bankwire']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='bankwire']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='bankwire']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='bankwire']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
@@ -1338,10 +1338,10 @@
               <![CDATA[Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //span[contains(text(),'I confirm my order')]]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //span[@class='price']]]>
@@ -1354,7 +1354,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- PaymentTest -->
-        <test-method status="PASS" signature="LogoutTest()[pri:4, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="LogoutTest" duration-ms="6572" started-at="2020-11-09T22:30:00Z" finished-at="2020-11-09T22:30:07Z">
+        <test-method status="PASS" signature="LogoutTest()[pri:4, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="LogoutTest" duration-ms="3840" started-at="2020-11-09T22:52:36Z" finished-at="2020-11-09T22:52:40Z">
           <reporter-output>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //a[@class='logout']]]>
@@ -1363,10 +1363,10 @@
               <![CDATA[Found Element By : By.xpath: //a[@class='logout']]]>
             </line>
             <line>
-              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='logout']]]]>
+              <![CDATA[Trying to click on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='logout']]]]>
             </line>
             <line>
-              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (7cda66cb4f31bf26f990c4c4d39670e0)] -> xpath: //a[@class='logout']]]]>
+              <![CDATA[Clicked on: [[ChromeDriver: chrome on WINDOWS (1e10df5e42a1fe4b96898cd2092791c6)] -> xpath: //a[@class='logout']]]]>
             </line>
             <line>
               <![CDATA[Trying to find Element By : By.xpath: //div[@class='header_user_info']]]>
@@ -1379,7 +1379,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- LogoutTest -->
-        <test-method status="PASS" signature="Flush()[pri:0, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="Flush" is-config="true" duration-ms="1663" started-at="2020-11-09T22:30:07Z" finished-at="2020-11-09T22:30:08Z">
+        <test-method status="PASS" signature="Flush()[pri:0, instance:com.AP.qa.test.TC002_Multiple_Products_Checkout_2@3b94d659]" name="Flush" is-config="true" duration-ms="1008" started-at="2020-11-09T22:52:40Z" finished-at="2020-11-09T22:52:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Flush -->
