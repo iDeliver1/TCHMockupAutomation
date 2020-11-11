@@ -54,7 +54,7 @@ List<WebElement> MultiProducts;
 				{
 					try {
 					if(Excel_Libraries.getdata(j).isEmpty()==false) {
-						Reporting("Pass", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j));
+						Reporting("Pass", j+1+" Validation for Input Value", "There must be an Input value ", " Input Value "+Excel_Libraries.getdata(j), "");
 						if(MultiProducts.get(i).getText().contains(Excel_Libraries.getdata(j)))
 						{
 							Actions action = new Actions(driver);
@@ -67,7 +67,7 @@ List<WebElement> MultiProducts;
 				}
 				catch(Exception f){
 					f.printStackTrace();
-					Reporting("Fail", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j));
+					Reporting("Fail", j+1+" Validation for Input Value", "There must be an Input value ", " Input Value "+Excel_Libraries.getdata(j), "");
 				}
 				}
 				
@@ -82,7 +82,7 @@ List<WebElement> MultiProducts;
 		}
 		catch(Exception e) {
 			String Casue = e.toString();
-			Reporting("Fail", "Product Selection Page  Validation", "Payment Page should displayed ", "Payment Page is unable to show due to"+Casue.substring(1, 88));
+			Reporting("Fail", "Product Selection Page  Validation", "Payment Page should displayed ", "Payment Page is unable to show due to"+Casue.substring(1, 88), "");
 			closeBrowser();
 		}
 		return null;

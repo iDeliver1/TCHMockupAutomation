@@ -1,6 +1,8 @@
 package com.AP.qa.test;
 
 
+
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -31,26 +33,31 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	}
 	
 	@Test//(dataProvider = "Run")
-	public void LoginTest() throws Throwable{
+	public void LoginTest() {
 		
 		Login.signInbtn.click();
 		Login.user.sendKeys(prop.getProperty("username"));
-		Login.password.sendKeys(prop.getProperty("password"));
+		Login.password.sendKeys("iDeliver56");
 		Login.signIn.click();
-		Login.home.click();
 		
 		
+		try {
 		if(Login.Beforeloginvalidation()!=null) {
-			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"));	 
+			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), "");
+			 Login.home.click();
 		}
 		else {
-			 Reporting("Fail", "Login Page Validation", "User unsuccessfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"));
-			 closeBrowser();
+			 Reporting("Fail", "Login Page Validation", "User unsuccessfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), "");
+			 
+		}
+		}catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	
 	@Parameters("Product")
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2,enabled=true,dependsOnMethods = "LoginTest")
 	public void MultiplePro(String Product)throws Throwable {
 		
 		//Selection for Multiple products
@@ -69,7 +76,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 							
 							if(homepage.MultiProducts.get(i).getText().contains(Excel_Libraries.getdata(j)))
 							{
-								Reporting("Pass", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j));
+								Reporting("Pass", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j), "");
 								TestUtil.MoveElement(homepage.MultiProducts.get(i));
 								
 								WaitForObject(homepage.Addtocart.get(i), "Click");
@@ -80,7 +87,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 					}
 					catch(Exception f){
 						f.printStackTrace();
-						Reporting("Fail", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j));
+						Reporting("Fail", j+1+" Validation for Input Value", "There must be an Input value", " Input Value"+Excel_Libraries.getdata(j), "");
 					}
 					}
 					
@@ -95,14 +102,14 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 			}
 			catch(Exception e) {
 				String Casue = e.toString();
-				Reporting("Fail", "Home  Page  Validation", "Home Page should displayed ", "Home Page is unable to show due to"+Casue.substring(1, 88));
+				Reporting("Fail", "Home  Page  Validation", "Home Page should displayed ", "Home Page is unable to show due to"+Casue.substring(1, 88), "");
 				closeBrowser();
 			}
 		
 		
 	}
 	
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 3)
 	public void PaymentTest() throws Throwable{
 		GlobalValue = Genral_Function.getMultiProductValue(homepage.Price, homepage.tax);
 		
@@ -119,13 +126,13 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 		Payment.pay_method.click();
 		Payment.confirm.click();
 		
-		if(Genral_Function.Argvalidation("Final Price Validation", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
+		if(Genral_Function.Argvalidation("Final Price Validation ", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
 			 new Logout();
 		}
 		
 	}
 	
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 4)
 	public void LogoutTest() throws Throwable {
 		Logout.signOut.click();
 		Genral_Function.logoutvalidation(Logout.signIn.getText());
@@ -133,7 +140,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	
 	
 	@AfterClass
-	public void Flush() throws Throwable
+	public void Flush() 
 	{
 		closeBrowser();
 	}

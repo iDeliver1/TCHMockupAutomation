@@ -5,15 +5,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Hyperlink;
 import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Name;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFFont;
+import org.apache.poi.xssf.usermodel.XSSFHyperlink;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.AP.qa.base.TestBase;
@@ -29,23 +33,27 @@ public class Excel_Libraries extends TestBase {
 	static String Reportn;
 	static int Sheetindex=0,Row_cnt;
 	static Sheet sh;
-	static	Row newRow,newRow1;
+	static	Row newRow,newRow1,rw;
 	static	XSSFFont customFont;
 	static CellStyle style;
+	static  Name name;
+	static CreationHelper createHelper;
+	static Cell cell;
 	
 	 public static String createExcel(String Reportname) throws InvalidFormatException, IOException{
-	
+		 Reportn = Reportname;
 		 WB = new XSSFWorkbook();
 		if ((new File(Excel_path)).exists()==false) {	
 			
 		
-		    WB.createSheet().createRow(0).createCell(0);
+		    WB.createSheet("TestCase List").createRow(0).createCell(0);
 			
 			FileOutputStream fout;
 			try {
 				fout = new FileOutputStream(new File(Excel_path));
 				WB.write(fout);
 				fout.close();
+				createcoloumnname(Reportn);
 			} catch (FileNotFoundException e) {
 			
 				e.printStackTrace();
@@ -53,11 +61,18 @@ public class Excel_Libraries extends TestBase {
 			
 				e.printStackTrace();
 			}
-	
 		}
-		
-		
-		createcoloumnname(Reportname);
+			
+			 FileInputStream fin = new FileInputStream(Excel_path);
+					 WB=(XSSFWorkbook) WorkbookFactory.create(fin);
+					 sh = WB.getSheetAt(0);
+					 sh.setDefaultColumnWidth(35);
+					 Row_cnt = sh.getLastRowNum();
+					 newRow = sh.createRow(Row_cnt+1);
+					 newRow.createCell(0).setCellValue(Reportname);
+						FileOutputStream fout = new FileOutputStream(Excel_path);
+						WB.write(fout);
+						fout.close();
 		
 		
 		Sheetindex= Sheetindex+1;
@@ -66,7 +81,8 @@ public class Excel_Libraries extends TestBase {
 	}
 	
 	private static void createcoloumnname(String Reportname) throws IOException, InvalidFormatException {
-		String[] Attribute = {"Step_details","Actual", "Expected","Status","Date"};
+		
+		String[] Attribute = {"TestCase Name - ","Status","Date"};
 		
 		 FileInputStream fin = new FileInputStream(Excel_path);
 		try {
@@ -74,81 +90,198 @@ public class Excel_Libraries extends TestBase {
 			 
 			 		sh = WB.getSheetAt(0);
 			 		sh.setDefaultColumnWidth(35);
+			 		name=WB.createName();
 			 		customFont = WB.createFont();
 			 		style = WB.createCellStyle();
 					customFont.setBold(true);
 		 			style.setFont(customFont);
 					 Row_cnt = sh.getLastRowNum();
 					 newRow = sh.createRow(Row_cnt+2);
-					 newRow.createCell(0).setCellValue("System Name - "+System.getenv("COMPUTERNAME"));
-					 newRow.getCell(0).setCellStyle(style);
+				
 					 
-					 newRow = sh.createRow(Row_cnt+3);
-					 newRow.createCell(0).setCellValue("TestCase Name - "+Reportname);
-					 newRow.getCell(0).setCellStyle(style);
-					 
- 	
+						for(int j=0;j<Attribute.length;j++)
+					 	{	
+					 			newRow.createCell(j).setCellValue(Attribute[j]);
+					 			newRow.getCell(j).setCellStyle(style);
+					 		
+					 	}
 			}
 	
-		
 			 catch(Exception e) {
 					System.out.println(e);
 				}
-		 Row_cnt = sh.getLastRowNum();
-		 newRow = sh.createRow(Row_cnt+1);
-		 
- 	for(int j=0;j<=4;j++)
- 	{	
- 			newRow.createCell(j).setCellValue(Attribute[j]);
- 			newRow.getCell(j).setCellStyle(style);
- 		
- 	}
+
+ 	
+ 	
+	 
  	FileOutputStream fout = new FileOutputStream(Excel_path);
 	WB.write(fout);
-	fout.close();	
+	fout.close();
+	
 	}
 
+	
+	
+	public static void Createcelllink(String reportname,String Step_details,String Actual,String Expected,String Status,String Time) throws InvalidFormatException, IOException {
+		String[] Attribute = {"Step_details","Actual", "Expected","Status","Date"};
+		try {
+			FileInputStream fin = new FileInputStream(Excel_path);
+			WB=(XSSFWorkbook) WorkbookFactory.create(fin);
+			CreationHelper createHelper = WB.getCreationHelper();
+			sh = WB.getSheetAt(0);
+			String ReportSheetName = reportname.substring(0, 23);
+			 WB.createSheet(ReportSheetName).createRow(0).createCell(0);
+			
+			 
+			  		int	shindex = WB.getActiveSheetIndex();
+			  		sh = WB.getSheetAt(shindex+Sheetindex-1);
+			  		sh.setDefaultColumnWidth(35);
+			  		Row_cnt = sh.getLastRowNum();
+			  		newRow = sh.createRow(Row_cnt+1);
+			  		customFont = WB.createFont();
+			 		style = WB.createCellStyle();
+				 
+		 	for(int j=0;j<=4;j++)
+		 	{	
+		 			newRow.createCell(j).setCellValue(Attribute[j]);
+		 			customFont.setColor(IndexedColors.BLUE.getIndex());
+		 			customFont.setBold(true);
+		 			style.setFont(customFont);
+		 			newRow.getCell(j).setCellStyle(style);
+		 		
+		 	}
+		 	
+		 	
+		 	
+		 	String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time};
+			Row	 newRow1 = sh.createRow(Row_cnt+2);
+				
+					for(int i=0;i<=4;i++)
+						{
+						newRow1.createCell(i).setCellValue(Attribute_value[i]);
+						if(Attribute_value[i].equalsIgnoreCase("Fail"))
+						{
+							
+								newRow1.createCell(i).setCellValue(Attribute_value[i]);
+								customFont.setColor(IndexedColors.RED.getIndex());
+								style.setFont(customFont);
+								newRow1.getCell(i).setCellStyle(style);
+						}
+						}
+		 	
+					sh = WB.getSheetAt( WB.getActiveSheetIndex());
+					 XSSFHyperlink link = (XSSFHyperlink) createHelper.createHyperlink(Hyperlink.LINK_DOCUMENT);
+					 link.setAddress(Excel_path.toString());
+					 link.setLocation(ReportSheetName+"!A1");
+					 rw = sh.getRow(0);
+					 cell = rw.getCell(0);
+					 int row = sh.getPhysicalNumberOfRows();
+				
+					  for(int i=2;i<=row;i++)
+					  {
+						  
+							  cell = sh.getRow(i).getCell(0);
+						
+							 if (cell.getStringCellValue().toString().equalsIgnoreCase(reportname)) {
+								 System.out.println(cell.getStringCellValue().toString());
+								 cell.setHyperlink(link);
+								 break;
+								
+							}	  
+					  }
+					
+					
+					
+		        FileOutputStream fout = new FileOutputStream(Excel_path);
+		    	WB.write(fout);
+		    	fout.close();
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		
+	}
 	//----------------------------------------------Excel Reporting-------------------------------------------------------	   
-	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time) throws Throwable
+	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time, String Last) throws Throwable
 		{ 
-		   
+		 	String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time,Last};
 			try {
+				if(Attribute_value[3].equalsIgnoreCase("Fail"))
+				{
+				Createcelllink(Reportn,Step_details,Actual,Expected,"Fail",Time);
+				
 				FileInputStream fin = new FileInputStream(Excel_path);
 				WB=(XSSFWorkbook) WorkbookFactory.create(fin);
-				String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time};
-				 sh = WB.getSheetAt(0);
-					sh.setDefaultColumnWidth(25);
-						 Row_cnt = sh.getLastRowNum();
-					
-					 newRow1 = sh.createRow(Row_cnt+1);
-					 customFont = WB.createFont();
-					 style = WB.createCellStyle();
+				int	shindex = WB.getActiveSheetIndex();
+		  		sh = WB.getSheetAt(shindex);
+		  		 rw = sh.getRow(0);
+				 cell = rw.getCell(0);
+				 customFont = WB.createFont();
+			 		style = WB.createCellStyle();
+				 int row = sh.getPhysicalNumberOfRows();
 			
-				for(int i=0;i<=4;i++)
-					{
-					newRow1.createCell(i).setCellValue(Attribute_value[i]);
-					if(Attribute_value[i].equalsIgnoreCase("Pass"))
-						{
-							customFont.setColor(IndexedColors.GREEN.getIndex());
-							customFont.setBold(true);
-							style.setFont(customFont);
-							newRow1.getCell(i).setCellStyle(style);
-						}
-					else if(Attribute_value[i].equalsIgnoreCase("Fail"))
-						{
+				  for(int i=2;i<=row;i++)
+				  {
+					  
+						  cell = sh.getRow(i).getCell(0);
+					
+						 if (cell.getStringCellValue().toString().equalsIgnoreCase(Reportn)) {
+							 System.out.println(cell.getStringCellValue().toString());
+							sh.getRow(i).createCell(1).setCellValue("Fail");
 							customFont.setColor(IndexedColors.RED.getIndex());
-							customFont.setBold(true);
 							style.setFont(customFont);
-							newRow1.getCell(i).setCellStyle(style);
-						}
-					}	
-			FileOutputStream fout = new FileOutputStream(Excel_path);
-			WB.write(fout);
-			fout.close();
+							sh.getRow(i).getCell(1).setCellStyle(style);
+							sh.getRow(i).createCell(2).setCellValue(TestUtil.fGetCurrentDate());
+						 break;
+							
+						}	  
+				  }
+				
+				  FileOutputStream fout = new FileOutputStream(Excel_path);
+			    	WB.write(fout);
+			    	fout.close();
 		}
+				else if (Attribute_value[5].equalsIgnoreCase("Last")){
+					
+					FileInputStream fin = new FileInputStream(Excel_path);
+					WB=(XSSFWorkbook) WorkbookFactory.create(fin);
+					int	shindex = WB.getActiveSheetIndex();
+			  		sh = WB.getSheetAt(shindex);
+			  		 rw = sh.getRow(0);
+					 cell = rw.getCell(0);
+					 customFont = WB.createFont();
+				 		style = WB.createCellStyle();
+					 int row = sh.getPhysicalNumberOfRows();
+				
+					  for(int i=2;i<=row;i++)
+					  {
+						  
+							  cell = sh.getRow(i).getCell(0);
+						
+							 if (cell.getStringCellValue().toString().equalsIgnoreCase(Reportn)) {
+								 System.out.println(cell.getStringCellValue().toString());
+								sh.getRow(i).createCell(1).setCellValue("Pass");
+								customFont.setColor(IndexedColors.GREEN.getIndex());
+								style.setFont(customFont);
+								sh.getRow(i).getCell(1).setCellStyle(style);
+								sh.getRow(i).createCell(2).setCellValue(TestUtil.fGetCurrentDate());
+							 break;
+								
+							}	  
+					  }
+					
+					  FileOutputStream fout = new FileOutputStream(Excel_path);
+				    	WB.write(fout);
+				    	fout.close();
+					
+					
+					
+				}
+				
+			}
 		catch(Exception e) {
 			System.out.println(e);
 		}
+		
 		}
 	   
 	 //------------------------------------------------Reading Data from Excel-------------------------------	   

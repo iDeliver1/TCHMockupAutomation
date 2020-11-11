@@ -22,7 +22,7 @@ public class homepage extends TestBase{
 	@FindBy(xpath = "//tr[contains(@class,'first_item')]//a[2]")public static
 	  WebElement selectFirstOrder;
 	
-	@FindBy(xpath = "//span[contains(text(),'sunil jaiswal')]")public static
+	@FindBy(xpath = "//span[contains(text(),'tester demo')]")public static
 	  WebElement profile;
 	
 	@FindBy(xpath = "//li[@class='ajax_block_product col-xs-12 col-sm-4 col-md-3 first-in-line first-item-of-tablet-line first-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Faded Short Sleeve T-shirts')]")

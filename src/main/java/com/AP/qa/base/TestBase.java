@@ -131,8 +131,8 @@ public  String GetProjectName(){
 				Reporter.log(data);
 			}
 		
-		public static   void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
-			objExtent.Report(Status, StepName, ActualStep, ExpectedStep);
+		public static   void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep, String LastCall) throws Throwable{
+			objExtent.Report(Status, StepName, ActualStep, ExpectedStep, LastCall);
 			
 		}
 		
@@ -177,9 +177,12 @@ public  String GetProjectName(){
 		
 		//Closing Browser And Saving Report 
 		public static   void closeBrowser() {
-			driver.quit();
-			objExtent.flush();
+			try {
+				driver.quit();
+				objExtent.flush();
+			}catch(Throwable e) {
 			
+			}
 		}
 
 }

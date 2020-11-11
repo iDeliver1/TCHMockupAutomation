@@ -22,6 +22,7 @@ static Extent_Report objRep = new Extent_Report();
 public static long PAGE_LOAD_TIMEOUT = 40;
 public static long IMPLICIT_WAIT = 40;
 public static String Report_Folder_path = "C:\\Reporting";
+static String rootdir;
 
 
 
@@ -67,7 +68,7 @@ public static String fGetCurrentDate()
 				
 				Runtime rt = Runtime.getRuntime();
 			    try {
-			    	String rootdir = System.getProperty("user.dir");
+			    	 rootdir = System.getProperty("user.dir");
 			       rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > "+rootdir+"\\version.txt\"");
 			       brow = getversion();
 			    } catch (IOException e) {
@@ -87,7 +88,7 @@ public static String fGetCurrentDate()
 		public static String getversion() {
 			 String data = "";
 			try {
-			File myObj = new File("E:/version.txt");
+			File myObj = new File(rootdir+"/version.txt");
 		      Scanner myReader = new Scanner(myObj);
 		      while (myReader.hasNextLine()) {
 		         data = myReader.nextLine();
