@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>TestNG:  Test2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Nov 10 22:55:35 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>74 seconds (74257 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.AP.qa.test.TC003_Reorder_Products_Checkout_3.LoginTest()'><b>LoginTest</b><br>Test class: com.AP.qa.test.TC003_Reorder_Products_Checkout_3<br/>
+<a href="#Output-1130656047" onClick='toggleBox("Output-1130656047", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1130656047" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1130656047">
+Trying to find Element By : By.xpath: //a[@class='login']<br/>
+Found Element By : By.xpath: //a[@class='login']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='login']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='login']]<br/>
+Trying to find Element By : By.xpath: //input[@id='email']<br/>
+Found Element By : By.xpath: //input[@id='email']<br/>
+Trying to find Element By : By.xpath: //input[@id='passwd']<br/>
+Found Element By : By.xpath: //input[@id='passwd']<br/>
+Trying to find Element By : By.xpath: //button[@id='SubmitLogin']<br/>
+Found Element By : By.xpath: //button[@id='SubmitLogin']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //button[@id='SubmitLogin']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //button[@id='SubmitLogin']]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'tester demo')]<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>com.AP.qa.test.TC003_Reorder_Products_Checkout_3@4516af24</td></tr>
+<tr>
+<td title='com.AP.qa.test.TC003_Reorder_Products_Checkout_3.LogoutTest()'><b>LogoutTest</b><br>Test class: com.AP.qa.test.TC003_Reorder_Products_Checkout_3<br/>
+<a href="#Output-1779615656" onClick='toggleBox("Output-1779615656", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1779615656" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1779615656">
+Trying to find Element By : By.xpath: //a[@class='logout']<br/>
+Found Element By : By.xpath: //a[@class='logout']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='logout']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='logout']]<br/>
+Trying to find Element By : By.xpath: //div[@class='header_user_info']<br/>
+Found Element By : By.xpath: //div[@class='header_user_info']<br/>
+Logout successfull<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.AP.qa.test.TC003_Reorder_Products_Checkout_3@4516af24</td></tr>
+<tr>
+<td title='com.AP.qa.test.TC003_Reorder_Products_Checkout_3.PaymentTest()'><b>PaymentTest</b><br>Test class: com.AP.qa.test.TC003_Reorder_Products_Checkout_3<br/>
+<a href="#Output-460534439" onClick='toggleBox("Output-460534439", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-460534439" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-460534439">
+Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Found Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Found Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Trying to find Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Found Element By : By.xpath: //span[contains(@id,'total_product_price')]<br/>
+Trying to find Element By : By.xpath: //td[@id='total_shipping']<br/>
+Found Element By : By.xpath: //td[@id='total_shipping']<br/>
+Trying to find Element By : By.xpath: //span[@id='total_price']<br/>
+Found Element By : By.xpath: //span[@id='total_price']<br/>
+CheckOut Price  Validation     35.02 is equal to 35.02<br/>
+Trying to find Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]]<br/>
+Trying to find Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]]<br/>
+Trying to find Element By : By.xpath: //input[@id='cgv']<br/>
+Found Element By : By.xpath: //input[@id='cgv']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //input[@id='cgv']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //input[@id='cgv']]<br/>
+Trying to find Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]<br/>
+Found Element By : By.xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]]<br/>
+Trying to find Element By : By.xpath: //span[@id='total_price']<br/>
+Found Element By : By.xpath: //span[@id='total_price']<br/>
+Trying to find Element By : By.xpath: //a[@class='bankwire']<br/>
+Found Element By : By.xpath: //a[@class='bankwire']<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='bankwire']]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //a[@class='bankwire']]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'I confirm my order')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'I confirm my order')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //span[contains(text(),'I confirm my order')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //span[contains(text(),'I confirm my order')]]<br/>
+Trying to find Element By : By.xpath: //span[@class='price']<br/>
+Found Element By : By.xpath: //span[@class='price']<br/>
+Final Price Validation Validation     35.02 is equal to 35.02<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>com.AP.qa.test.TC003_Reorder_Products_Checkout_3@4516af24</td></tr>
+<tr>
+<td title='com.AP.qa.test.TC003_Reorder_Products_Checkout_3.ReorderTest()'><b>ReorderTest</b><br>Test class: com.AP.qa.test.TC003_Reorder_Products_Checkout_3<br>Parameters: Single<br/>
+<a href="#Output-1100004490" onClick='toggleBox("Output-1100004490", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1100004490" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1100004490">
+Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'tester demo')]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'tester demo')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'tester demo')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //span[contains(text(),'tester demo')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //span[contains(text(),'tester demo')]]<br/>
+Trying to find Element By : By.xpath: //span[contains(text(),'Order history and details')]<br/>
+Found Element By : By.xpath: //span[contains(text(),'Order history and details')]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //span[contains(text(),'Order history and details')]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //span[contains(text(),'Order history and details')]]<br/>
+Trying to find Element By : By.xpath: //tr[contains(@class,'first_item')]//a[2]<br/>
+Found Element By : By.xpath: //tr[contains(@class,'first_item')]//a[2]<br/>
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //tr[contains(@class,'first_item')]//a[2]]<br/>
+Clicked on: [[ChromeDriver: chrome on WINDOWS (dfe39b3ed8df2df161e741582fcaba4a)] -> xpath: //tr[contains(@class,'first_item')]//a[2]]<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.AP.qa.test.TC003_Reorder_Products_Checkout_3@4516af24</td></tr>
+</table><p>
+</body>
+</html>
