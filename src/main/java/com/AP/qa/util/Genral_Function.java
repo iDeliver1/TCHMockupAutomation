@@ -1,15 +1,19 @@
 package com.AP.qa.util;
 
+
 import java.util.List;
+
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import com.AP.qa.base.TestBase;
 
 
 
+
 public class Genral_Function extends TestBase {
 
-
+	
 
 	//-------------Function For Login Page Validation----------------------
 	public static boolean LoginValidation(WebElement element) throws Throwable {

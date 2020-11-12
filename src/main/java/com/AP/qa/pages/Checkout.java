@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.AP.qa.base.TestBase;
 
 public class Checkout extends TestBase {
-
+	
 	
 	
 	

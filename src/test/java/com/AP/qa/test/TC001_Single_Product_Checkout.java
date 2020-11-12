@@ -42,7 +42,7 @@ public class TC001_Single_Product_Checkout extends TestBase {
 		
 		
 		if(Login.Beforeloginvalidation()!=null) {
-			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), "");
+			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), " ");
 			 Login.home.click();
 		}
 		else {

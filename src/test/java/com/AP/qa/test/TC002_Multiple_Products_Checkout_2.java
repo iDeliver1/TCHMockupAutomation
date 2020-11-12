@@ -37,7 +37,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 		
 		Login.signInbtn.click();
 		Login.user.sendKeys(prop.getProperty("username"));
-		Login.password.sendKeys("iDeliver56");
+		Login.password.sendKeys(prop.getProperty("password"));
 		Login.signIn.click();
 		
 		
@@ -57,7 +57,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	}
 	
 	@Parameters("Product")
-	@Test(priority = 2,enabled=true,dependsOnMethods = "LoginTest")
+	@Test(priority = 2)
 	public void MultiplePro(String Product)throws Throwable {
 		
 		//Selection for Multiple products
