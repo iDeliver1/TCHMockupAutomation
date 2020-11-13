@@ -1,129 +1,118 @@
 package com.AP.qa.test;
 
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.AP.qa.base.TestBase;
-import com.AP.qa.pages.Login;
-import com.AP.qa.pages.Logout;
-import com.AP.qa.pages.Payment;
 import com.AP.qa.pages.homepage;
-import com.AP.qa.util.Genral_Function;
-import com.AP.qa.util.TestUtil;
+import com.AP.qa.util.Business_Layer_Functions;
+
 
 
 
 public class TC001_Single_Product_Checkout extends TestBase {
 	
-	Login login;
+	//Variable Declaration 
+	WebElement element ;
+	Business_Layer_Functions objFun;
+	Boolean Pass_Fail;
 	
+	//Initializing Browser 
 	@Parameters("Browser")
 	@BeforeClass
 	public void init(String Browser) throws Throwable {
+		
 		initialization(Browser);
+		
 		SetUP(this.getClass().getSimpleName(), driver.getTitle());
-		 new Login();
-	}
-	
-	
-	
-	//Login test
-	@Test(priority = 1)
-	public void LoginTest() throws Throwable{
 		
-		
-		Login.signInbtn.click();
-		Login.user.sendKeys(prop.getProperty("username"));
-		Login.password.sendKeys(prop.getProperty("password"));
-		Login.signIn.click();
-		
-		
-		
-		if(Login.Beforeloginvalidation()!=null) {
-			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), " ");
-			 Login.home.click();
-		}
-		else {
-			 Reporting("Fail", "Login Page Validation", "User unsuccessfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), "");
-			 closeBrowser();
-		}
+		objFun = new Business_Layer_Functions();
 		
 	}
 	
 	
-	//Select Product Test
+	
+	//First Method Login test
+	@Test(priority = 1,enabled = true)
+	public void Login_Test() throws Throwable{
+		
+		element = objFun.LoginPerform(prop.getProperty("username"), prop.getProperty("password"));
+		
+		Pass_Fail = objFun.LoginValidation(element);
+		
+		Reporting_Description("Login Validation", "User Successfully Loged in", "User Should be able to logged in", "Failed to logged in");
+		
+	}
+	
+	
+	//Second Method Booking_Test
 	@Parameters("Product")
 	@Test(priority = 2)
-	public void BookingTest(String Product) throws Throwable{
+	public void Booking_Test(String Product) throws Throwable {
+	
+		Pass_Fail = objFun.Single_Product_Selection();
 		
-		try {
-			TestUtil.MoveElement(homepage.Target);	//Moving object to desired position 
-			
-			homepage.Tshirt.click();
-			
-			WaitForObject(homepage.qty, "Check");
-			
-			homepage.qty.clear();
-			
-			homepage.qty.sendKeys(prop.getProperty("Qty"));	//Can give number of quantity 
-			
-			TestUtil.SelectQuantity(homepage.size, "L");	//Select Size -S / M /L
-			
-			homepage.cart.click();
-			
-			WaitForObject(homepage.checkout, "Click");
-			
-			}
-			catch(Exception e) {
-				String Cause = e.toString();
-				Reporting("Fail", "Payment Page Validation", "Payment Page should displayed ", "Payment Page is unable to show due to"+Cause.substring(1, 88), "");
-				closeBrowser();
-			}	
+		Reporting_Description("CheckOut Page Validation",  "CheckOut Page is displayed","User should be able to navigate to CheckOut Page", "CheckOut Page is failed to show ");
+		
 	}
 	
 	
-	//Payment test
+	//Third Method CheckOut_Test()
 	@Test(priority = 3)
-	public void PaymentTest() throws Throwable{
-		GlobalValue = Genral_Function.getMultiProductValue(homepage.Price, homepage.tax);
-		GlobalArgumrnt = Genral_Function.Argvalidation("CheckOut Price ", GlobalValue,homepage.TotalPrice.getText().replace("$", ""));
+	public void CheckOut_Test() throws Throwable{
 		
-		try{
-		if(homepage.BeforeLogin_PriceValidation(GlobalArgumrnt)!=null) {
-			Reporting("Pass", "Payment Page Validation", "User successfully navigate to Payment Page", "User should be able to navigate to Payment Page", "");
-			Payment.proceed.click(); 
-		}
-		}
-		catch(Exception e)
-		{
-			Reporting("Fail", "Payment Page Validation", "User unsuccessfully navigate to Payment Page", "User should be able to navigate to Payment Page", "");
-			closeBrowser();
-		}
-		Payment.processAddress.click();
-		Payment.checkbox.click();
-		Payment.processCarrier.click();
-		GlobalValue = Payment.amount.getText().replace("$", "");
-		Payment.pay_method.click();
-		Payment.confirm.click();
+		GlobalValue = objFun.getMultiProductValue();  //Getting Price Value of a Product
 		
-		if(Genral_Function.Argvalidation("Final Price Validation ", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
-		Payment.logoutvalidation();
-		}
+		Pass_Fail = objFun.Argvalidation( GlobalValue,homepage.TotalPrice.getText().replace("$", ""));
 		
+		Reporting_Description("CheckOut Price Validation", "Check price is equal to"+GlobalValue, "CheckOut Price should be equal to "+homepage.TotalPrice.getText().replace("$", ""), "Checkout Price Doesnt Match");
+		
+		objFun.ClicktoElement(homepage.proceed);
 	}
 	
 	
-	//logout test
-	@Test(priority = 4, enabled = true)
-	public void LogoutTest() throws Throwable {
-		Logout.signOut.click();
-		Genral_Function.logoutvalidation(Logout.signIn.getText());
+	//Fourth Method Payment_Test
+	@Test(priority = 4)
+	public void FinalPayment_Test() throws Throwable {
+		
+		Pass_Fail = objFun.Argvalidation( GlobalValue,objFun.Payment_Process()); //Comparing Initial  Price with Final Price
+		
+		Reporting_Description("Final Price Validation", "Final price is equal to"+GlobalValue, "Final Price should be equal to "+objFun.GetFinalPrice(), "Final Price Doesnt Match");
+		
 	}
 	
+	//Fifth Method logout test
+	@Test(priority = 5, enabled = true)
+	public void Logout_Test() throws Throwable {
+		
+		Pass_Fail=objFun.logoutvalidation();
+		
+		Reporting_Description("Logout Validation", "Logout successfull", "User should be able to Logout", "Logout Failed");
+		
+		LastCall=true;
+			
+	}
+	
+	//Checking Test Method whether Pass or Fail
+	@AfterMethod
+	public void CheckMethod() throws Throwable {
+		
+		if(Pass_Fail) {
+			Reporting("Pass", StepDes, Actual, PassExp);
+		}
+		else {
+			Reporting("Fail", StepDes, Actual, FailExp+" casued by "+cause);
+			TearDown();
+		}
+	}
+	
+	//Closing Browser 
 	@AfterClass
-	public void Flush() throws Throwable
+	public void TearDown() throws Throwable
 	{
 		closeBrowser();
 	}

@@ -3,30 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="Product" value="Single"/>
   <parameter name="Browser" value="chrome"/>
-  <test name="Test1(failed)">
+  <test name="Test(failed)">
     <parameter name="Product" value="Single"/>
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.AP.qa.test.TC002_Multiple_Products_Checkout_2">
-        <methods>
-          <include name="LogoutTest"/>
-          <include name="Flush"/>
-          <include name="PaymentTest"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.AP.qa.test.TC002_Multiple_Products_Checkout_2 -->
-      <class name="com.AP.qa.test.TC003_Reorder_Products_Checkout_3">
-        <methods>
-          <include name="init"/>
-          <include name="Flush"/>
-        </methods>
-      </class> <!-- com.AP.qa.test.TC003_Reorder_Products_Checkout_3 -->
       <class name="com.AP.qa.test.TC001_Single_Product_Checkout">
         <methods>
+          <include name="Booking_Test" invocation-numbers="0"/>
           <include name="Flush"/>
           <include name="init"/>
+          <include name="CheckMethod"/>
         </methods>
       </class> <!-- com.AP.qa.test.TC001_Single_Product_Checkout -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

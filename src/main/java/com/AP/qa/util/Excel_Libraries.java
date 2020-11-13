@@ -27,7 +27,7 @@ import com.AP.qa.base.TestBase;
 
 public class Excel_Libraries extends TestBase {
 	static String [][] Data;
-	static String Excel_path = TestUtil.Report_Folder_path+"\\Excel"+TestUtil.fTimestamp()+".xls";
+	static String Excel_path = TestUtil.Report_Folder_path+"\\Excel"+TestUtil.fTimestamp()+".xlsx";
 	public static XSSFWorkbook WB;
 	static boolean abc ;
 	static String Reportn;
@@ -201,9 +201,9 @@ public class Excel_Libraries extends TestBase {
 		
 	}
 	//----------------------------------------------Excel Reporting-------------------------------------------------------	   
-	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time, String Last) throws Throwable
+	   public static void fExcelReporter(String Step_details,String Actual,String Expected,String Status,String Time) throws Throwable
 		{ 
-		 	String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time,Last};
+		 	String Attribute_value[] =  {Step_details,Actual,Expected,Status,Time};
 			try {
 				if(Attribute_value[3].equalsIgnoreCase("Fail"))
 				{
@@ -240,7 +240,7 @@ public class Excel_Libraries extends TestBase {
 			    	WB.write(fout);
 			    	fout.close();
 		}
-				else if (Attribute_value[5].equalsIgnoreCase("Last")){
+				else if (LastCall){
 					
 					FileInputStream fin = new FileInputStream(Excel_path);
 					WB=(XSSFWorkbook) WorkbookFactory.create(fin);

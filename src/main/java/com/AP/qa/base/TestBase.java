@@ -49,7 +49,8 @@ public class TestBase {
 	public static int counter = 0;
 	public static String brow;
 	public static String BrowserVersion ;
-	public static Boolean GlobalArgumrnt;
+	public static Boolean GlobalArgumrnt,LastCall;
+	public static String StepDes,Actual,PassExp,FailExp,FinalPrice,cause;
 	public TestBase(){
 		
 		try {
@@ -115,6 +116,17 @@ public class TestBase {
 		
 	}
 	
+	
+	
+	public static void Reporting_Description(String Des,String Act,String PassEx,String FailEx) {
+		
+		StepDes=Des;
+				Actual=Act;
+			PassExp=PassEx;
+		FailExp=FailEx;
+		
+		
+	}
 public  String GetProjectName(){
 		
 		String userDir = System.getProperty("user.dir");
@@ -131,8 +143,8 @@ public  String GetProjectName(){
 				Reporter.log(data);
 			}
 		
-		public static   void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep, String LastCall) throws Throwable{
-			objExtent.Report(Status, StepName, ActualStep, ExpectedStep, LastCall);
+		public static   void Reporting(String Status,String StepName,String ActualStep,String ExpectedStep) throws Throwable{
+			objExtent.Report(Status, StepName, ActualStep, ExpectedStep);
 			
 		}
 		

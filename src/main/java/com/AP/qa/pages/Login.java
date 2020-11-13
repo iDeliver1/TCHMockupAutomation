@@ -25,7 +25,7 @@ public class Login extends TestBase{
 	public static WebElement signIn;
 	
 	@FindBy(xpath = "//img[@class='logo img-responsive']")
-	public static WebElement home;
+	public  WebElement home;
 	
 	@FindBy(xpath = "//span[contains(text(),'tester demo')]")
 	public static WebElement validate_user;
@@ -38,6 +38,16 @@ public class Login extends TestBase{
 	public static boolean validateLogo(){
 		return validate_user.isDisplayed();
 	}
+	
+	public WebElement LoginAction(String usr,String pass) {
+		signInbtn.click();
+		user.sendKeys(usr);
+		password.sendKeys(pass);
+		signIn.click();
+		return validate_user;
+	}
+	
+	
 	
 	public WebElement Login_Before_checkout(String usr, String pass) throws Throwable {
 		signInbtn.click();

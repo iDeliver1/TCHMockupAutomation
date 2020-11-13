@@ -30,7 +30,7 @@ public class Reorder extends TestBase{
 		selectFirstOrder.click();
 		}catch(Exception e) {
 			String Cause = e.toString();
-			Reporting("Fail", "Re-Order Page Validation", "Re-Order Page should displayed ", "Re-Order Page is unable to show due to"+Cause.substring(1, 88), "");
+			Reporting("Fail", "Re-Order Page Validation", "Re-Order Page should displayed ", "Re-Order Page is unable to show due to"+Cause.substring(1, 88));
 			closeBrowser();
 		}
 		

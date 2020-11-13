@@ -63,13 +63,13 @@ public class Extent_Report {
 	      return extentTest.get();
 	  }
 	  
-	  public  void Report(String Status1,String Description,String ActualStep,String ExpectedStep, String LastCall) throws Throwable{
+	  public  void Report(String Status1,String Description,String ActualStep,String ExpectedStep) throws Throwable{
 			
 		  
 		  
 		  String ReportStatus = "<b>Step Number "+functioncall+"<br>Description :</b> "+Description+"<br><b>Expected :</b> "+ExpectedStep+"<br><b>Actual :</b> "+ActualStep;
 			//System.out.println(getTest());
-			Excel_Libraries.fExcelReporter(Description, ActualStep, ExpectedStep, Status1, TestUtil.fGetCurrentDate(), LastCall);
+			Excel_Libraries.fExcelReporter(Description, ActualStep, ExpectedStep, Status1, TestUtil.fGetCurrentDate());
 			try{
 			if(Status1.equalsIgnoreCase("PASS")){	
 				extentTest.get().log(Status.PASS, ReportStatus);
@@ -99,9 +99,9 @@ public class Extent_Report {
 			System.out.println(extentTest.get());
 			try{
 				Assert.assertEquals(Actual, Expected);
-				Report("PASS",StepName,"Page launch Successfull "+ Actual ,"Should be able to launch "+Expected, "Last");
+				Report("PASS",StepName,"Page launch Successfull "+ Actual ,"Should be able to launch "+Expected);
 				}catch(Exception e){ 
-					Report("FAIL",StepName,"Page launch unsuccessfull "+ Actual ,"Should be able to launch "+Expected, "Last");
+					Report("FAIL",StepName,"Page launch unsuccessfull "+ Actual ,"Should be able to launch "+Expected);
 				}
 		
 		}
@@ -111,14 +111,14 @@ public class Extent_Report {
 		System.out.println(extentTest.get());
 			try{
 				Assert.assertEquals(Actual, Expected);
-				Report("PASS","Verifying "+StepName,StepName+" is equal to "+Actual,StepName+"should be equal to "+Expected, "Last");
+				Report("PASS","Verifying "+StepName,StepName+" is equal to "+Actual,StepName+"should be equal to "+Expected);
 				
 				//log(StepName+" Validation     "+Actual + " is equal to " +Expected);
 				
 				}catch(Exception e){ 
 				//	log(StepName+"  Validation    "+ Actual + " is not  equal to " +Expected+" because "+e);
 					
-					Report("FAIL","Verifying "+StepName,StepName+"is equal to "+Actual+""+e,StepName+"should be equal to "+Expected, "Last");
+					Report("FAIL","Verifying "+StepName,StepName+"is equal to "+Actual+""+e,StepName+"should be equal to "+Expected);
 				}
 		
 		}
@@ -128,12 +128,12 @@ public class Extent_Report {
 		try{
 			
 			 Assert.assertEquals(true, element.isDisplayed());
-			Report("PASS","Verifying "+ StepName,StepName+" is Visible ",StepName+" Must be visible", "Last");
+			Report("PASS","Verifying "+ StepName,StepName+" is Visible ",StepName+" Must be visible");
 			//log(StepName + " is Visible ");
 			}catch(Exception e){ 
 				String cause = e.toString();
 				//log(StepName+" is not Visible ");
-				Report("FAIL","Verifying "+StepName, StepName+" is not visible because "+cause.substring(1, 88) ,StepName+" Must be visible", "Last");
+				Report("FAIL","Verifying "+StepName, StepName+" is not visible because "+cause.substring(1, 88) ,StepName+" Must be visible");
 				
 			}
 	}

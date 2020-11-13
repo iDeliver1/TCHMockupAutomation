@@ -13,7 +13,7 @@ import com.AP.qa.pages.Logout;
 import com.AP.qa.pages.Payment;
 import com.AP.qa.pages.homepage;
 import com.AP.qa.util.Excel_Libraries;
-import com.AP.qa.util.Genral_Function;
+import com.AP.qa.util.Business_Layer_Functions;
 import com.AP.qa.util.TestUtil;
 
 public class TC002_Multiple_Products_Checkout_2 extends TestBase{
@@ -21,7 +21,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	Login login;
 
 	
-
+/*
 	
 	@Parameters("Browser")
 	@BeforeClass
@@ -44,7 +44,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 		try {
 		if(Login.Beforeloginvalidation()!=null) {
 			 Reporting("Pass", "Login Page Validation", "User successfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), "");
-			 Login.home.click();
+			// Login.home.click();
 		}
 		else {
 			 Reporting("Fail", "Login Page Validation", "User unsuccessfull naviagted to homepage with username - "+prop.getProperty("username"), "User should be able to  naviagted to homepage with username - "+prop.getProperty("username"), "");
@@ -111,9 +111,9 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	
 	@Test(priority = 3)
 	public void PaymentTest() throws Throwable{
-		GlobalValue = Genral_Function.getMultiProductValue(homepage.Price, homepage.tax);
+		GlobalValue = Business_Layer_Functions.getMultiProductValue(homepage.Price, homepage.tax);
 		
-		if(Genral_Function.Argvalidation("CheckOut Price ", GlobalValue,homepage.TotalPrice.getText().replace("$", ""))==true) {
+		if(Business_Layer_Functions.Argvalidation("CheckOut Price ", GlobalValue,homepage.TotalPrice.getText().replace("$", ""))==true) {
 			
 			 new Payment();
 			 Payment.proceed.click();
@@ -126,7 +126,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 		Payment.pay_method.click();
 		Payment.confirm.click();
 		
-		if(Genral_Function.Argvalidation("Final Price Validation ", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
+		if(Business_Layer_Functions.Argvalidation("Final Price Validation ", GlobalValue,Payment.price.getText().replace("$", ""))==true) {
 			 new Logout();
 		}
 		
@@ -135,7 +135,7 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	@Test(priority = 4)
 	public void LogoutTest() throws Throwable {
 		Logout.signOut.click();
-		Genral_Function.logoutvalidation(Logout.signIn.getText());
+		Business_Layer_Functions.logoutvalidation(Logout.signIn.getText());
 	}
 	
 	
@@ -144,6 +144,6 @@ public class TC002_Multiple_Products_Checkout_2 extends TestBase{
 	{
 		closeBrowser();
 	}
-	
+	*/
 	
 }

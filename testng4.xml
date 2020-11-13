@@ -2,14 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test name="Test">
-  <parameter name = "Browser" value="chrome"/> 
+   <parameter name = "Browser" value="chrome"/> 
   <parameter name = "Product" value="Single"/> 
     <classes>
       <class name="com.AP.qa.test.TC001_Single_Product_Checkout"/>
     </classes>
   </test> <!-- Test -->
-  
-  
- 
-  
 </suite> <!-- Suite -->

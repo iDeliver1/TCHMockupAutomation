@@ -7,12 +7,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.AP.qa.base.TestBase;
 import com.AP.qa.util.Extent_Report;
+import com.AP.qa.util.TestUtil;
 
 
 public class Payment extends TestBase{
 	
 	@FindBy(xpath = "//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]")
-	public static WebElement proceed;
+	public  WebElement proceed;
 	
 	@FindBy(xpath = "//button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]")
 	public static
@@ -41,7 +42,7 @@ public class Payment extends TestBase{
 	WebElement order_msg;
 	
 	@FindBy(xpath = "//span[@id='total_price']")
-	public static
+	public 
 	WebElement amount;
 	
 	@FindBy(xpath = "//span[contains(@id,'total_product_price')]")
@@ -63,16 +64,17 @@ public class Payment extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String  paymentpage() throws Throwable {	
+	public void  paymentpage() throws Throwable {	
 		processAddress.click();
 		checkbox.click();
 		processCarrier.click();
-		String FPrice = amount.getText().replace("$", "");
+		FinalPrice = amount.getText();
 		pay_method.click();
 		confirm.click();
-		return FPrice;
 		}
 	
+	
+
 	
 	public static Logout logoutvalidation() {
 		
